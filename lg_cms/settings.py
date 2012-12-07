@@ -149,3 +149,9 @@ LOGGING = {
         },
     }
 }
+
+# Override settings locally for development and production environments.
+try:
+    from settings_local import *
+except ImportError:
+    pass

@@ -30,7 +30,8 @@ class FileTest(LiveServerTestCase):
 
     def test_can_create_new_asset_via_admin_site(self):
         ## User opens their web browser, and goes to the admin page.
-        self.browser.get(self.live_server_url + '/admin/')
+        #self.browser.get(self.live_server_url + '/admin/')
+        self.browser.get('http://10.42.41.1/admin/')
         # .get is tells the browser to go to a new page, and we pass it the
         # url, which is made up of self.live_server_url, which is set up for us
         # by LiveServerTestCase, and then we tack on the /admin/ url to get to
