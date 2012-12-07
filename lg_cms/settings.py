@@ -51,7 +51,7 @@ MEDIA_ROOT = '/var/www/lg_cms/media/'
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = 'http://lg-head/cms/media/'
+MEDIA_URL = '/cms/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -61,7 +61,7 @@ STATIC_ROOT = '/var/www/lg_cms/static/'
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = '/static/'
+STATIC_URL = '/cms/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -117,7 +117,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-    'django.contrib.admindocs',
+    # 'django.contrib.admindocs',
     'lg_cms.functional_tests',
 )
 
