@@ -119,6 +119,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # 'django.contrib.admindocs',
     'lg_cms.functional_tests',
+    'assets',
 )
 
 # A sample logging configuration. The only tangible logging
