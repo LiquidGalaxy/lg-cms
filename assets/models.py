@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+from mimetypes import guess_type
+
 # Create your models here.
 
 class Item(models.Model):
@@ -15,6 +17,12 @@ class Item(models.Model):
     update_time = models.DateTimeField(auto_now=True)
 
     storage = models.FileField(upload_to='asset_storage', max_length=250)
+    mime_type = models.CharField(max_length=80, blank=True)
+
+    def save(self, *args, **kwargs):
+        if self.storage.url is not '':
+            self.mime_type = guess_type(self.storage.url)[0]
+        super(Item, self).save(*args, **kwargs) # Call the "real" save() method.
 
     def __unicode__(self):
         return self.title

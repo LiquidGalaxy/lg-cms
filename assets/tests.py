@@ -11,6 +11,8 @@ class ItemUploadTest(TestCase):
         item.slug = "foo-item"
         item.description = "Moar foo than yoo."
 
+        item.storage = 'foo.txt'
+
         item.creation_time = timezone.now()
         
         # Check that we can save it in the database.
@@ -28,6 +30,9 @@ class ItemUploadTest(TestCase):
         self.assertEquals(only_item_in_database.slug, "foo-item")
         self.assertEquals(only_item_in_database.description, "Moar foo than yoo.")
         self.assertEquals(only_item_in_database.creation_time, item.creation_time)
+
+        # And test that the MIME type was correctly determined.
+        self.assertEquals(only_item_in_database.mime_type, 'text/plain')
 
 class SimpleTest(TestCase):
     def test_basic_addition(self):

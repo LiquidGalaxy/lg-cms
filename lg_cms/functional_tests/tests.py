@@ -8,8 +8,6 @@ from django.test import LiveServerTestCase
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-from selenium.webdriver.support.ui import WebDriverWait # available since 2.4.0
-
 # Functional tests are grouped into classes, and each test is a method inside
 # the class. The special rule is that test methods must begin with a test_.
 
@@ -169,24 +167,35 @@ class ItemTest(LiveServerTestCase):
 
         # Enter a title and description.
         title_field = self.browser.find_element_by_name("title")
-        title_field.send_keys('Foo File')
+        title_field.send_keys('End Point')
 
         description_field = self.browser.find_element_by_name("description")
         description_field.send_keys("""Lorem Ipsum, placerat id condimentum rutrum, rhoncus ac lorem. D'ya have a good sarsaparilla? Aliquam placerat posuere neque, at dignissim magna ullamcorper. ...which would place him high in the runnin' for laziest worldwide-but sometimes there's a man... sometimes there's a man. In aliquam sagittis massa ac tortor ultrices faucibus. These men are nihilists, Donny, nothing to be afraid of. Curabitur eu mi sapien, ut ultricies ipsum morbi.""") # Lebowskiipsum.com
 
         file_field = self.browser.find_element_by_name("storage")
-        file_field.send_keys('/etc/passwd')
+        file_field.send_keys('lg_cms/functional_tests/fixtures/placemark_end_point.kml')
 
         # Save this object.
         self.browser.find_element_by_name("_save").click()
 
-        # We should now be back at the listing.  Verify the slug is listed:
-        file_links = self.browser.find_elements_by_link_text("foo-file")
+        # We should now be back at the listing. Verify the slug alone is listed:
+        file_links = self.browser.find_elements_by_link_text("end-point")
+        self.assertEquals(len(file_links), 1)
+
+        # And that the correct MIME type is displayed somewhere.
+        body = self.browser.find_element_by_tag_name('body')
+        self.assertIn('application/vnd.google-earth.kml+xml', body.text)
+
+        # And that we can filter files by MIME type.
+        self.browser.find_element_by_link_text(
+            'application/vnd.google-earth.kml+xml'
+        ).click()
+
+        # The slug should still be a link here.
+        file_links = self.browser.find_elements_by_link_text("end-point")
         self.assertEquals(len(file_links), 1)
 
         # Log out.
         self.browser.find_element_by_link_text('Log out').click()
         body = self.browser.find_element_by_tag_name('body')
         self.assertIn('Logged out', body.text)
-
-        WebDriverWait(self.browser, 10)        
