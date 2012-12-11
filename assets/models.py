@@ -15,3 +15,12 @@ class Item(models.Model):
     update_time = models.DateTimeField(auto_now=True)
 
     storage = models.FileField(upload_to='asset_storage', max_length=250)
+
+    def __unicode__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "asset file"
+
+        # http://stackoverflow.com/questions/612372/can-you-give-a-django-app-a-verbose-name-for-use-throughout-the-admin
+        # app_label = "Digital Assets" # Causes error in Django 1.5

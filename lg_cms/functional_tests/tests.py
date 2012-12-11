@@ -113,3 +113,54 @@ class UserTest(LiveServerTestCase):
 
         # Log out.
         self.browser.find_element_by_link_text('Log out')
+
+class ItemTest(LiveServerTestCase):
+    fixtures = ['admin_user.json']
+
+    def setUp(self):
+        self.browser = webdriver.Firefox()
+        self.browser.implicitly_wait(3)
+
+    def tearDown(self):
+        self.browser.quit()
+
+    def test_can_create_new_item_and_upload_via_admin_site(self):
+        """ This test ensures all are uploads are accepted and identified. """
+
+        ## User opens their web browser, and goes to the admin page.
+        self.browser.get(self.live_server_url + '/admin/')
+
+        ## She sees the familiar 'Django administration' heading.
+        body = self.browser.find_element_by_tag_name('body')
+        self.assertIn('Django administration', body.text)
+
+        # The user types in her username and password and hits "Return".
+        username_field = self.browser.find_element_by_name('username')
+        username_field.send_keys('galadmin')
+
+        password_field = self.browser.find_element_by_name('password')
+        password_field.send_keys('galadmin')
+        password_field.send_keys(Keys.RETURN)
+
+        # The username and password should be accepted, and the user taken
+        # to the Site Administration page.
+        body = self.browser.find_element_by_tag_name('body')
+        self.assertIn('Site administration', body.text)
+
+        # The user now sees a couple of links for the "Assets" application...
+        asset_links = self.browser.find_elements_by_link_text("Assets")
+        self.assertEquals(len(asset_links), 1)
+
+        # ... and the Items called "Files".
+        asset_links = self.browser.find_elements_by_link_text("Asset files")
+        self.assertEquals(len(asset_links), 1)
+
+        # User clicks the "Asset Files" link to view the empty listing.
+        asset_links[0].click()
+        body = self.browser.find_element_by_tag_name('body')
+        self.assertIn('0 asset files', body.text)
+
+        # Click the "Add" link.
+        self.browser.find_element_by_link_text("Add asset file").click()
+
+        self.fail() # TODO: Finish this test.
