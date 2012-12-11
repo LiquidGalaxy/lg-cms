@@ -8,6 +8,8 @@ from django.test import LiveServerTestCase
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
+from selenium.webdriver.support.ui import WebDriverWait # available since 2.4.0
+
 # Functional tests are grouped into classes, and each test is a method inside
 # the class. The special rule is that test methods must begin with a test_.
 
@@ -112,13 +114,15 @@ class UserTest(LiveServerTestCase):
         self.assertEquals(len(new_user_links), 1)
 
         # Log out.
-        self.browser.find_element_by_link_text('Log out')
+        self.browser.find_element_by_link_text('Log out').click()
+        body = self.browser.find_element_by_tag_name('body')
+        self.assertIn('Logged out', body.text)
 
 class ItemTest(LiveServerTestCase):
     fixtures = ['admin_user.json']
 
     def setUp(self):
-        self.browser = webdriver.Firefox()
+        self.browser = webdriver.Chrome()
         self.browser.implicitly_wait(3)
 
     def tearDown(self):
@@ -163,4 +167,26 @@ class ItemTest(LiveServerTestCase):
         # Click the "Add" link.
         self.browser.find_element_by_link_text("Add asset file").click()
 
-        self.fail() # TODO: Finish this test.
+        # Enter a title and description.
+        title_field = self.browser.find_element_by_name("title")
+        title_field.send_keys('Foo File')
+
+        description_field = self.browser.find_element_by_name("description")
+        description_field.send_keys("""Lorem Ipsum, placerat id condimentum rutrum, rhoncus ac lorem. D'ya have a good sarsaparilla? Aliquam placerat posuere neque, at dignissim magna ullamcorper. ...which would place him high in the runnin' for laziest worldwide-but sometimes there's a man... sometimes there's a man. In aliquam sagittis massa ac tortor ultrices faucibus. These men are nihilists, Donny, nothing to be afraid of. Curabitur eu mi sapien, ut ultricies ipsum morbi.""") # Lebowskiipsum.com
+
+        file_field = self.browser.find_element_by_name("storage")
+        file_field.send_keys('/etc/passwd')
+
+        # Save this object.
+        self.browser.find_element_by_name("_save").click()
+
+        # We should now be back at the listing.  Verify the slug is listed:
+        file_links = self.browser.find_elements_by_link_text("foo-file")
+        self.assertEquals(len(file_links), 1)
+
+        # Log out.
+        self.browser.find_element_by_link_text('Log out').click()
+        body = self.browser.find_element_by_tag_name('body')
+        self.assertIn('Logged out', body.text)
+
+        WebDriverWait(self.browser, 10)        
