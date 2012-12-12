@@ -2,6 +2,9 @@ from django.test import TestCase
 from django.utils import timezone
 from assets.models import Item
 
+# To test unique constraints.
+from django.db.utils import IntegrityError
+
 class ItemUploadTest(TestCase):
     def test_creating_a_new_item_with_a_new_file(self):
         # Start by creating a new Item object
@@ -33,6 +36,32 @@ class ItemUploadTest(TestCase):
 
         # And test that the MIME type was correctly determined.
         self.assertEquals(only_item_in_database.mime_type, 'text/plain')
+
+    def test_duplicate_slugs(self):
+        """ Test that saving Items with duplicate slugs causes an Exception. """
+
+        # Create and save the first object.
+        item1 = Item()
+
+        item1.title = "Foo Item"
+        item1.slug = "foo-item"
+        item1.description = "Moar foo than yoo."
+
+        item1.storage = 'foo.txt'
+
+        item1.save()
+
+        # Create and save the second object.
+        item2 = Item()
+
+        item2.title = "Foo Item"
+        item2.slug = "foo-item"
+        item2.description = "Moar foo than yoo."
+
+        item2.storage = 'foo.txt'
+
+        # Trying to save a duplicate item should raise an Integrity Exception.
+        self.assertRaisesRegexp(item2.save, IntegrityError)
 
 class SimpleTest(TestCase):
     def test_basic_addition(self):

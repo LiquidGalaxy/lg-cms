@@ -10,7 +10,7 @@ class Item(models.Model):
     
     creator = models.ForeignKey(User, null=True, blank=True)
     title = models.CharField(max_length=250)
-    slug = models.CharField(max_length=80)
+    slug = models.CharField(max_length=80, unique=True)
     description = models.TextField(max_length=1000)
 
     creation_time = models.DateTimeField(auto_now=True)
