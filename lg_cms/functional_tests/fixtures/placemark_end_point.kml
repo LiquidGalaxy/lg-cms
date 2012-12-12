@@ -6,6 +6,15 @@
 	<phoneNumber>(212) 929-6923</phoneNumber>
 	<snippet>920 Broadway # 701 , New York, NY 10010, United States</snippet>
 	<description>End Point Corporation</description>
+	<LookAt>
+		<longitude>-73.98959999994308</longitude>
+		<latitude>40.73970000013086</latitude>
+		<altitude>0</altitude>
+		<heading>3.714030842021182e-11</heading>
+		<tilt>0</tilt>
+		<range>1500.000015133294</range>
+		<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+	</LookAt>
 	<ExtendedData>
 		<Data name="placepageUri">
 			<value>http://maps.google.com/maps/place?latlng=407397,-739896,7315800243254801711&amp;hl=en&amp;gl=us&amp;ui=earth&amp;view=teaser</value>
