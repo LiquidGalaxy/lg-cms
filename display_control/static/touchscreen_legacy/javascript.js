@@ -86,33 +86,33 @@ function xchangePlanet(planet) {
 }
 
 function changePlanet(planet) {
-  submitRequest('http://lg1:81/change.php?planet=' + planet);
+  submitRequest('http://lg2-1:81/change.php?planet=' + planet);
   showAndHideStatus();
 }
 
 function changeQuery(query, name) {
-  submitRequest('http://lg1:81/change.php?query=' + query + '&name=' + name);
+  submitRequest('http://lg2-1:81/change.php?query=' + query + '&name=' + name);
   showAndHideStatus();
 }
 
 function changeLayer(layer, name) {
-  submitRequest('http://lg1:81/change.php?layer=' + layer + '&name=' + name);
+  submitRequest('http://lg2-1:81/change.php?layer=' + layer + '&name=' + name);
   showAndHideStatus();
 }
 
 function syncKml(action, url) {
-  submitRequest('http://lg1:81/sync_touchscreen.php?touch_action=' + action + '&touch_kml=' + url);
+  submitRequest('http://lg2-1:81/sync_touchscreen.php?touch_action=' + action + '&touch_kml=' + url);
   showAndHideStatus();
 }
 
 function toggleKml(obj, url) {
   if (obj.className == 'kml_off') {
-    submitRequest('http://lg1:81/sync_touchscreen.php?touch_action=add&touch_kml=' + url);
+    submitRequest('http://lg2-1:81/sync_touchscreen.php?touch_action=add&touch_kml=' + url);
     obj.className='kml_on';
   }
   else if (obj.className == 'kml_on') {
     
-    submitRequest('http://lg1:81/sync_touchscreen.php?touch_action=delete&touch_kml=' + url);
+    submitRequest('http://lg2-1:81/sync_touchscreen.php?touch_action=delete&touch_kml=' + url);
     obj.className='kml_off';
   }
   showAndHideStatus();
