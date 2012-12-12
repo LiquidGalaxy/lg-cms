@@ -1,25 +1,25 @@
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}touchscreen_legacy/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}touchscreen_legacy/sidebar.css" />
     <script type="text/javascript" src="{{ STATIC_URL }}touchscreen_legacy/javascript.js"></script>
     <script type="text/javascript">       
       function clearKmls() {
         showAndHideStatus();
-                  submitRequest('/sync_touchscreen.php?touch_action=delete&touch_kml=http://mw1.google.com/mw-earth-vectordb/Imagery_Updates/imagery_updates.kml');
+                  submitRequest('http://lg1:81/sync_touchscreen.php?touch_action=delete&touch_kml=http://mw1.google.com/mw-earth-vectordb/Imagery_Updates/imagery_updates.kml');
           document.getElementById('kml_0').className='kml_off';
-                  submitRequest('/sync_touchscreen.php?touch_action=delete&touch_kml=http://mw2.google.com/mw-earth-vectordb/gallery_website/en/Volcanoes.kml');
+                  submitRequest('http://lg1:81/sync_touchscreen.php?touch_action=delete&touch_kml=http://mw2.google.com/mw-earth-vectordb/gallery_website/en/Volcanoes.kml');
           document.getElementById('kml_1').className='kml_off';
-                  submitRequest('/sync_touchscreen.php?touch_action=delete&touch_kml=http://mw1.google.com/mw-earth-vectordb/flightwise/flightwise_root.kml');
+                  submitRequest('http://lg1:81/sync_touchscreen.php?touch_action=delete&touch_kml=http://mw1.google.com/mw-earth-vectordb/flightwise/flightwise_root.kml');
           document.getElementById('kml_2').className='kml_off';
-                  submitRequest('/sync_touchscreen.php?touch_action=delete&touch_kml=http://services.google.com/earth/kmz/realtime_earthquakes_n.kmz');
+                  submitRequest('http://lg1:81/sync_touchscreen.php?touch_action=delete&touch_kml=http://services.google.com/earth/kmz/realtime_earthquakes_n.kmz');
           document.getElementById('kml_3').className='kml_off';
-                  submitRequest('/sync_touchscreen.php?touch_action=delete&touch_kml=http://lg-head/kml/wildaid_loader.kml');
+                  submitRequest('http://lg1:81/sync_touchscreen.php?touch_action=delete&touch_kml=http://lg-head/kml/wildaid_loader.kml');
           document.getElementById('kml_4').className='kml_off';
                 showAndHideStatus();
       }
     </script>
 
-    <title>Liquid Galaxy</title>
+    <title>Liquid Galaxy Touchscreen</title>
   </head>
   <body onload="noneExpand('e_earth', 'e_layers', 'e_moon', 'e_mars', 'e_keyboard');">
     <div class="touchscreen">
