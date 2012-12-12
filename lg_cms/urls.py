@@ -1,7 +1,5 @@
 from django.conf.urls import patterns, include, url
 
-from django.views.generic import TemplateView
-
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
@@ -17,5 +15,5 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 
-    url(r'^touchscreen/', TemplateView.as_view(template_name = 'touchscreen_legacy.html')),
+    url(r'^touchscreen/', include('display_control.urls')),
 )

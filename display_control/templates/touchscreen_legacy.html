@@ -100,14 +100,14 @@
                   </div>
       </div>
       <div class="layers">
-        <div class="title" onclick="changePlanet('earth');  toggleExpand('e_layers', 'e_earth', 'e_mars','e_moon', 'e_keyboard');">Layers</div>
+        <div id="layers_icon" class="title" onclick="changePlanet('earth');  toggleExpand('e_layers', 'e_earth', 'e_mars','e_moon', 'e_keyboard');">Layers</div>
         <img onclick="changePlanet('earth'); toggleExpand('e_layers', 'e_earth', 'e_moon', 'e_mars', 'e_keyboard');" src="{{ STATIC_URL }}touchscreen_legacy/layers.png" />
         <div class="expand_inactive" id="e_layers">
-                      <div id="kml_0" class="kml_off" onclick="toggleKml(this, 'http://mw1.google.com/mw-earth-vectordb/Imagery_Updates/imagery_updates.kml');">New Google Imagery Updates</div>
-                      <div id="kml_1" class="kml_off" onclick="toggleKml(this, 'http://mw2.google.com/mw-earth-vectordb/gallery_website/en/Volcanoes.kml');">Volcanoes</div>
-                      <div id="kml_2" class="kml_off" onclick="toggleKml(this, 'http://mw1.google.com/mw-earth-vectordb/flightwise/flightwise_root.kml');">U.S. Air Traffic</div>
-                      <div id="kml_3" class="kml_off" onclick="toggleKml(this, 'http://services.google.com/earth/kmz/realtime_earthquakes_n.kmz');">Earthquakes</div>
-                      <div id="kml_4" class="kml_off" onclick="toggleKml(this, 'http://lg-head/kml/wildaid_loader.kml');">Wild Aid</div>
+		{% for item in object_list %}
+                      <div id="{{ item.slug }}" class="kml_off" onclick="toggleKml(this, '{{ item.storage.url }}');">{{ item.title }}</div>
+		{% empty %}
+			<div id="kml_empty">Sorry, no KML files to load.</div>
+		{% endfor %}
                   </div>
       </div>
       <div class="keyboard">

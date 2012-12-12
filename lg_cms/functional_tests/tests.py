@@ -7,6 +7,7 @@ from django.test import LiveServerTestCase
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
 
 # Functional tests are grouped into classes, and each test is a method inside
 # the class. The special rule is that test methods must begin with a test_.
@@ -199,3 +200,26 @@ class ItemTest(LiveServerTestCase):
         self.browser.find_element_by_link_text('Log out').click()
         body = self.browser.find_element_by_tag_name('body')
         self.assertIn('Logged out', body.text)
+
+        # Now see if it's on the touchscreen interface.
+        self.browser.get(self.live_server_url + '/touchscreen/')
+
+        # Click the "Layers" icon.
+        self.browser.find_element_by_id('layers_icon').click()
+
+# Unfortunately this block just doesn't work as promised.
+# http://seleniumhq.org/docs/04_webdriver_advanced.html#explicit-and-implicit-waits
+#        # Wait for it to appear
+#        wait = WebDriverWait(self.browser, 40)
+#
+#        def clickable(element):
+#            if element.is_displayed():
+#                return element
+#            return null
+#
+#        item_link = wait.until(
+#            lambda d: clickable(d.find_element_by_id('end-point'))
+#        )
+#
+#        # PRES BUTAN!
+#        item_link.click()
