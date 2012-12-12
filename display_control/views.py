@@ -6,4 +6,4 @@ from assets.models import Item
 
 class TouchscreenLegacy(ListView):
       """ Render the legacy Liquid Galaxy Touchscreen interface. """
-      model = Item
+      queryset = Item.objects.filter(mime_type__contains='application/vnd.google-earth')

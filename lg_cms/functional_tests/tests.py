@@ -118,7 +118,7 @@ class UserTest(LiveServerTestCase):
         self.assertIn('Logged out', body.text)
 
 class ItemTest(LiveServerTestCase):
-    fixtures = ['admin_user.json']
+    fixtures = ['admin_user.json', 'example_kml_assets.json']
 
     def setUp(self):
         self.browser = webdriver.Chrome()
@@ -158,10 +158,10 @@ class ItemTest(LiveServerTestCase):
         asset_links = self.browser.find_elements_by_link_text("Asset files")
         self.assertEquals(len(asset_links), 1)
 
-        # User clicks the "Asset Files" link to view the empty listing.
+        # User clicks the "Asset Files" link to view the Asset files listing.
         asset_links[0].click()
         body = self.browser.find_element_by_tag_name('body')
-        self.assertIn('0 asset files', body.text)
+        self.assertIn('4 asset files', body.text) # fixture
 
         # Click the "Add" link.
         self.browser.find_element_by_link_text("Add asset file").click()
@@ -223,3 +223,21 @@ class ItemTest(LiveServerTestCase):
 #
 #        # PRES BUTAN!
 #        item_link.click()
+
+        # There should now be three buttons for KML loading.
+        item_links = self.browser.find_elements_by_class_name('kml_off')
+        self.assertEquals(len(item_links), 3)
+
+    def test_touchscreen_displays_only_KML_files_for_loading(self):
+        """ This tests that only KML files are displayed for loading
+            into Google Earth from the touchscreen display control. """
+
+        ## User opens their web browser, and goes to the touchscreen page.
+        self.browser.get(self.live_server_url + '/touchscreen/')
+
+        ## She sees the familiar 'Django administration' heading.
+        body = self.browser.find_element_by_tag_name('body')
+
+        # There should be only two buttons to load files.
+        item_links = self.browser.find_elements_by_class_name('kml_off')
+        self.assertEquals(len(item_links), 2)
