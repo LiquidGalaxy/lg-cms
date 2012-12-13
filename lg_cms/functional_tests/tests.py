@@ -326,14 +326,14 @@ class GeoTest(LiveServerTestCase):
         
         # This fixture should have some bookmarks already loaded.
         body = self.browser.find_element_by_tag_name('body')
-        # TODO self.assertIn('63 bookmarks', body.text) # fixture
+        self.assertIn('63 bookmarks', body.text) # fixture
 
         # And many of them can be filtered by group.
         self.browser.find_element_by_link_text("earth - Earth").click()
 
         # The legacy touchscreen had many Earth bookmarks.
         body = self.browser.find_element_by_tag_name('body')
-        # TODO self.assertIn('31 bookmarks', body.text) # fixture
+        self.assertIn('31 bookmarks', body.text) # fixture
 
         # Let's create a new one or three.
         self.browser.find_element_by_link_text("Add bookmark").click()

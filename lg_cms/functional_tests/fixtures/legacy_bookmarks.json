@@ -3,22 +3,693 @@
   "pk": 1, 
   "model": "geo.bookmark", 
   "fields": {
-    "flytoview": "\t<LookAt>\r\n\t\t<longitude>-73.98959999994308</longitude>\r\n\t\t<latitude>40.73970000013086</latitude>\r\n\t\t<altitude>0</altitude>\r\n\t\t<heading>3.714030842021182e-11</heading>\r\n\t\t<tilt>0</tilt>\r\n\t\t<range>1500.000015133294</range>\r\n\t\t<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>\r\n\t</LookAt>", 
-    "description": "New York City Headquarters of End Point Corporation", 
+    "flytoview": "<LookAt><longitude>-0.1267320099722797</longitude><latitude>51.49925579894098</latitude><altitude>0</altitude><heading>78.8295920519042</heading><tilt>61.91707350294211</tilt><range>338.9856138972227</range><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
     "group": 1, 
-    "slug": "end-point", 
-    "title": "End Point HQ"
+    "slug": "westminster-abbey", 
+    "title": "Westminster Abbey"
   }
 },
 {
   "pk": 2, 
   "model": "geo.bookmark", 
   "fields": {
+    "flytoview": "<LookAt><longitude>2.290455736364925</longitude><latitude>48.86090365501671</latitude><altitude>0</altitude><heading>-45.44423211616271</heading><tilt>70.80125256159648</tilt><range>1092.404426261441</range><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "eiffel-tower", 
+    "title": "Eiffel Tower"
+  }
+},
+{
+  "pk": 3, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-9.124801501915782</longitude><latitude>38.71556333164073</latitude><altitude>0</altitude><heading>-3.418675602360248</heading><tilt>72.02164430161824</tilt><range>498.5882544022817</range><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "lisbon", 
+    "title": "Lisbon"
+  }
+},
+{
+  "pk": 4, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>6.958590264131517</longitude><latitude>50.94053850945959</latitude><altitude>0</altitude><heading>138.849439201831</heading><tilt>61.76264257325172</tilt><range>454.8112304610324</range><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "cologne-cathedral", 
+    "title": "Cologne Cathedral"
+  }
+},
+{
+  "pk": 5, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>9.992521130339245</longitude><latitude>53.54572589286541</latitude><altitude>0</altitude><heading>-7.876946284621686</heading><tilt>62.56759832747682</tilt><range>822.2892539725251</range><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "hamburg", 
+    "title": "Hamburg"
+  }
+},
+{
+  "pk": 6, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>11.25610673285207</longitude><latitude>43.77334065557257</latitude><altitude>0</altitude><heading>-38.9012694754605</heading><tilt>59.76510444648495</tilt><range>447.7430674202788</range><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "il-duomo-di-firenze", 
+    "title": "Il Duomo di Firenze"
+  }
+},
+{
+  "pk": 7, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>12.45592530418785</longitude><latitude>41.90233623815922</latitude><altitude>0</altitude><heading>-137.5505473058023</heading><tilt>57.79675851890055</tilt><range>859.5443385524493</range><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "vatican-city", 
+    "title": "Vatican City"
+  }
+},
+{
+  "pk": 8, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-74.04360361922375</longitude> <latitude>40.69009975947805</latitude> <altitude>0</altitude> <range>527.8032446973145</range> <tilt>72.36990091672752</tilt> <heading>36.32411956787109</heading> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "statue-of-liberty", 
+    "title": "Statue of Liberty"
+  }
+},
+{
+  "pk": 9, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-73.99639665810437</longitude><latitude>40.73708530818186</latitude><altitude>0</altitude><heading>-143.9986563391426</heading><tilt>79.72205379676838</tilt><range>2119.352793234599</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "empire-state-building", 
+    "title": "Empire State Building"
+  }
+},
+{
+  "pk": 10, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-71.09159845458048</longitude><latitude>42.35898221470529</latitude><altitude>0</altitude><heading>-24.18307075683213</heading><tilt>57.19248829352457</tilt><range>337.9583010891307</range><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "mit", 
+    "title": "MIT"
+  }
+},
+{
+  "pk": 11, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-79.38582154205574</longitude><latitude>43.64592803179259</latitude><altitude>0</altitude><heading>22.66346384632554</heading><tilt>69.8685302614463</tilt><range>1794.305611902872</range><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "cn-tower", 
+    "title": "CN - Tower"
+  }
+},
+{
+  "pk": 12, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-79.07823548286463</longitude><latitude>43.07961384574877</latitude><altitude>0</altitude><heading>-63.61448035889561</heading><tilt>71.0996064425109</tilt><range>852.2784611236771</range><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "niagara-falls", 
+    "title": "Niagara Falls"
+  }
+},
+{
+  "pk": 13, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-93.23706343792134</longitude><latitude>44.97322995298126</latitude><altitude>0</altitude><heading>66.83920951778353</heading><tilt>76.16570774759269</tilt><range>214.9198350037479</range><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "weisman-art-museum", 
+    "title": "Weisman Art Museum"
+  }
+},
+{
+  "pk": 14, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-87.63220271570034</longitude><latitude>41.88483817991625</latitude><altitude>0</altitude><heading>24.6982221185926</heading><tilt>69.0357526603637</tilt><range>1521.709873955993</range><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "willis-tower", 
+    "title": "Willis Tower"
+  }
+},
+{
+  "pk": 15, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-104.9881415781729</longitude><latitude>39.7365153963279</latitude><altitude>0</altitude><heading>59.04652675019803</heading><tilt>78.56915566178576</tilt><range>343.3723919751282</range><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "denver-art-museum", 
+    "title": "Denver Art Museum"
+  }
+},
+{
+  "pk": 16, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-111.8889022015411</longitude><latitude>36.03873353926406</latitude><altitude>0</altitude><heading>-85.87896607649738</heading><tilt>67.92562079561495</tilt><range>5355.631620407577</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "grand-canyon", 
+    "title": "Grand Canyon"
+  }
+},
+{
+  "pk": 17, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-122.3499367260323</longitude><latitude>47.62109035504494</latitude><altitude>0</altitude><heading>159.6519825717539</heading><tilt>72.39682756089907</tilt><range>448.8354508627081</range><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "space-needle", 
+    "title": "Space Needle"
+  }
+},
+{
+  "pk": 18, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-122.472400462235</longitude><latitude>37.81868599702572</latitude><altitude>0</altitude><heading>135.4301581620274</heading><tilt>77.34023378939395</tilt><range>1464.204792006197</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "golden-gate-bridge", 
+    "title": "Golden Gate Bridge"
+  }
+},
+{
+  "pk": 19, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-99.17495033235876</longitude><latitude>19.42196417829941</latitude><altitude>0</altitude><heading>70.08287571736612</heading><tilt>81.80314533348832</tilt><range>1074.007063831796</range><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "mexico-city", 
+    "title": "Mexico City"
+  }
+},
+{
+  "pk": 20, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera><longitude>-91.86373298836202</longitude><latitude>18.52106283679075</latitude><altitude>10.41094381533852</altitude><heading>-54.31631895884751</heading><tilt>76.59342733665744</tilt><roll>1.239943964610199</roll><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></Camera>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "mangrove-forest", 
+    "title": "Mangrove Forest"
+  }
+},
+{
+  "pk": 21, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-43.21944555497749</longitude><latitude>-22.96347619882502</latitude><altitude>0</altitude><heading>-145.9628300017914</heading><tilt>69.86161734348755</tilt><range>2063.814426818592</range><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "christo-redentor", 
+    "title": "Christo Redentor"
+  }
+},
+{
+  "pk": 22, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera><longitude>151.2214029820703</longitude><latitude>-33.85367077770335</latitude><altitude>207.1795327618231</altitude><heading>-119.6822609492343</heading><tilt>74.18569523263631</tilt><roll>-2.018597890945746</roll><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></Camera>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "sydney-opera-house", 
+    "title": "Sydney Opera House"
+  }
+},
+{
+  "pk": 23, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>133.9358385953364</longitude><latitude>34.66482339042736</latitude><altitude>0</altitude><heading>-148.3553954598459</heading><tilt>65.79393857321585</tilt><range>138.6394385625003</range><altitudeMode>relativeToGround</altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "okayama-castle", 
+    "title": "Okayama Castle"
+  }
+},
+{
+  "pk": 24, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>121.569670600714</longitude><latitude>25.02881029521499</latitude><altitude>0</altitude><heading>149.7861771621335</heading><tilt>78.36163428851943</tilt><range>1929.359879523905</range><altitudeMode>relativeToGround</altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "taipei", 
+    "title": "Taipei"
+  }
+},
+{
+  "pk": 25, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>121.4981287411351</longitude><latitude>31.2397149331515</latitude><altitude>0</altitude><heading>-48.78189093439979</heading><tilt>64.56281385188321</tilt><range>1695.115340158771</range><altitudeMode>relativeToGround</altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "shanghai-world-financial-center", 
+    "title": "Shanghai World Financial Center"
+  }
+},
+{
+  "pk": 26, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>101.7119894661757</longitude> <latitude>3.157654272706834</latitude> <altitude>0</altitude> <range>1006.394904296604</range> <tilt>44.51128824786823</tilt> <heading>-38.09136686328268</heading> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "petrona-towers", 
+    "title": "Petrona Towers"
+  }
+},
+{
+  "pk": 27, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>116.3910722183764</longitude><latitude>39.91550079289854</latitude><altitude>0</altitude><heading>-2.606426886160688</heading><tilt>70.05692092545999</tilt><range>1166.036930190046</range><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "forbidden-city", 
+    "title": "Forbidden City"
+  }
+},
+{
+  "pk": 28, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>78.04224807788447</longitude> <latitude>27.17426079281572</latitude> <altitude>0</altitude> <range>255.2184342580283</range> <tilt>79.02363850875322</tilt> <heading>-6.73298078209461</heading> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "taj-mahal", 
+    "title": "Taj Mahal"
+  }
+},
+{
+  "pk": 29, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>86.92082423649634</longitude> <latitude>27.98056240575426</latitude> <altitude>0</altitude> <range>4407.854403832683</range> <tilt>21.08288541862354</tilt> <heading>-0.08156758852426507</heading> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "mount-everest", 
+    "title": "Mount Everest"
+  }
+},
+{
+  "pk": 30, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>28.98023257013791</longitude> <latitude>41.00847815448282</latitude> <altitude>0</altitude> <range>416.0980300282511</range> <tilt>63.79751029521821</tilt> <heading>-105.3472490282871</heading> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "hagia-sophia", 
+    "title": "Hagia Sophia"
+  }
+},
+{
+  "pk": 31, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><gx:ViewerOptions><gx:option name=\\'streetview\\'></gx:option></gx:ViewerOptions><longitude>151.9065592716471</longitude><latitude>-23.44281356058847</latitude><altitude>0</altitude><heading>-15.38682802270009</heading><tilt>75.26764732227559</tilt><range>9.84185468932489</range><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "heron-island", 
+    "title": "Heron Island"
+  }
+},
+{
+  "pk": 32, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-5.502068000836189</longitude> <latitude>-2.005623000433638</latitude> <altitude>0</altitude> <heading>2.926737542700578e-11</heading> <tilt>0</tilt> <range>8640.003889414937</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 2, 
+    "slug": "opportunity-overview", 
+    "title": "Opportunity Overview"
+  }
+},
+{
+  "pk": 33, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-5.500489525005472</longitude> <latitude>-2.050149875663977</latitude> <altitude>0</altitude> <heading>97.80107809771226</heading> <tilt>60.07131681432958</tilt> <range>193.4636951054748</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 2, 
+    "slug": "victoria-crater", 
+    "title": "Victoria Crater"
+  }
+},
+{
+  "pk": 34, 
+  "model": "geo.bookmark", 
+  "fields": {
     "flytoview": "<LookAt> <longitude>-5.511841622751501</longitude> <latitude>-2.089007195521459</latitude> <altitude>0</altitude> <heading>6.849997374100312</heading> <tilt>62.66623343764025</tilt> <range>10.62872596561346</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
     "group": 2, 
-    "slug": "oppertunity", 
-    "title": "Oppertunity Rover"
+    "slug": "opportunity-rover", 
+    "title": "Opportunity Rover"
+  }
+},
+{
+  "pk": 35, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>175.5020999997616</longitude> <latitude>-14.58708999924545</latitude> <altitude>0</altitude> <heading>6.003055439832523e-11</heading> <tilt>0</tilt> <range>3431.000004919954</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 2, 
+    "slug": "spirit-overview", 
+    "title": "Spirit Overview"
+  }
+},
+{
+  "pk": 36, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>175.5270018442543</longitude> <latitude>-14.60237596595758</latitude> <altitude>0</altitude> <heading>-88.66808309999423</heading> <tilt>74.75900324285081</tilt> <range>5.882062070098894</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 2, 
+    "slug": "spirit-rover", 
+    "title": "Spirit Rover"
+  }
+},
+{
+  "pk": 37, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-125.4656864436261</longitude> <latitude>68.23402791415076</latitude> <altitude>0</altitude> <heading>73.88193817377817</heading> <tilt>65.65380758912458</tilt> <range>49234.00135581528</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 2, 
+    "slug": "phoenix-descent-image", 
+    "title": "Phoenix Descent Image"
+  }
+},
+{
+  "pk": 38, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-125.7483171478007</longitude> <latitude>68.21854098286268</latitude> <altitude>0</altitude> <heading>160.5928048902707</heading> <tilt>72.48265055905887</tilt> <range>25.3409534491582</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 2, 
+    "slug": "phoenix-lander", 
+    "title": "Phoenix Lander"
+  }
+},
+{
+  "pk": 39, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-133.1505924980777</longitude> <latitude>18.42497950401414</latitude> <altitude>0</altitude> <heading>-158.4572137228136</heading> <tilt>50.52869176347102</tilt> <range>63273.09338955151</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 2, 
+    "slug": "olympus-mons-summit", 
+    "title": "Olympus Mons Summit"
+  }
+},
+{
+  "pk": 40, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>25.01019598552429</longitude> <latitude>-7.985947186411825</latitude> <altitude>0</altitude> <heading>0.02129030520119741</heading> <tilt>0</tilt> <range>29867.56363638087</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 2, 
+    "slug": "white-rock", 
+    "title": "White Rock"
+  }
+},
+{
+  "pk": 41, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-62.89230537377572</longitude> <latitude>-10.79362210708346</latitude> <altitude>0</altitude> <heading>-22.13579378203362</heading> <tilt>40.51299406675182</tilt> <range>515417.6482927721</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 2, 
+    "slug": "valles-marineris-bluffs", 
+    "title": "Valles Marineris Bluffs"
+  }
+},
+{
+  "pk": 42, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-9.462283816928258</longitude> <latitude>40.74904149199955</latitude> <altitude>0</altitude> <heading>-31.21270213495078</heading> <tilt>0</tilt> <range>4988.503538547445</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 2, 
+    "slug": "cydonia-mensae-face-on-mars", 
+    "title": "Cydonia Mensae (Face on Mars)"
+  }
+},
+{
+  "pk": 43, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-136.2367413723124</longitude> <latitude>23.21002974593238</latitude> <altitude>0</altitude> <heading>141.5494739436939</heading> <tilt>73.6488926437397</tilt> <range>5367.370212132081</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 2, 
+    "slug": "dark-slope-streaks", 
+    "title": "Dark Slope Streaks"
+  }
+},
+{
+  "pk": 44, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-21.33148429025792</longitude> <latitude>1.720284069694282</latitude> <altitude>0</altitude> <heading>156.4130185454879</heading> <tilt>57.21281045729595</tilt> <range>47653.57524488318</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 2, 
+    "slug": "aram-chaos", 
+    "title": "Aram Chaos"
+  }
+},
+{
+  "pk": 45, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-69.76841445736109</longitude> <latitude>-10.03310401379998</latitude> <altitude>0</altitude> <heading>34.16772708046136</heading> <tilt>52.98627238564747</tilt> <range>38905.0820764801</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 2, 
+    "slug": "melas-chasma-dune-field", 
+    "title": "Melas Chasma Dune Field"
+  }
+},
+{
+  "pk": 46, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-105.5911149319767</longitude> <latitude>8.483052861424319</latitude> <altitude>0</altitude> <heading>23.86574423988766</heading> <tilt>22.97855210400711</tilt> <range>145860.4550759962</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 2, 
+    "slug": "ascraeus-chasmata", 
+    "title": "Ascraeus Chasmata"
+  }
+},
+{
+  "pk": 47, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>30.63466992056277</longitude> <latitude>-47.14634578635977</latitude> <altitude>0</altitude> <heading>-148.6524362278704</heading> <tilt>58.1144046374339</tilt> <range>14865.38128224011</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 2, 
+    "slug": "proctor-crater-dune-field", 
+    "title": "Proctor Crater Dune Field"
+  }
+},
+{
+  "pk": 48, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-76.7737235162009</longitude> <latitude>-6.45321146458648</latitude> <altitude>0</altitude> <heading>-16.37305622183582</heading> <tilt>76.18971312126968</tilt> <range>2095.084565950926</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 2, 
+    "slug": "faults-in-candor-chasma", 
+    "title": "Faults in Candor Chasma"
+  }
+},
+{
+  "pk": 49, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-20.99128448996523</longitude> <latitude>25.35886191346841</latitude> <altitude>0</altitude> <heading>84.14940235857532</heading> <tilt>52.70722367181256</tilt> <range>4625.819560691976</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 2, 
+    "slug": "mawrth-vallis", 
+    "title": "Mawrth Vallis"
+  }
+},
+{
+  "pk": 50, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-63.98500642445104</longitude> <latitude>-12.44178819316902</latitude> <altitude>0</altitude> <heading>103.4536799861345</heading> <tilt>75.60367115913975</tilt> <range>38816.3472079732</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 2, 
+    "slug": "vallis-marineris", 
+    "title": "Vallis Marineris"
+  }
+},
+{
+  "pk": 51, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>23.46023322757257</longitude> <latitude>0.6818690701373029</latitude> <altitude>0</altitude> <heading>55.56025577175851</heading> <tilt>70.44457090053699</tilt> <range>64.60575653701883</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 3, 
+    "slug": "apollo-11", 
+    "title": "Apollo 11"
+  }
+},
+{
+  "pk": 52, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-23.46175860219994</longitude> <latitude>-3.025568845799381</latitude> <altitude>0</altitude> <heading>136.2370857550598</heading> <tilt>61.35959025341867</tilt> <range>78.4158621426043</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 3, 
+    "slug": "apollo-12", 
+    "title": "Apollo 12"
+  }
+},
+{
+  "pk": 53, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-17.49489422538602</longitude> <latitude>-3.651647982786785</latitude> <altitude>0</altitude> <heading>69.26000464999706</heading> <tilt>65.07392961713315</tilt> <range>43.39237703401442</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 3, 
+    "slug": "apollo-14", 
+    "title": "Apollo 14"
+  }
+},
+{
+  "pk": 54, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>3.502022352559111</longitude> <latitude>26.02129553290783</latitude> <altitude>0</altitude> <heading>-132.1084656226968</heading> <tilt>69.4012043918584</tilt> <range>8491.436241658754</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 3, 
+    "slug": "apollo-15", 
+    "title": "Apollo 15"
+  }
+},
+{
+  "pk": 55, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>15.47469989161034</longitude> <latitude>-8.990145821093558</latitude> <altitude>0</altitude> <heading>-95.13734615159895</heading> <tilt>68.40394799225787</tilt> <range>33.19016992229445</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 3, 
+    "slug": "apollo-16-from-rover", 
+    "title": "Apollo 16 From Rover"
+  }
+},
+{
+  "pk": 56, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>30.7631530554148</longitude> <latitude>20.19205371110379</latitude> <altitude>0</altitude> <heading>-92.09520695772345</heading> <tilt>69.8876630498702</tilt> <range>311.1559410430297</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 3, 
+    "slug": "apollo-17", 
+    "title": "Apollo 17"
+  }
+},
+{
+  "pk": 57, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-23.45919223319664</longitude> <latitude>-3.027430477637387</latitude> <altitude>0</altitude> <heading>-54.41843612519305</heading> <tilt>63.58473046334316</tilt> <range>82.47600483700177</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 3, 
+    "slug": "surveyor-3", 
+    "title": "Surveyor 3"
+  }
+},
+{
+  "pk": 58, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-34.99832550354183</longitude> <latitude>38.27891541033399</latitude> <altitude>0</altitude> <heading>128.2462735593615</heading> <tilt>86.57004618165323</tilt> <range>60.3846576951117</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 3, 
+    "slug": "luna-17-lunakhod-1", 
+    "title": "Luna 17 + Lunakhod 1"
+  }
+},
+{
+  "pk": 59, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>30.65624286552221</longitude> <latitude>25.85380231354238</latitude> <altitude>0</altitude> <heading>-0.07257313800190887</heading> <tilt>0</tilt> <range>15411.40489768634</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 3, 
+    "slug": "luna-21-lunakhod-2", 
+    "title": "Luna 21 + Lunakhod 2"
+  }
+},
+{
+  "pk": 60, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>62.19994118888357</longitude> <latitude>12.75044214452487</latitude> <altitude>0</altitude> <heading>-1.522203115392835</heading> <tilt>79.71161417256202</tilt> <range>18.91056852561078</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 3, 
+    "slug": "luna-24", 
+    "title": "Luna 24"
+  }
+},
+{
+  "pk": 61, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>148.3288769428797</longitude> <latitude>23.34089502359551</latitude> <altitude>0</altitude> <heading>-173.7238651322664</heading> <tilt>82.65765510309093</tilt> <range>289612.0741833603</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 3, 
+    "slug": "mare-moscoviense", 
+    "title": "Mare Moscoviense"
+  }
+},
+{
+  "pk": 62, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-10.83838552380425</longitude> <latitude>-43.3056164044095</latitude> <altitude>0</altitude> <heading>-17.307171340787</heading> <tilt>49.05813653932753</tilt> <range>46288.72428903546</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 3, 
+    "slug": "tycho-crater", 
+    "title": "Tycho Crater"
+  }
+},
+{
+  "pk": 63, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt> <longitude>-42.51811153704084</longitude> <latitude>-84.90409579662281</latitude> <altitude>0</altitude> <heading>1.514801253318955</heading> <tilt>48.39649996833047</tilt> <range>75311.22481107077</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
+    "description": "", 
+    "group": 3, 
+    "slug": "lcross-impact-site", 
+    "title": "LCROSS Impact Site"
   }
 },
 {
@@ -26,29 +697,29 @@
   "model": "geo.bookmarkgroup", 
   "fields": {
     "planet": "earth", 
-    "icon_url": "", 
+    "icon_url": "http://liquid-galaxy.googlecode.com/git/php-interface/earth.png", 
     "description": "Earth is the third planet from the Sun, and the densest and fifth-largest of the eight planets in the Solar System. It is also the largest of the Solar System's four terrestrial planets. It is sometimes referred to as the world, the Blue Planet, or by its Latin name, Terra.\r\n\r\nEarth formed approximately 4.54 billion years ago, and life appeared on its surface within one billion years. Earth's biosphere then significantly altered the atmospheric and other basic physical conditions, which enabled the proliferation of organisms as well as the formation of the ozone layer, which together with Earth's magnetic field blocked harmful solar radiation, and permitted formerly ocean-confined life to move safely to land. The physical properties of the Earth, as well as its geological history and orbit, have allowed life to persist. Estimates on how much longer the planet will be able to continue to support life range from 500 million years (myr), to as long as 2.3 billion years (byr).", 
     "slug": "earth", 
     "title": "Earth"
   }
 },
 {
-  "pk": 2, 
+  "pk": 3, 
   "model": "geo.bookmarkgroup", 
   "fields": {
     "planet": "mars", 
-    "icon_url": "", 
+    "icon_url": "http://liquid-galaxy.googlecode.com/git/php-interface/mars.png", 
     "description": "Mars is the fourth planet from the Sun and the second smallest planet in the Solar System. Named after the Roman god of war, it is often described as the \"Red Planet\", as the iron oxide prevalent on its surface gives it a reddish appearance. Mars is a terrestrial planet with a thin atmosphere, having surface features reminiscent both of the impact craters of the Moon and the volcanoes, valleys, deserts, and polar ice caps of Earth. The rotational period and seasonal cycles of Mars are likewise similar to those of Earth, as is the tilt that produces the seasons. Mars is the site of Olympus Mons, the second highest known mountain within the Solar System (the tallest on a planet), and of Valles Marineris, one of the largest canyons. The smooth Borealis basin in the northern hemisphere covers 40% of the planet and may be a giant impact feature. Mars has two moons, Phobos and Deimos, which are small and irregularly shaped. These may be captured asteroids, similar to 5261 Eureka, a Martian trojan asteroid.\r\n\r\nUntil the first successful Mars flyby in 1965 by Mariner 4, many speculated about the presence of liquid water on the planet's surface. This was based on observed periodic variations in light and dark patches, particularly in the polar latitudes, which appeared to be seas and continents; long, dark striations were interpreted by some as irrigation channels for liquid water. These straight line features were later explained as optical illusions, though geological evidence gathered by unmanned missions suggest that Mars once had large-scale water coverage on its surface. In 2005, radar data revealed the presence of large quantities of water ice at the poles and at mid-latitudes. The Mars rover Spirit sampled chemical compounds containing water molecules in March 2007. The Phoenix lander directly sampled water ice in shallow Martian soil on July 31, 2008.", 
     "slug": "mars", 
     "title": "Mars"
   }
 },
 {
-  "pk": 3, 
+  "pk": 2, 
   "model": "geo.bookmarkgroup", 
   "fields": {
     "planet": "moon", 
-    "icon_url": "", 
+    "icon_url": "http://liquid-galaxy.googlecode.com/git/php-interface/moon.png", 
     "description": "The Moon (Latin: luna) is the only natural satellite of the Earth, and the fifth largest satellite in the Solar System. It is the largest natural satellite of a planet in the Solar System relative to the size of its primary, having 27% the diameter and 60% the density of Earth, resulting in 1\u204481 its mass. The Moon is the second densest satellite after Io, a satellite of Jupiter.\r\n\r\nThe Moon is in synchronous rotation with Earth, always showing the same face with its near side marked by dark volcanic maria that fill between the bright ancient crustal highlands and the prominent impact craters. It is the brightest object in the sky after the Sun, although its surface is actually very dark, with a reflectance similar to that of coal. Its prominence in the sky and its regular cycle of phases have, since ancient times, made the Moon an important cultural influence on language, calendars, art and mythology. The Moon's gravitational influence produces the ocean tides and the minute lengthening of the day. The Moon's current orbital distance, about thirty times the diameter of the Earth, causes it to appear almost the same size in the sky as the Sun, allowing it to cover the Sun nearly precisely in total solar eclipses. This matching of apparent visual size is a coincidence. The Moon's linear distance from the Earth is currently increasing at a rate of 3.82\u00b10.07cm per year, however this rate is not constant.", 
     "slug": "moon", 
     "title": "Moon"

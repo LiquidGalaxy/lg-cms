@@ -16,5 +16,38 @@
     "email": "lg-ops@endpoint.com", 
     "date_joined": "2012-12-07T16:32:30Z"
   }
+},
+{
+  "pk": 1, 
+  "model": "geo.bookmarkgroup", 
+  "fields": {
+    "planet": "earth", 
+    "icon_url": "http://liquid-galaxy.googlecode.com/git/php-interface/earth.png", 
+    "description": "Earth is the third planet from the Sun, and the densest and fifth-largest of the eight planets in the Solar System. It is also the largest of the Solar System's four terrestrial planets. It is sometimes referred to as the world, the Blue Planet, or by its Latin name, Terra.\r\n\r\nEarth formed approximately 4.54 billion years ago, and life appeared on its surface within one billion years. Earth's biosphere then significantly altered the atmospheric and other basic physical conditions, which enabled the proliferation of organisms as well as the formation of the ozone layer, which together with Earth's magnetic field blocked harmful solar radiation, and permitted formerly ocean-confined life to move safely to land. The physical properties of the Earth, as well as its geological history and orbit, have allowed life to persist. Estimates on how much longer the planet will be able to continue to support life range from 500 million years (myr), to as long as 2.3 billion years (byr).", 
+    "slug": "earth", 
+    "title": "Earth"
+  }
+},
+{
+  "pk": 3, 
+  "model": "geo.bookmarkgroup", 
+  "fields": {
+    "planet": "mars", 
+    "icon_url": "http://liquid-galaxy.googlecode.com/git/php-interface/mars.png", 
+    "description": "Mars is the fourth planet from the Sun and the second smallest planet in the Solar System. Named after the Roman god of war, it is often described as the \"Red Planet\", as the iron oxide prevalent on its surface gives it a reddish appearance. Mars is a terrestrial planet with a thin atmosphere, having surface features reminiscent both of the impact craters of the Moon and the volcanoes, valleys, deserts, and polar ice caps of Earth. The rotational period and seasonal cycles of Mars are likewise similar to those of Earth, as is the tilt that produces the seasons. Mars is the site of Olympus Mons, the second highest known mountain within the Solar System (the tallest on a planet), and of Valles Marineris, one of the largest canyons. The smooth Borealis basin in the northern hemisphere covers 40% of the planet and may be a giant impact feature. Mars has two moons, Phobos and Deimos, which are small and irregularly shaped. These may be captured asteroids, similar to 5261 Eureka, a Martian trojan asteroid.\r\n\r\nUntil the first successful Mars flyby in 1965 by Mariner 4, many speculated about the presence of liquid water on the planet's surface. This was based on observed periodic variations in light and dark patches, particularly in the polar latitudes, which appeared to be seas and continents; long, dark striations were interpreted by some as irrigation channels for liquid water. These straight line features were later explained as optical illusions, though geological evidence gathered by unmanned missions suggest that Mars once had large-scale water coverage on its surface. In 2005, radar data revealed the presence of large quantities of water ice at the poles and at mid-latitudes. The Mars rover Spirit sampled chemical compounds containing water molecules in March 2007. The Phoenix lander directly sampled water ice in shallow Martian soil on July 31, 2008.", 
+    "slug": "mars", 
+    "title": "Mars"
+  }
+},
+{
+  "pk": 2, 
+  "model": "geo.bookmarkgroup", 
+  "fields": {
+    "planet": "moon", 
+    "icon_url": "http://liquid-galaxy.googlecode.com/git/php-interface/moon.png", 
+    "description": "The Moon (Latin: luna) is the only natural satellite of the Earth, and the fifth largest satellite in the Solar System. It is the largest natural satellite of a planet in the Solar System relative to the size of its primary, having 27% the diameter and 60% the density of Earth, resulting in 1\u204481 its mass. The Moon is the second densest satellite after Io, a satellite of Jupiter.\r\n\r\nThe Moon is in synchronous rotation with Earth, always showing the same face with its near side marked by dark volcanic maria that fill between the bright ancient crustal highlands and the prominent impact craters. It is the brightest object in the sky after the Sun, although its surface is actually very dark, with a reflectance similar to that of coal. Its prominence in the sky and its regular cycle of phases have, since ancient times, made the Moon an important cultural influence on language, calendars, art and mythology. The Moon's gravitational influence produces the ocean tides and the minute lengthening of the day. The Moon's current orbital distance, about thirty times the diameter of the Earth, causes it to appear almost the same size in the sky as the Sun, allowing it to cover the Sun nearly precisely in total solar eclipses. This matching of apparent visual size is a coincidence. The Moon's linear distance from the Earth is currently increasing at a rate of 3.82\u00b10.07cm per year, however this rate is not constant.", 
+    "slug": "moon", 
+    "title": "Moon"
+  }
 }
 ]
