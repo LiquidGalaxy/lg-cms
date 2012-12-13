@@ -121,6 +121,7 @@ INSTALLED_APPS = (
     'lg_cms.functional_tests',
     'assets',
     'display_control',
+    'geo',
 )
 
 # A sample logging configuration. The only tangible logging
