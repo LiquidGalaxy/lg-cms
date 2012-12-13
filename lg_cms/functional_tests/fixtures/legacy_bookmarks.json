@@ -346,7 +346,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-5.502068000836189</longitude> <latitude>-2.005623000433638</latitude> <altitude>0</altitude> <heading>2.926737542700578e-11</heading> <tilt>0</tilt> <range>8640.003889414937</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 2, 
+    "group": 3, 
     "slug": "opportunity-overview", 
     "title": "Opportunity Overview"
   }
@@ -357,7 +357,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-5.500489525005472</longitude> <latitude>-2.050149875663977</latitude> <altitude>0</altitude> <heading>97.80107809771226</heading> <tilt>60.07131681432958</tilt> <range>193.4636951054748</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 2, 
+    "group": 3, 
     "slug": "victoria-crater", 
     "title": "Victoria Crater"
   }
@@ -368,7 +368,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-5.511841622751501</longitude> <latitude>-2.089007195521459</latitude> <altitude>0</altitude> <heading>6.849997374100312</heading> <tilt>62.66623343764025</tilt> <range>10.62872596561346</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 2, 
+    "group": 3, 
     "slug": "opportunity-rover", 
     "title": "Opportunity Rover"
   }
@@ -379,7 +379,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>175.5020999997616</longitude> <latitude>-14.58708999924545</latitude> <altitude>0</altitude> <heading>6.003055439832523e-11</heading> <tilt>0</tilt> <range>3431.000004919954</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 2, 
+    "group": 3, 
     "slug": "spirit-overview", 
     "title": "Spirit Overview"
   }
@@ -390,7 +390,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>175.5270018442543</longitude> <latitude>-14.60237596595758</latitude> <altitude>0</altitude> <heading>-88.66808309999423</heading> <tilt>74.75900324285081</tilt> <range>5.882062070098894</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 2, 
+    "group": 3, 
     "slug": "spirit-rover", 
     "title": "Spirit Rover"
   }
@@ -401,7 +401,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-125.4656864436261</longitude> <latitude>68.23402791415076</latitude> <altitude>0</altitude> <heading>73.88193817377817</heading> <tilt>65.65380758912458</tilt> <range>49234.00135581528</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 2, 
+    "group": 3, 
     "slug": "phoenix-descent-image", 
     "title": "Phoenix Descent Image"
   }
@@ -412,7 +412,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-125.7483171478007</longitude> <latitude>68.21854098286268</latitude> <altitude>0</altitude> <heading>160.5928048902707</heading> <tilt>72.48265055905887</tilt> <range>25.3409534491582</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 2, 
+    "group": 3, 
     "slug": "phoenix-lander", 
     "title": "Phoenix Lander"
   }
@@ -423,7 +423,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-133.1505924980777</longitude> <latitude>18.42497950401414</latitude> <altitude>0</altitude> <heading>-158.4572137228136</heading> <tilt>50.52869176347102</tilt> <range>63273.09338955151</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 2, 
+    "group": 3, 
     "slug": "olympus-mons-summit", 
     "title": "Olympus Mons Summit"
   }
@@ -434,7 +434,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>25.01019598552429</longitude> <latitude>-7.985947186411825</latitude> <altitude>0</altitude> <heading>0.02129030520119741</heading> <tilt>0</tilt> <range>29867.56363638087</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 2, 
+    "group": 3, 
     "slug": "white-rock", 
     "title": "White Rock"
   }
@@ -445,7 +445,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-62.89230537377572</longitude> <latitude>-10.79362210708346</latitude> <altitude>0</altitude> <heading>-22.13579378203362</heading> <tilt>40.51299406675182</tilt> <range>515417.6482927721</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 2, 
+    "group": 3, 
     "slug": "valles-marineris-bluffs", 
     "title": "Valles Marineris Bluffs"
   }
@@ -456,7 +456,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-9.462283816928258</longitude> <latitude>40.74904149199955</latitude> <altitude>0</altitude> <heading>-31.21270213495078</heading> <tilt>0</tilt> <range>4988.503538547445</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 2, 
+    "group": 3, 
     "slug": "cydonia-mensae-face-on-mars", 
     "title": "Cydonia Mensae (Face on Mars)"
   }
@@ -467,7 +467,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-136.2367413723124</longitude> <latitude>23.21002974593238</latitude> <altitude>0</altitude> <heading>141.5494739436939</heading> <tilt>73.6488926437397</tilt> <range>5367.370212132081</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 2, 
+    "group": 3, 
     "slug": "dark-slope-streaks", 
     "title": "Dark Slope Streaks"
   }
@@ -478,7 +478,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-21.33148429025792</longitude> <latitude>1.720284069694282</latitude> <altitude>0</altitude> <heading>156.4130185454879</heading> <tilt>57.21281045729595</tilt> <range>47653.57524488318</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 2, 
+    "group": 3, 
     "slug": "aram-chaos", 
     "title": "Aram Chaos"
   }
@@ -489,7 +489,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-69.76841445736109</longitude> <latitude>-10.03310401379998</latitude> <altitude>0</altitude> <heading>34.16772708046136</heading> <tilt>52.98627238564747</tilt> <range>38905.0820764801</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 2, 
+    "group": 3, 
     "slug": "melas-chasma-dune-field", 
     "title": "Melas Chasma Dune Field"
   }
@@ -500,7 +500,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-105.5911149319767</longitude> <latitude>8.483052861424319</latitude> <altitude>0</altitude> <heading>23.86574423988766</heading> <tilt>22.97855210400711</tilt> <range>145860.4550759962</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 2, 
+    "group": 3, 
     "slug": "ascraeus-chasmata", 
     "title": "Ascraeus Chasmata"
   }
@@ -511,7 +511,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>30.63466992056277</longitude> <latitude>-47.14634578635977</latitude> <altitude>0</altitude> <heading>-148.6524362278704</heading> <tilt>58.1144046374339</tilt> <range>14865.38128224011</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 2, 
+    "group": 3, 
     "slug": "proctor-crater-dune-field", 
     "title": "Proctor Crater Dune Field"
   }
@@ -522,7 +522,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-76.7737235162009</longitude> <latitude>-6.45321146458648</latitude> <altitude>0</altitude> <heading>-16.37305622183582</heading> <tilt>76.18971312126968</tilt> <range>2095.084565950926</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 2, 
+    "group": 3, 
     "slug": "faults-in-candor-chasma", 
     "title": "Faults in Candor Chasma"
   }
@@ -533,7 +533,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-20.99128448996523</longitude> <latitude>25.35886191346841</latitude> <altitude>0</altitude> <heading>84.14940235857532</heading> <tilt>52.70722367181256</tilt> <range>4625.819560691976</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 2, 
+    "group": 3, 
     "slug": "mawrth-vallis", 
     "title": "Mawrth Vallis"
   }
@@ -544,7 +544,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-63.98500642445104</longitude> <latitude>-12.44178819316902</latitude> <altitude>0</altitude> <heading>103.4536799861345</heading> <tilt>75.60367115913975</tilt> <range>38816.3472079732</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 2, 
+    "group": 3, 
     "slug": "vallis-marineris", 
     "title": "Vallis Marineris"
   }
@@ -555,7 +555,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>23.46023322757257</longitude> <latitude>0.6818690701373029</latitude> <altitude>0</altitude> <heading>55.56025577175851</heading> <tilt>70.44457090053699</tilt> <range>64.60575653701883</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 3, 
+    "group": 2, 
     "slug": "apollo-11", 
     "title": "Apollo 11"
   }
@@ -566,7 +566,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-23.46175860219994</longitude> <latitude>-3.025568845799381</latitude> <altitude>0</altitude> <heading>136.2370857550598</heading> <tilt>61.35959025341867</tilt> <range>78.4158621426043</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 3, 
+    "group": 2, 
     "slug": "apollo-12", 
     "title": "Apollo 12"
   }
@@ -577,7 +577,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-17.49489422538602</longitude> <latitude>-3.651647982786785</latitude> <altitude>0</altitude> <heading>69.26000464999706</heading> <tilt>65.07392961713315</tilt> <range>43.39237703401442</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 3, 
+    "group": 2, 
     "slug": "apollo-14", 
     "title": "Apollo 14"
   }
@@ -588,7 +588,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>3.502022352559111</longitude> <latitude>26.02129553290783</latitude> <altitude>0</altitude> <heading>-132.1084656226968</heading> <tilt>69.4012043918584</tilt> <range>8491.436241658754</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 3, 
+    "group": 2, 
     "slug": "apollo-15", 
     "title": "Apollo 15"
   }
@@ -599,7 +599,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>15.47469989161034</longitude> <latitude>-8.990145821093558</latitude> <altitude>0</altitude> <heading>-95.13734615159895</heading> <tilt>68.40394799225787</tilt> <range>33.19016992229445</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 3, 
+    "group": 2, 
     "slug": "apollo-16-from-rover", 
     "title": "Apollo 16 From Rover"
   }
@@ -610,7 +610,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>30.7631530554148</longitude> <latitude>20.19205371110379</latitude> <altitude>0</altitude> <heading>-92.09520695772345</heading> <tilt>69.8876630498702</tilt> <range>311.1559410430297</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 3, 
+    "group": 2, 
     "slug": "apollo-17", 
     "title": "Apollo 17"
   }
@@ -621,7 +621,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-23.45919223319664</longitude> <latitude>-3.027430477637387</latitude> <altitude>0</altitude> <heading>-54.41843612519305</heading> <tilt>63.58473046334316</tilt> <range>82.47600483700177</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 3, 
+    "group": 2, 
     "slug": "surveyor-3", 
     "title": "Surveyor 3"
   }
@@ -632,7 +632,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-34.99832550354183</longitude> <latitude>38.27891541033399</latitude> <altitude>0</altitude> <heading>128.2462735593615</heading> <tilt>86.57004618165323</tilt> <range>60.3846576951117</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 3, 
+    "group": 2, 
     "slug": "luna-17-lunakhod-1", 
     "title": "Luna 17 + Lunakhod 1"
   }
@@ -643,7 +643,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>30.65624286552221</longitude> <latitude>25.85380231354238</latitude> <altitude>0</altitude> <heading>-0.07257313800190887</heading> <tilt>0</tilt> <range>15411.40489768634</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 3, 
+    "group": 2, 
     "slug": "luna-21-lunakhod-2", 
     "title": "Luna 21 + Lunakhod 2"
   }
@@ -654,7 +654,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>62.19994118888357</longitude> <latitude>12.75044214452487</latitude> <altitude>0</altitude> <heading>-1.522203115392835</heading> <tilt>79.71161417256202</tilt> <range>18.91056852561078</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 3, 
+    "group": 2, 
     "slug": "luna-24", 
     "title": "Luna 24"
   }
@@ -665,7 +665,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>148.3288769428797</longitude> <latitude>23.34089502359551</latitude> <altitude>0</altitude> <heading>-173.7238651322664</heading> <tilt>82.65765510309093</tilt> <range>289612.0741833603</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 3, 
+    "group": 2, 
     "slug": "mare-moscoviense", 
     "title": "Mare Moscoviense"
   }
@@ -676,7 +676,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-10.83838552380425</longitude> <latitude>-43.3056164044095</latitude> <altitude>0</altitude> <heading>-17.307171340787</heading> <tilt>49.05813653932753</tilt> <range>46288.72428903546</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 3, 
+    "group": 2, 
     "slug": "tycho-crater", 
     "title": "Tycho Crater"
   }
@@ -687,7 +687,7 @@
   "fields": {
     "flytoview": "<LookAt> <longitude>-42.51811153704084</longitude> <latitude>-84.90409579662281</latitude> <altitude>0</altitude> <heading>1.514801253318955</heading> <tilt>48.39649996833047</tilt> <range>75311.22481107077</range> <altitudeMode>relativeToGround</altitudeMode> <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode> </LookAt>", 
     "description": "", 
-    "group": 3, 
+    "group": 2, 
     "slug": "lcross-impact-site", 
     "title": "LCROSS Impact Site"
   }
