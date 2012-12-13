@@ -7,7 +7,7 @@ from django.test import LiveServerTestCase
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.ui import WebDriverWait, Select
 
 # Functional tests are grouped into classes, and each test is a method inside
 # the class. The special rule is that test methods must begin with a test_.
@@ -31,7 +31,7 @@ class UserTest(LiveServerTestCase):
     def tearDown(self):
         self.browser.quit()
 
-    def test_can_create_new_user_via_admin_site(self):
+    def DONT_test_can_create_new_user_via_admin_site(self):
         ## User opens their web browser, and goes to the admin page.
         self.browser.get(self.live_server_url + '/admin/')
         #self.browser.get('http://10.42.41.1/cms/admin/')
@@ -241,3 +241,124 @@ class ItemTest(LiveServerTestCase):
         # There should be only two buttons to load files.
         item_links = self.browser.find_elements_by_class_name('kml_off')
         self.assertEquals(len(item_links), 2)
+
+class GeoTest(LiveServerTestCase):
+    fixtures = [
+        'admin_user.json',
+        'example_kml_assets.json',
+        'legacy_bookmarks.json',
+    ]
+
+    def setUp(self):
+        self.browser = webdriver.Chrome()
+        self.browser.implicitly_wait(3)
+
+        ## User opens their web browser, and goes to the admin page.
+        self.browser.get(self.live_server_url + '/admin/')
+
+        ## She sees the familiar 'Django administration' heading.
+        body = self.browser.find_element_by_tag_name('body')
+        self.assertIn('Django administration', body.text)
+
+        # The user types in her username and password and hits "Return".
+        username_field = self.browser.find_element_by_name('username')
+        username_field.send_keys('galadmin')
+
+        password_field = self.browser.find_element_by_name('password')
+        password_field.send_keys('galadmin')
+        password_field.send_keys(Keys.RETURN)
+
+        # The username and password should be accepted, and the user taken
+        # to the Site Administration page.
+        body = self.browser.find_element_by_tag_name('body')
+        self.assertIn('Site administration', body.text)
+
+    def tearDown(self):
+        self.browser.quit()
+
+    def test_can_create_new_bookmarks_and_and_groups_via_admin_site(self):
+        """ This test ensures bookmarks can be created and displayed. """
+
+        # The user now sees a couple of links for the "Geo" application...
+        geo_links = self.browser.find_elements_by_link_text("Geo")
+        self.assertEquals(len(geo_links), 1)
+
+        # ... and the Bookmark and Bookmark Groups links.
+        geo_links = self.browser.find_elements_by_link_text("Bookmarks")
+        self.assertEquals(len(geo_links), 1)
+        geo_links = self.browser.find_elements_by_link_text("Bookmark groups")
+        self.assertEquals(len(geo_links), 1)
+
+        # User clicks the "Bookmark Groups" link to view the listing.
+        geo_links[0].click()
+        body = self.browser.find_element_by_tag_name('body')
+        self.assertIn('3 bookmark groups', body.text) # fixture
+
+        # Click the "Add" link.
+        self.browser.find_element_by_link_text("Add bookmark group").click()
+
+        # Populate the fields.
+        self.browser.find_element_by_name("title").send_keys("Extra")
+        self.browser.find_element_by_name("description").send_keys(
+            """Lebowski ipsum dolor sit amet, consectetur adipiscing elit praesent ac magna justo. Obviously you're not a golfer. Pellentesque ac lectus quis elit blandit fringilla a ut turpis. Huh? Oh. Yeah. Tape deck. Couple of Creedence tapes. And there was a, uh... my briefcase. So he thinks it's the carpet-pissers, huh? Praesent felis ligula, malesuada suscipit malesuada non, ultrices non urna. Sed orci ipsum, placerat id condimentum rutrum, rhoncus ac lorem. Uh, yeah. Probably a vagrant, slept in the car.""") # Lebowskiipsum.com
+        self.browser.find_element_by_name("icon_url").send_keys(
+            "http://www.google.com/images/icons/product/earth_client-128.png")
+
+        # The Earth should be the default planet selected.
+        planet_selector = Select(self.browser.find_element_by_name("planet"))
+        self.assertEquals(planet_selector.first_selected_option.text, 'Earth')
+
+        # Save this group.
+        self.browser.find_element_by_name("_save").click()
+
+        # Confirm the new group is listed.
+        extra_links = self.browser.find_elements_by_link_text("Extra")
+        self.assertEquals(len(extra_links), 1)
+
+        # Head over to the Bookmarks section.
+        geo_links = self.browser.find_elements_by_link_text("Geo")
+        self.assertEquals(len(geo_links), 1)
+        geo_links[0].click()
+
+        geo_links = self.browser.find_elements_by_link_text("Bookmarks")
+        self.assertEquals(len(geo_links), 1)
+        geo_links[0].click()
+        
+        # This fixture should have some bookmarks already loaded.
+        body = self.browser.find_element_by_tag_name('body')
+        # TODO self.assertIn('63 bookmarks', body.text) # fixture
+
+        # And many of them can be filtered by group.
+        self.browser.find_element_by_link_text("earth - Earth").click()
+
+        # The legacy touchscreen had many Earth bookmarks.
+        body = self.browser.find_element_by_tag_name('body')
+        # TODO self.assertIn('31 bookmarks', body.text) # fixture
+
+        # Let's create a new one or three.
+        self.browser.find_element_by_link_text("Add bookmark").click()
+
+        # Populate the fields.
+        self.browser.find_element_by_name("title").send_keys("End Point HQ")
+        # The "slug" field should populate automagically.
+        self.browser.find_element_by_name("flytoview").send_keys(
+"""<LookAt>\r
+	<longitude>-73.98959999994308</longitude>\r
+	<latitude>40.73970000013086</latitude>\r
+	<altitude>0</altitude>\r
+	<heading>3.714030842021182e-11</heading>\r
+	<tilt>0</tilt>\r
+	<range>1500.000015133294</range>\r
+	<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>\r
+</LookAt>\r
+""")
+
+        # Select the Bookmark Group we just created.
+        group_select = Select(self.browser.find_element_by_name("group"))
+        group_select.select_by_visible_text("earth - Extra")
+
+        # Save this bookmark.
+        self.browser.find_element_by_name("_save").click()
+
+        # Log out of the admin interface.
+        self.browser.find_element_by_link_text("Log out").click()

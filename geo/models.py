@@ -15,7 +15,7 @@ class Bookmark(models.Model):
 
     flytoview = models.TextField(
         max_length=1000,
-        help_text="A valid KML <LookAt> or <Camera> element."
+        help_text="A valid KML &lt;LookAt&gt; or &lt;Camera&gt; element."
     )
 
     def __unicode__(self):

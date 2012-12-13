@@ -27,7 +27,7 @@
 {% for group in bookmark_groups %}
       <div class="earth">
         <div class="title" onclick="changePlanet('{{ group.planet }}');  toggleExpand('e_earth', 'e_layers', 'e_moon', 'e_mars', 'e_keyboard');">{{ group.title }}</div>
-        <img onclick="changePlanet('{{ group.planet }}');  toggleExpand('e_earth', 'e_layers', 'e_moon', 'e_mars', 'e_keyboard');" src="{{ STATIC_URL }}touchscreen_legacy/earth.png" />
+        <img onclick="changePlanet('{{ group.planet }}');  toggleExpand('e_earth', 'e_layers', 'e_moon', 'e_mars', 'e_keyboard');" src="{{ group.icon_url }}" />
         <div class="expand_inactive" id="e_earth">
 	{% for bookmark in group.bookmark_set.all %}
                       <div class="location" onclick="changeQuery('{{ bookmark.as_query_txt|safe }}', '{{ bookmark.title }}');">{{ bookmark.title }}</div>
