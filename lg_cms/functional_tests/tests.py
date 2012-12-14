@@ -302,7 +302,7 @@ class GeoTest(LiveServerTestCase):
         self.browser.find_element_by_name("description").send_keys(
             """Lebowski ipsum dolor sit amet, consectetur adipiscing elit praesent ac magna justo. Obviously you're not a golfer. Pellentesque ac lectus quis elit blandit fringilla a ut turpis. Huh? Oh. Yeah. Tape deck. Couple of Creedence tapes. And there was a, uh... my briefcase. So he thinks it's the carpet-pissers, huh? Praesent felis ligula, malesuada suscipit malesuada non, ultrices non urna. Sed orci ipsum, placerat id condimentum rutrum, rhoncus ac lorem. Uh, yeah. Probably a vagrant, slept in the car.""") # Lebowskiipsum.com
         self.browser.find_element_by_name("icon_url").send_keys(
-            "http://www.google.com/images/icons/product/earth_client-128.png")
+            "http://www.google.com/images/icons/product/earth-128.png")
 
         # The Earth should be the default planet selected.
         planet_selector = Select(self.browser.find_element_by_name("planet"))
@@ -343,16 +343,14 @@ class GeoTest(LiveServerTestCase):
         # The "slug" field should populate automagically.
         self.browser.find_element_by_name("flytoview").send_keys(
 """<LookAt>\r
-	<longitude>-73.98959999994308</longitude>\r
-	<latitude>40.73970000013086</latitude>\r
-	<altitude>0</altitude>\r
-	<heading>3.714030842021182e-11</heading>\r
-	<tilt>0</tilt>\r
-	<range>1500.000015133294</range>\r
-	<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>\r
-</LookAt>\r
-""")
-
+    <longitude>-73.98959999994308</longitude>\r
+    <latitude>40.73970000013086</latitude>\r
+    <altitude>0</altitude>\r
+    <heading>3.714030842021182e-11</heading>\r
+    <tilt>0</tilt>\r
+    <range>1500.000015133294</range>\r
+    <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>\r
+</LookAt>""")
         # Select the Bookmark Group we just created.
         group_select = Select(self.browser.find_element_by_name("group"))
         group_select.select_by_visible_text("earth - Extra")
@@ -360,5 +358,22 @@ class GeoTest(LiveServerTestCase):
         # Save this bookmark.
         self.browser.find_element_by_name("_save").click()
 
+        # We should now be back to the bookmark listing.  Make sure it's shown.
+        bookmark_links = self.browser.find_elements_by_link_text("End Point HQ")
+        self.assertEquals(len(bookmark_links), 1)
+
         # Log out of the admin interface.
         self.browser.find_element_by_link_text("Log out").click()
+
+        # Check out the touchscreen interface.
+        self.browser.get(self.live_server_url + '/touchscreen/')
+
+        # We should see the new bookmark group and the bookmarks.
+        group_divs = self.browser.find_elements_by_class_name('title')
+        self.assertEquals(len(group_divs), 6)
+
+        bookmark_divs = self.browser.find_elements_by_class_name('location')
+        self.assertEquals(len(bookmark_divs), 65) # some extra elements
+
+        new_bookmark_divs = self.browser.find_elements_by_id('end-point-hq')
+        self.assertEquals(len(new_bookmark_divs), 1)
