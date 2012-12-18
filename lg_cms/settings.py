@@ -122,6 +122,8 @@ INSTALLED_APPS = (
     'assets',
     'display_control',
     'geo',
+    'screens',
+    'sequences',
 )
 
 # A sample logging configuration. The only tangible logging

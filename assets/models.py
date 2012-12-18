@@ -8,7 +8,7 @@ from mimetypes import guess_type
 class Item(models.Model):
     """ Base model describing a single asset """
     
-    creator = models.ForeignKey(User, null=True, blank=True)
+    # naw # creator = models.ForeignKey(User, null=True, blank=True)
     title = models.CharField(max_length=250)
     slug = models.CharField(max_length=80, unique=True)
     description = models.TextField(max_length=1000)
