@@ -1,0 +1,178 @@
+[
+{
+  "pk": 1, 
+  "model": "screens.screen", 
+  "fields": {
+    "width": 1080, 
+    "slug": "ring_left_three", 
+    "height": 1920
+  }
+},
+{
+  "pk": 2, 
+  "model": "screens.screen", 
+  "fields": {
+    "width": 1080, 
+    "slug": "ring_left_two", 
+    "height": 1920
+  }
+},
+{
+  "pk": 3, 
+  "model": "screens.screen", 
+  "fields": {
+    "width": 1080, 
+    "slug": "ring_left_one", 
+    "height": 1920
+  }
+},
+{
+  "pk": 4, 
+  "model": "screens.screen", 
+  "fields": {
+    "width": 1080, 
+    "slug": "ring_center", 
+    "height": 1920
+  }
+},
+{
+  "pk": 5, 
+  "model": "screens.screen", 
+  "fields": {
+    "width": 1080, 
+    "slug": "ring_right_one", 
+    "height": 1920
+  }
+},
+{
+  "pk": 7, 
+  "model": "screens.screen", 
+  "fields": {
+    "width": 1080, 
+    "slug": "ring_right_two", 
+    "height": 1920
+  }
+},
+{
+  "pk": 8, 
+  "model": "screens.screen", 
+  "fields": {
+    "width": 1080, 
+    "slug": "ring_right_three", 
+    "height": 1920
+  }
+},
+{
+  "pk": 9, 
+  "model": "screens.screen", 
+  "fields": {
+    "width": 1920, 
+    "slug": "podium_touchscreen", 
+    "height": 1080
+  }
+},
+{
+  "pk": 1, 
+  "model": "screens.window", 
+  "fields": {
+    "window_type": "earth", 
+    "x_origin": 0, 
+    "screen": 4, 
+    "height": 1920, 
+    "width": 1080, 
+    "y_origin": 0, 
+    "slug": "earth_center"
+  }
+},
+{
+  "pk": 2, 
+  "model": "screens.window", 
+  "fields": {
+    "window_type": "earth", 
+    "x_origin": 0, 
+    "screen": 9, 
+    "height": 1080, 
+    "width": 1920, 
+    "y_origin": 0, 
+    "slug": "earth_touchscreen"
+  }
+},
+{
+  "pk": 3, 
+  "model": "screens.window", 
+  "fields": {
+    "window_type": "earth", 
+    "x_origin": 0, 
+    "screen": 5, 
+    "height": 1920, 
+    "width": 1080, 
+    "y_origin": 0, 
+    "slug": "earth_right_one"
+  }
+},
+{
+  "pk": 4, 
+  "model": "screens.window", 
+  "fields": {
+    "window_type": "earth", 
+    "x_origin": 0, 
+    "screen": 7, 
+    "height": 1920, 
+    "width": 1080, 
+    "y_origin": 0, 
+    "slug": "earth_right_two"
+  }
+},
+{
+  "pk": 5, 
+  "model": "screens.window", 
+  "fields": {
+    "window_type": "earth", 
+    "x_origin": 0, 
+    "screen": 8, 
+    "height": 1920, 
+    "width": 1080, 
+    "y_origin": 0, 
+    "slug": "earth_right_three"
+  }
+},
+{
+  "pk": 6, 
+  "model": "screens.window", 
+  "fields": {
+    "window_type": "earth", 
+    "x_origin": 0, 
+    "screen": 1, 
+    "height": 1920, 
+    "width": 1080, 
+    "y_origin": 0, 
+    "slug": "earth_left_three"
+  }
+},
+{
+  "pk": 7, 
+  "model": "screens.window", 
+  "fields": {
+    "window_type": "earth", 
+    "x_origin": 0, 
+    "screen": 2, 
+    "height": 1920, 
+    "width": 1080, 
+    "y_origin": 0, 
+    "slug": "earth_left_two"
+  }
+},
+{
+  "pk": 8, 
+  "model": "screens.window", 
+  "fields": {
+    "window_type": "earth", 
+    "x_origin": 0, 
+    "screen": 3, 
+    "height": 1920, 
+    "width": 1080, 
+    "y_origin": 0, 
+    "slug": "earth_left_one"
+  }
+}
+]

@@ -12,16 +12,36 @@ class Sequence(models.Model):
     slug = models.SlugField()
     description = models.TextField(max_length=1000, blank=True)
 
+class Manifest(models.Model):
+    """ Display one or more asset files in one or more windows. """
+
+    slug = models.SlugField(blank=True)
+
+    windows = models.ManyToManyField(Window)
+
+    assets = models.ManyToManyField(Item)
+
+class ManifestGroup(models.Model):
+    """ Group of Manifests that may be persistently loaded. """
+
+    title = models.CharField(max_length=250)
+    slug = models.SlugField()
+    description = models.TextField(max_length=1000, blank=True)
+
+    manifests = models.ManyToManyField(Manifest)
+
+    persistant = models.BooleanField(default=False)
+
 class Cue(models.Model):
-    """ Display an asset file in a Window during a Sequence. """
+    """ Display one or more Manifests during a Sequence. """
 
     slug = models.SlugField(blank=True)
 
     start = models.DecimalField(max_digits=5, decimal_places=2)
     end   = models.DecimalField(max_digits=5, decimal_places=2)
 
-    windows = models.ManyToManyField(Window)
+    manifests = models.ManyToManyField(Manifest)
 
-    assets = models.ManyToManyField(Item)
-
+    sequence = models.ForeignKey(Sequence)
+    
     # TODO: Validate 'end' > 'start'

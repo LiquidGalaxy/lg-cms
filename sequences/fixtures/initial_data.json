@@ -1,0 +1,35 @@
+[
+{
+  "pk": 1, 
+  "model": "sequences.manifest", 
+  "fields": {
+    "windows": [
+      1, 
+      2, 
+      3, 
+      4, 
+      5, 
+      6, 
+      7, 
+      8
+    ], 
+    "slug": "ephq_everywhere", 
+    "assets": [
+      1
+    ]
+  }
+},
+{
+  "pk": 1, 
+  "model": "sequences.manifestgroup", 
+  "fields": {
+    "persistant": true, 
+    "description": "", 
+    "manifests": [
+      1
+    ], 
+    "slug": "ephq_everywhere", 
+    "title": "End Point HQ everywhere"
+  }
+}
+]

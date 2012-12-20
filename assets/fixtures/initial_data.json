@@ -1,0 +1,15 @@
+[
+{
+  "pk": 1, 
+  "model": "assets.item", 
+  "fields": {
+    "update_time": "2012-12-20T20:39:42.543Z", 
+    "description": "End Point Corporation's Headquarters in New York City", 
+    "title": "End Point HQ", 
+    "creation_time": "2012-12-20T20:39:42.543Z", 
+    "storage": "asset_storage/placemark_end_point.kml", 
+    "slug": "end-point-hq", 
+    "mime_type": "application/vnd.google-earth.kml+xml"
+  }
+}
+]
