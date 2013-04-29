@@ -7,7 +7,6 @@
     "description": "This file should not appear on the touchscreen", 
     "title": "Example Text File", 
     "storage": "asset_storage/example.txt", 
-    "creator": null, 
     "creation_time": "2012-12-12T22:50:24.469Z", 
     "slug": "example-text-file", 
     "mime_type": "text/plain"
@@ -21,7 +20,6 @@
     "description": "This is a KML file so it should appear on the touchscreen.", 
     "title": "End Point HQ", 
     "storage": "asset_storage/placemark_end_point_10.kml", 
-    "creator": null, 
     "creation_time": "2012-12-12T22:51:05.089Z", 
     "slug": "end-point-hq", 
     "mime_type": "application/vnd.google-earth.kml+xml"
@@ -35,7 +33,6 @@
     "description": "This is a JSON so it should not appear on the touchscreen for Google Earth loading.", 
     "title": "Example JSON File", 
     "storage": "asset_storage/admin_user.json", 
-    "creator": null, 
     "creation_time": "2012-12-12T22:51:38.548Z", 
     "slug": "example-json-file", 
     "mime_type": "application/json"
@@ -49,7 +46,6 @@
     "description": "This is also a KMZ file compressed so it should appear on the touchscreen for Google Earth.", 
     "title": "Another KML as KMZ", 
     "storage": "asset_storage/placemark_end_point.kmz", 
-    "creator": null, 
     "creation_time": "2012-12-12T22:53:21.674Z", 
     "slug": "another-kml-kmz", 
     "mime_type": "application/vnd.google-earth.kmz"
