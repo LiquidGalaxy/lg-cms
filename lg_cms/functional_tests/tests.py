@@ -173,8 +173,12 @@ class ItemTest(LiveServerTestCase):
         description_field = self.browser.find_element_by_name("description")
         description_field.send_keys("""Lorem Ipsum, placerat id condimentum rutrum, rhoncus ac lorem. D'ya have a good sarsaparilla? Aliquam placerat posuere neque, at dignissim magna ullamcorper. ...which would place him high in the runnin' for laziest worldwide-but sometimes there's a man... sometimes there's a man. In aliquam sagittis massa ac tortor ultrices faucibus. These men are nihilists, Donny, nothing to be afraid of. Curabitur eu mi sapien, ut ultricies ipsum morbi.""") # Lebowskiipsum.com
 
-        file_field = self.browser.find_element_by_name("storage")
-        file_field.send_keys('lg_cms/functional_tests/fixtures/placemark_end_point.kml')
+        # Unfortunately we cannot upload a file directly with Selenium.
+        #file_field = self.browser.find_element_by_name("storage")
+        #file_field.send_keys('lg_cms/functional_tests/fixtures/placemark_end_point.kml')
+
+        # This uses the FakeFileUploadMiddleware
+        self.browser.execute_script("document.getElementsByName('fakefile_storage')[0].value='placemark_end_point.kml'")
 
         # Save this object.
         self.browser.find_element_by_name("_save").click()

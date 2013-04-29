@@ -94,9 +94,22 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'lg_cms.middleware.FakeFileUploadMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
+
+# FakeFileUploadMiddleware
+FAKEUPLOAD_FILE_SPEC = {
+    "smallfile.txt":  {
+        "filename": "smallfile.txt",
+        "contents": "I am a small text file."
+    },
+    "placemark_end_point.kml": {
+        "filename": "placemark_end_point.kml",
+        "file": "lg_cms/functional_tests/fixtures/placemark_end_point.kml",
+    }
+}
 
 ROOT_URLCONF = 'lg_cms.urls'
 
