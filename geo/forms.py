@@ -13,7 +13,7 @@ class GoogleEarthWidget(forms.Widget):
     Widget which displays Google Earth Plugin and a textarea widget with current camera kml.
     """
 
-    def _build_js_for_loading_ge(self, textarea_name, element_name, kml):
+    def _build_js_for_loading_ge(self, textarea_name, element_name, kml, group_name):
         """
         Builds and returns javascript for showing the Google Earth Widget.
 
@@ -21,6 +21,7 @@ class GoogleEarthWidget(forms.Widget):
             textarea_name   - name of the textarea field with kml
             element_name    - name of the html tag where Google Earth plugin will be placed
             kml             - initial kml value to fly right after plugin loading
+            group_name      - name of the element containing Group name
 
         Returns:
             Javascript which should be inserted into web page code.
@@ -29,35 +30,99 @@ class GoogleEarthWidget(forms.Widget):
             <script type="text/javascript">
             var ge;
             var ge_kmlObject;
+            var ge_map_type = '';
 
             google.load("earth", "1");
 
+            function clear_gep() {
+              // Clears existing Google Earth Plugin instance.
+              document.getElementById('%(element_name)s').innerHTML = '';
+              ge_map_type = null;
+            }
+
+            function load_earth() {
+              // Load Earth data in Google Earth Plugin
+              clear_gep();
+              google.earth.createInstance('%(element_name)s', initCB, failureCB);
+              ge_map_type = 'earth';
+            }
+
+            function load_mars() {
+              // Load Mars data in Google Earth Plugin
+              clear_gep();
+              google.earth.createInstance('%(element_name)s', initCB, failureCB, { database: 'http://khmdb.google.com/?db=mars' });
+              ge_map_type = 'mars';
+            }
+
+            function load_moon() {
+              // Load Moon data in Google Earth Plugin
+              clear_gep();
+              google.earth.createInstance('%(element_name)s', initCB, failureCB, { database: 'http://khmdb.google.com/?db=moon' });
+              ge_map_type = 'moon';
+            }
+
+            function load_group_map() {
+              // Loads map according to current group field.
+              var g = document.getElementById('%(group_name)s');
+              var group = g.options[g.selectedIndex].text;
+              switch (group) {
+                case '---------':
+                    clear_gep();
+                    break;
+                case 'earth - Earth':
+                    load_earth();
+                    break;
+                case 'moon - Moon':
+                    load_moon();
+                    break;
+                case 'mars - Mars':
+                    load_mars();
+                    break;
+              }
+            }
+
+            function add_group_on_change() {
+              // Creates a callback loading proper map data in to Google Earth Plugin
+              // when the Group field is changed.
+              var g = document.getElementById('%(group_name)s');
+              g.onchange=function(){
+                document.getElementById('%(textarea_name)s').value = "";
+                ge_kmlObject = null;
+                load_group_map();
+              };
+            }
+
             function init() {
-              // only on windows or mac:
+              // The Google Earth Plugin works onlz on Windows or Mac, so I'm hiding it here.
               if (! (navigator.appVersion.indexOf("Win")!=-1 || navigator.appVersion.indexOf("Mac")!=-1)) {
                 document.getElementById('%(element_name)s').style.display = "";
                 return;
               }
 
-              google.earth.createInstance('%(element_name)s', initCB, failureCB);
+              load_group_map();
+              add_group_on_change();
             }
 
             function initCB(instance) {
               ge = instance;
               ge.getWindow().setVisibility(true);
-              ge.getLayerRoot().enableLayerById(ge.LAYER_BORDERS, true);
-              ge.getLayerRoot().enableLayerById(ge.LAYER_BUILDINGS, true);
-              ge.getLayerRoot().enableLayerById(ge.LAYER_ROADS, true);
-              ge.getLayerRoot().enableLayerById(ge.LAYER_TERRAIN, true);
-              ge.getNavigationControl().setVisibility(ge.VISIBILITY_SHOW);
 
-              var kmlString = %(kml)s;
-              ge_kmlObject = ge.parseKml(kmlString);
-              ge.getFeatures().appendChild(ge_kmlObject);
-              if (ge_kmlObject.getAbstractView()) {
-                  ge.getView().setAbstractView(ge_kmlObject.getAbstractView());
+              if (ge_map_type == 'earth') {
+                ge.getLayerRoot().enableLayerById(ge.LAYER_BORDERS, true);
+                ge.getLayerRoot().enableLayerById(ge.LAYER_BUILDINGS, true);
+                ge.getLayerRoot().enableLayerById(ge.LAYER_ROADS, true);
+                ge.getLayerRoot().enableLayerById(ge.LAYER_TERRAIN, true);
+                ge.getNavigationControl().setVisibility(ge.VISIBILITY_SHOW);
               }
-
+              ge.getNavigationControl().setVisibility(ge.VISIBILITY_SHOW);
+              var kmlString = %(kml)s;
+              if (kmlString != '') {
+                ge_kmlObject = ge.parseKml(kmlString);
+                ge.getFeatures().appendChild(ge_kmlObject);
+                if (ge_kmlObject.getAbstractView()) {
+                    ge.getView().setAbstractView(ge_kmlObject.getAbstractView());
+                }
+              }
               google.earth.addEventListener(ge.getView(), 'viewchangeend', function() {
                 var view = ge.getView().copyAsLookAt(ge.ALTITUDE_RELATIVE_TO_SEA_FLOOR)
                 var kml = "<LookAt>"
@@ -68,6 +133,7 @@ class GoogleEarthWidget(forms.Widget):
                     + "<heading>"         + view.getHeading()    + "</heading>"
                     + "<tilt>"            + view.getTilt()       + "</tilt>"
                     + "<range>"           + view.getRange()      + "</range>"
+                    + "<altitudeMode>"    + "relativeToGround"   + "</altitudeMode>"
                     + "<gx:altitudeMode>" + "relativeToSeaFloor" + "</gx:altitudeMode>"
                     + "</LookAt>";
                 document.getElementById('%(textarea_name)s').value = kml;
@@ -79,7 +145,7 @@ class GoogleEarthWidget(forms.Widget):
 
             google.setOnLoadCallback(init);
             </script>
-        """ % {"element_name": element_name, "kml": kml, 'textarea_name': textarea_name}
+        """ % {"element_name": element_name, "kml": kml, 'textarea_name': textarea_name, 'group_name': group_name}
 
         return mark_safe(ge_js_load)
 
@@ -139,11 +205,12 @@ class GoogleEarthWidget(forms.Widget):
             HTML and Javascript code for Google Earth Widget.
         """
         div_name = "ge_" + name
+        group_name = 'id_group'
 
         kml = self._build_kml_document(value)
         res = [
                 self._build_basic_ge_js(),
-                self._build_js_for_loading_ge(name, div_name, kml),
+                self._build_js_for_loading_ge(name, div_name, kml, group_name),
                 self._build_div_for_ge(div_name),
               ]
 
