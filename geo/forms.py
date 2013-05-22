@@ -65,19 +65,21 @@ class GoogleEarthWidget(forms.Widget):
               // Loads map according to current group field.
               var g = document.getElementById('%(group_name)s');
               var group = g.options[g.selectedIndex].text;
-              switch (group) {
-                case '---------':
-                    clear_gep();
-                    break;
-                case 'earth - Earth':
-                    load_earth();
-                    break;
-                case 'moon - Moon':
-                    load_moon();
-                    break;
-                case 'mars - Mars':
-                    load_mars();
-                    break;
+              if (group.match(/--/g) ) {
+                clear_gep();
+                alert('----');
+              }
+              else if (group.match(/earth/g) ) {
+                load_earth();
+                alert(group);
+              }
+              else if (group.match(/moon/g) ) {
+                load_moon();
+                alert(group);
+              }
+              else if (group.match(/mars/g) ) {
+                load_mars();
+                alert(group);
               }
             }
 
