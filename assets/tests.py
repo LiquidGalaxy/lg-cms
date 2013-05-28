@@ -21,21 +21,20 @@ class ItemUploadTest(TestCase):
         # Check that we can save it in the database.
         item.save()
 
+        my_id = item.id
+
         # Now check we can find it in the database again.
-        all_items_in_database = Item.objects.all()
-        # And that this "foo" Item is the only object.
-        self.assertEquals(len(all_items_in_database), 1)
-        only_item_in_database = all_items_in_database[0]
-        self.assertEquals(only_item_in_database, item)
+        my_item_in_database = Item.objects.get(id=my_id)
+        self.assertEquals(my_item_in_database, item)
 
         # And check that it's properly saved its attributes
-        self.assertEquals(only_item_in_database.title, "Foo Item")
-        self.assertEquals(only_item_in_database.slug, "foo-item")
-        self.assertEquals(only_item_in_database.description, "Moar foo than yoo.")
-        self.assertEquals(only_item_in_database.creation_time, item.creation_time)
+        self.assertEquals(my_item_in_database.title, "Foo Item")
+        self.assertEquals(my_item_in_database.slug, "foo-item")
+        self.assertEquals(my_item_in_database.description, "Moar foo than yoo.")
+        self.assertEquals(my_item_in_database.creation_time, item.creation_time)
 
         # And test that the MIME type was correctly determined.
-        self.assertEquals(only_item_in_database.mime_type, 'text/plain')
+        self.assertEquals(my_item_in_database.mime_type, 'text/plain')
 
     def test_duplicate_slugs(self):
         """ Test that saving Items with duplicate slugs causes an Exception. """
