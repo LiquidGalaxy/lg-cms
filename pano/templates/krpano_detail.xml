@@ -1,0 +1,12 @@
+<krpano version="1.16.3">
+
+	<image type="{{ object.projection }}"
+		hfov="{{ object.hfov|default:"" }}"
+		vfov="{{ object.vfov|default:"" }}"
+		voffset="{{ object.voffset|default:"" }}"
+	>
+		<{{ object.projection|lower }} url="{{ object.storage.url }}" />
+	</image>
+
+	<view limitview="on" />
+</krpano>

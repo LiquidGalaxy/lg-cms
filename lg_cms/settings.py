@@ -135,6 +135,7 @@ INSTALLED_APPS = (
     'assets',
     'display_control',
     'geo',
+    'pano',
     'screens',
     'sequences',
 )

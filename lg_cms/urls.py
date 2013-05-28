@@ -16,4 +16,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'^touchscreen/', include('display_control.urls')),
+
+    url(r'^pano/', include('pano.urls')),
 )
