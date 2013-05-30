@@ -40,14 +40,14 @@ class UserTest(LiveServerTestCase):
         # by LiveServerTestCase, and then we tack on the /admin/ url to get to
         # the admin site.
 
-        ## She sees the familiar 'Django administration' heading.
+        ## She sees the familiar 'Liquid Galaxy administration' heading.
         body = self.browser.find_element_by_tag_name('body')
         # find_element_by_tag_name, which tells Selenium to look through the 
         # page and find the HTML element for a particular tag - in this case,
         # body, which means the whole of the visible part of the page.
         # The method returns an WebElement object, which represents the HTML
         # element.
-        self.assertIn('Django administration', body.text)
+        self.assertIn('Liquid Galaxy administration', body.text)
         # Finally, we get to an assertion - where we say what we expect,
         # and the test should pass or fail at this point.
 
@@ -133,9 +133,9 @@ class ItemTest(LiveServerTestCase):
         ## User opens their web browser, and goes to the admin page.
         self.browser.get(self.live_server_url + '/admin/')
 
-        ## She sees the familiar 'Django administration' heading.
+        ## She sees the familiar 'Liquid Galaxy administration' heading.
         body = self.browser.find_element_by_tag_name('body')
-        self.assertIn('Django administration', body.text)
+        self.assertIn('Liquid Galaxy administration', body.text)
 
         # The user types in her username and password and hits "Return".
         username_field = self.browser.find_element_by_name('username')
@@ -239,7 +239,7 @@ class ItemTest(LiveServerTestCase):
         ## User opens their web browser, and goes to the touchscreen page.
         self.browser.get(self.live_server_url + '/touchscreen/')
 
-        ## She sees the familiar 'Django administration' heading.
+        ## She sees the familiar 'Liquid Galaxy administration' heading.
         body = self.browser.find_element_by_tag_name('body')
 
         # There should be only two buttons to load files.
@@ -260,9 +260,9 @@ class GeoTest(LiveServerTestCase):
         ## User opens their web browser, and goes to the admin page.
         self.browser.get(self.live_server_url + '/admin/')
 
-        ## She sees the familiar 'Django administration' heading.
+        ## She sees the familiar 'Liquid Galaxy administration' heading.
         body = self.browser.find_element_by_tag_name('body')
-        self.assertIn('Django administration', body.text)
+        self.assertIn('Liquid Galaxy administration', body.text)
 
         # The user types in her username and password and hits "Return".
         username_field = self.browser.find_element_by_name('username')
