@@ -37,6 +37,10 @@ SITE_ID = 1
 # to load the internationalization machinery.
 USE_I18N = True
 
+LOCALE_PATHS = (
+    'lg_cms/locale',
+)
+
 # If you set this to False, Django will not format dates, numbers and
 # calendars according to the current locale.
 USE_L10N = True
@@ -89,8 +93,10 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
+    # Order suggested here: https://docs.djangoproject.com/en/dev/topics/i18n/translation/#how-django-discovers-language-preference
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
