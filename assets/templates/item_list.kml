@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+	<Document>
+		{% for item in item_list %}
+		<NetworkLink id="{{ item.slug }}">
+			<name>{{ item.title }}</name>
+			<description>{{ item.description }}</description>
+			<Link>
+				<href>{{ item.storage.url }}</href>
+			</Link>
+		</NetworkLink>
+		{% endfor %}
+	</Document>
+</kml>
