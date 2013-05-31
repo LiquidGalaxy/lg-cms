@@ -15,7 +15,7 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 
-    url(r'^touchscreen/', include('display_control.urls')),
+    url(r'^control/', include('display_control.urls')),
 
     url(r'^pano/', include('pano.urls')),
 

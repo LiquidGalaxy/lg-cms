@@ -206,7 +206,7 @@ class ItemTest(LiveServerTestCase):
         self.assertIn('Logged out', body.text)
 
         # Now see if it's on the touchscreen interface.
-        self.browser.get(self.live_server_url + '/touchscreen/')
+        self.browser.get(self.live_server_url + '/control/touchscreen.html')
 
         # Click the "Layers" icon.
         self.browser.find_element_by_id('layers_icon').click()
@@ -237,7 +237,7 @@ class ItemTest(LiveServerTestCase):
             into Google Earth from the touchscreen display control. """
 
         ## User opens their web browser, and goes to the touchscreen page.
-        self.browser.get(self.live_server_url + '/touchscreen/')
+        self.browser.get(self.live_server_url + '/control/touchscreen.html')
 
         ## She sees the familiar 'Liquid Galaxy administration' heading.
         body = self.browser.find_element_by_tag_name('body')
@@ -370,7 +370,7 @@ class GeoTest(LiveServerTestCase):
         self.browser.find_element_by_link_text("Log out").click()
 
         # Check out the touchscreen interface.
-        self.browser.get(self.live_server_url + '/touchscreen/')
+        self.browser.get(self.live_server_url + '/control/touchscreen.html')
 
         # We should see the new bookmark group and the bookmarks.
         group_divs = self.browser.find_elements_by_class_name('title')

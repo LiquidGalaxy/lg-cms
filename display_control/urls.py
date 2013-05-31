@@ -7,5 +7,6 @@ urlpatterns = patterns('',
     # url(r'^$', 'lg_cms.views.home', name='home'),
     # url(r'^lg_cms/', include('lg_cms.foo.urls')),
 
-    url(r'^$', TouchscreenLegacy.as_view(template_name='touchscreen_legacy.html')),
+    url(r'^touchscreen.html$', TouchscreenLegacy.as_view(template_name='touchscreen_legacy.html')),
+    url(r'^template/(?P<template_name>.*)$', TouchscreenLegacy.as_view()),
 )
