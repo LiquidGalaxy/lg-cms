@@ -1,6 +1,10 @@
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}touchscreen_legacy/sidebar.css" />
+{% extends 'base.html' %}    
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}touchscreen_legacy/sidebar.css" />
+{% endblock %}
+
+{% block extrahead %}
     <script type="text/javascript" src="{{ STATIC_URL }}touchscreen_legacy/javascript.js"></script>
     <script type="text/javascript">       
       function clearKmls() {
@@ -11,10 +15,12 @@
                 showAndHideStatus();
       }
     </script>
+{% endblock %}
 
-    <title>Liquid Galaxy Touchscreen</title>
-  </head>
-  <body onload="noneExpand('e_earth', 'e_layers', 'e_moon', 'e_mars', 'e_keyboard');">
+{% block title %}Liquid Galaxy Touchscreen{% endblock %}
+  {% block bodyonload %}noneExpand('e_earth', 'e_layers', 'e_moon', 'e_mars', 'e_keyboard');{% endblock %}
+
+{% block content %}
     <div class="touchscreen">
       <div id="status"></div>
 {% for group in bookmark_groups %}
@@ -120,5 +126,4 @@
         <!--<div class="location" onclick="changeQuery('relaunch-mplayer', 'Relaunch');">Catlin Seaview Survey</div> -->
       </div>
     </div>
-  </body>
-</html>
+{% endblock %}
