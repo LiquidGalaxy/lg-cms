@@ -21,6 +21,11 @@ import os
 # os.environ["DJANGO_SETTINGS_MODULE"] = "lg_cms.settings"
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "lg_cms.settings")
 
+# Protect from a specific Denial of Service Attack.
+# https://docs.djangoproject.com/en/dev/howto/deployment/checklist/#python-options
+# http://www.ocert.org/advisories/ocert-2011-003.html
+os.environ.setdefault("PYTHONHASHSEED", "random")
+
 # This application object is used by any WSGI server configured to use this
 # file. This includes Django's development server, if the WSGI_APPLICATION
 # setting points here.
