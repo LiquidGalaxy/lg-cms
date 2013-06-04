@@ -32,7 +32,7 @@
         <img onclick="changePlanet('{{ group.planet }}');  toggleExpand('e_{{ group.planet }}', 'e_earth', 'e_moon', 'e_mars');" src="{{ group.icon_url }}" />
         <div class="expand_inactive" id="e_{{ group.slug }}">
 	{% for bookmark in group.bookmark_set.all %}
-                      <div class="location" onclick="changeQuery('{{ bookmark.as_query_txt|safe }}', '{{ bookmark.title }}');"><strong>{{ bookmark.title }}</strong><br />{{ bookmark.description }}</div>
+                      <div class="location" onclick="changeQuery('{{ bookmark.as_query_txt|safe }}', '{{ bookmark.title }}');"><strong>{{ bookmark.title }}</strong><br />{{ bookmark.description|safe }}</div>
 	{% endfor %}
                   </div>
       </div>

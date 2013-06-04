@@ -86,33 +86,33 @@ function xchangePlanet(planet) {
 }
 
 function changePlanet(planet) {
-  submitRequest('change.php?planet=' + planet);
+  submitRequest('http://lg2-1:81/change.php?planet=' + planet);
   showAndHideStatus();
 }
 
 function changeQuery(query, name) {
-  submitRequest('change.php?query=' + query + '&name=' + name);
+  submitRequest('http://lg2-1:81/change.php?query=' + query + '&name=' + name);
   showAndHideStatus();
 }
 
 function changeLayer(layer, name) {
-  submitRequest('change.php?layer=' + layer + '&name=' + name);
+  submitRequest('http://lg2-1:81/change.php?layer=' + layer + '&name=' + name);
   showAndHideStatus();
 }
 
 function syncKml(action, url) {
-  submitRequest('sync_touchscreen.php?touch_action=' + action + '&touch_kml=' + url);
+  submitRequest('http://lg2-1:81/sync_touchscreen.php?touch_action=' + action + '&touch_kml=' + url);
   showAndHideStatus();
 }
 
 function toggleKml(obj, url) {
   if (obj.className == 'kml_off') {
-    submitRequest('sync_touchscreen.php?touch_action=add&touch_kml=' + url);
+    submitRequest('http://lg2-1:81/sync_touchscreen.php?touch_action=add&touch_kml=' + url);
     obj.className='kml_on';
   }
   else if (obj.className == 'kml_on') {
     
-    submitRequest('sync_touchscreen.php?touch_action=delete&touch_kml=' + url);
+    submitRequest('http://lg2-1:81/sync_touchscreen.php?touch_action=delete&touch_kml=' + url);
     obj.className='kml_off';
   }
   showAndHideStatus();
@@ -163,8 +163,13 @@ function enterKeySubmit(e) {
 }
 
 function toggleExpand(on_obj, off_obj1, off_obj2, off_obj3){
-  document.getElementById(on_obj).className='expand_active';
   document.getElementById(off_obj1).className='expand_inactive';
   document.getElementById(off_obj2).className='expand_inactive';
   document.getElementById(off_obj3).className='expand_inactive';
+  document.getElementById(on_obj).className='expand_active';
+}
+function noneExpand(off_obj, off_obj1, off_obj2){
+  document.getElementById(off_obj).className='expand_inactive';
+  document.getElementById(off_obj1).className='expand_inactive';
+  document.getElementById(off_obj2).className='expand_inactive';
 }
