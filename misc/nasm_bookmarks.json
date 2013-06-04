@@ -1,0 +1,464 @@
+[
+{
+  "pk": 1301, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>63.34300851336701</longitude> <latitude>45.91897035016571</latitude> <altitude>206.12218692477597</altitude> <heading>-22.09134385391194</heading> <tilt>57.09655206580344</tilt> <roll>-0.00060470061855</roll> <altitudeMode>relativeToGround</altitudeMode> </Camera>", 
+    "description": "Russian Soyuz launch site", 
+    "group": 1, 
+    "slug": "baikonour-cosmodrome", 
+    "title": "Baikonour Cosmodrome"
+  }
+},
+{
+  "pk": 1302, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>116.26480654441556</longitude> <latitude>40.07871457169239</latitude> <altitude>553.63207556076918</altitude> <heading>-138.57196892803307</heading> <tilt>72.15655679036372</tilt> <roll>-0.00295591545650</roll> <altitudeMode>relativeToGround</altitudeMode> </Camera>", 
+    "description": "Chinese mission control", 
+    "group": 1, 
+    "slug": "beijing-aerospace-command-and-control-center", 
+    "title": "Beijing Aerospace Command and Control Center"
+  }
+},
+{
+  "pk": 1303, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-117.90995778956034</longitude> <latitude>34.93199066027000</latitude> <altitude>1402.40299664682584</altitude> <heading>122.49822254922351</heading> <tilt>71.90237325829740</tilt> <roll>-0.01064918931057</roll> <altitudeMode>relativeToGround</altitudeMode> </Camera>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "dryden-flight-research-center-and-edwards-air-force-base", 
+    "title": "Dryden Flight Research Center and Edwards Air Force Base"
+  }
+},
+{
+  "pk": 1304, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>38.11560001961177</longitude> <latitude>55.86670277167160</latitude> <altitude>516.36798393075162</altitude> <heading>0.00012476951517</heading> <tilt>71.10881556511342</tilt> <roll>0.00206285544127</roll> <altitudeMode>relativeToGround</altitudeMode> </Camera>", 
+    "description": "Russian training facilities", 
+    "group": 1, 
+    "slug": "gagarin-cosmonaut-training-center", 
+    "title": "Gagarin Cosmonaut Training Center"
+  }
+},
+{
+  "pk": 1305, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>11.29564665497788</longitude> <latitude>48.09050804498703</latitude> <altitude>728.72732845635653</altitude> <heading>-136.55685434133991</heading> <tilt>72.37503239383214</tilt> <roll>-0.00069074873178</roll> <altitudeMode>relativeToGround</altitudeMode> </Camera>", 
+    "description": "European mission control", 
+    "group": 1, 
+    "slug": "german-aerospace-center", 
+    "title": "German Aerospace Center"
+  }
+},
+{
+  "pk": 1306, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>140.12562585268756</longitude> <latitude>36.06936351490840</latitude> <altitude>208.39805611797766</altitude> <heading>136.06469639877039</heading> <tilt>70.37898988311069</tilt> <roll>0.00159115863470</roll> <altitudeMode>relativeToGround</altitudeMode> </Camera>", 
+    "description": "Japanese mission control", 
+    "group": 1, 
+    "slug": "tsukuba-space-center", 
+    "title": "Tsukuba Space Center"
+  }
+},
+{
+  "pk": 1307, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>100.29467249920376</longitude> <latitude>40.96772219625286</latitude> <altitude>1469.34076653318425</altitude> <heading>-153.63812323464867</heading> <tilt>61.11267747134167</tilt> <roll>-0.00435824526174</roll> <altitudeMode>relativeToGround</altitudeMode> </Camera>", 
+    "description": "Chinese Shenzhou launch site", 
+    "group": 1, 
+    "slug": "jiuquan-satellite-launch-center", 
+    "title": "Jiuquan Satellite Launch Center"
+  }
+},
+{
+  "pk": 1308, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-95.09140100577770</longitude> <latitude>29.55629273189529</latitude> <altitude>79.78244638796302</altitude> <heading>-73.80763706860670</heading> <tilt>76.20329643235502</tilt> <roll>0.00378188331995</roll> <altitudeMode>relativeToGround</altitudeMode> </Camera>", 
+    "description": "NASA mission control", 
+    "group": 1, 
+    "slug": "johnson-space-center", 
+    "title": "Johnson Space Center"
+  }
+},
+{
+  "pk": 1309, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-80.60307031171294</longitude> <latitude>28.60810227133671</latitude> <altitude>47.52240317613258</altitude> <heading>-82.30920329597626</heading> <tilt>81.93356881340584</tilt> <roll>0.00211581533651</roll> <altitudeMode>relativeToGround</altitudeMode> </Camera>", 
+    "description": "NASA launch and landing site", 
+    "group": 1, 
+    "slug": "kennedy-space-center", 
+    "title": "Kennedy Space Center"
+  }
+},
+{
+  "pk": 13010, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-52.76864517662904</longitude> <latitude>5.24146241170092</latitude> <altitude>99.29553771616587</altitude> <heading>174.22666363634949</heading> <tilt>83.79142249947449</tilt> <roll>-0.00043739303458</roll> <altitudeMode>relativeToGround</altitudeMode> </Camera>", 
+    "description": "(French Guiana)<br />European / Russian launch site", 
+    "group": 1, 
+    "slug": "kourou-space-center", 
+    "title": "Kourou Space Center"
+  }
+},
+{
+  "pk": 13011, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-118.14429408452290</longitude> <latitude>35.06539168379422</latitude> <altitude>1072.65367979684106</altitude> <heading>-148.11292103336390</heading> <tilt>72.58703278830438</tilt> <roll>-0.01498948521919</roll> <altitudeMode>relativeToGround</altitudeMode> </Camera>", 
+    "description": "Commercial space launch facilities", 
+    "group": 1, 
+    "slug": "mojave-air-and-space-port", 
+    "title": "Mojave Air and Space Port"
+  }
+},
+{
+  "pk": 13012, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-77.01983554369941</longitude> <latitude>38.88925463132151</latitude> <altitude>34.05802121133802</altitude> <heading>178.74481388689355</heading> <tilt>65.75510632450799</tilt> <roll>0.00089568336612</roll> <altitudeMode>relativeToGround</altitudeMode> </Camera>", 
+    "description": "You are here!", 
+    "group": 1, 
+    "slug": "national-air-and-space-museum", 
+    "title": "National Air and Space Museum"
+  }
+},
+{
+  "pk": 13013, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>37.86693286439361</longitude> <latitude>55.94560248914557</latitude> <altitude>244.45372548715807</altitude> <heading>-144.09948098347144</heading> <tilt>63.14318504551144</tilt> <roll>0.00232017336986</roll> <altitudeMode>relativeToGround</altitudeMode> </Camera>", 
+    "description": "International Space Station control center", 
+    "group": 1, 
+    "slug": "rka-mission-control-center", 
+    "title": "RKA Mission Control Center"
+  }
+},
+{
+  "pk": 13014, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-106.96975575422134</longitude> <latitude>32.98701319026875</latitude> <altitude>1598.90112615067210</altitude> <heading>-0.48246099200618</heading> <tilt>69.48602766683624</tilt> <roll>-0.06061680266530</roll> <altitudeMode>relativeToGround</altitudeMode> </Camera>", 
+    "description": "Future commercial launch site", 
+    "group": 1, 
+    "slug": "spaceport-america", 
+    "title": "Spaceport America"
+  }
+},
+{
+  "pk": 13015, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-64.00022304062027</longitude> <latitude>7.99983808441991</latitude> <altitude>-1708.21561984541722</altitude> <heading>38.66102624517306</heading> <tilt>69.19340721287354</tilt> <roll>0.00014501378953</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Oceanus Procellarum<br />First robotic soft landing (USSR)", 
+    "group": 2, 
+    "slug": "luna-9-1966", 
+    "title": "Luna 9 (1966)"
+  }
+},
+{
+  "pk": 13016, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-43.34116522893504</longitude> <latitude>-2.47970816992777</latitude> <altitude>-1876.73285475129182</altitude> <heading>-118.99584524648414</heading> <tilt>73.44990991368668</tilt> <roll>0.00001412702608</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Oceanus Procellarum<br />Second soft landing (US)", 
+    "group": 2, 
+    "slug": "surveyor-i-1966", 
+    "title": "Surveyor I (1966)"
+  }
+},
+{
+  "pk": 13017, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-23.45752702546677</longitude> <latitude>-3.02850437169467</latitude> <altitude>-1416.69715792577995</altitude> <heading>-63.26331268996868</heading> <tilt>64.89472032856149</tilt> <roll>-0.00018683552680</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Oceanus Procellarum", 
+    "group": 2, 
+    "slug": "surveyor-iii-1967", 
+    "title": "Surveyor III (1967)"
+  }
+},
+{
+  "pk": 13018, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>23.17477036456905</longitude> <latitude>1.41557171729513</latitude> <altitude>-1989.45433569174406</altitude> <heading>-58.74476356089765</heading> <tilt>66.35249187279217</tilt> <roll>-0.00000338276340</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Mare Tranquillitatis", 
+    "group": 2, 
+    "slug": "surveyor-v-1967", 
+    "title": "Surveyor V (1967)"
+  }
+},
+{
+  "pk": 13019, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-11.46985169566469</longitude> <latitude>-40.85990158522337</latitude> <altitude>204.21487510964457</altitude> <heading>-118.49385918431361</heading> <tilt>87.69458246697774</tilt> <roll>0.00005869048927</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Tycho crater", 
+    "group": 2, 
+    "slug": "surveyor-vii-1968", 
+    "title": "Surveyor VII (1968)"
+  }
+},
+{
+  "pk": 13020, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>23.45920283074881</longitude> <latitude>0.68145800255008</latitude> <altitude>-1920.27904288251716</altitude> <heading>87.86623674401565</heading> <tilt>90.00044252591796</tilt> <roll>-0.00006606397743</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Mare Tranquillitatis<br />First human landing (US)", 
+    "group": 2, 
+    "slug": "apollo-11-1969", 
+    "title": "Apollo 11 (1969)"
+  }
+},
+{
+  "pk": 13021, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-23.46267549177990</longitude> <latitude>-3.02467903527994</latitude> <altitude>-1418.80553882382151</altitude> <heading>135.56414312899489</heading> <tilt>59.65567538691185</tilt> <roll>0.00053583316155</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Oceanus Procellarum<br />Second human landing", 
+    "group": 2, 
+    "slug": "apollo-12-1969", 
+    "title": "Apollo 12 (1969)"
+  }
+},
+{
+  "pk": 13022, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>56.29986787222925</longitude> <latitude>-0.67984377119926</latitude> <altitude>-2455.08369584615730</altitude> <heading>157.15482814653697</heading> <tilt>56.58914025573591</tilt> <roll>0.00003883943722</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Mare Fecunditatis<br />First robotic sample return (USSR)", 
+    "group": 2, 
+    "slug": "luna-16-1970", 
+    "title": "Luna 16 (1970)"
+  }
+},
+{
+  "pk": 13023, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-34.99968297154577</longitude> <latitude>38.27991992575948</latitude> <altitude>-2460.40287475370360</altitude> <heading>-61.25505209658051</heading> <tilt>86.60331108297174</tilt> <roll>0.00007690557886</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Mare Imbrium<br />First robotic rover (USSR)", 
+    "group": 2, 
+    "slug": "luna-17lunokhod-1-1970", 
+    "title": "Luna 17/Lunokhod 1 (1970)"
+  }
+},
+{
+  "pk": 13024, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-17.49484081616687</longitude> <latitude>-3.64849780498909</latitude> <altitude>-994.66969180863441</altitude> <heading>178.74491673590109</heading> <tilt>68.88708772903263</tilt> <roll>0.00301124115674</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Fra Mauro Highlands<br />Third human landing", 
+    "group": 2, 
+    "slug": "apollo-14-1971", 
+    "title": "Apollo 14 (1971)"
+  }
+},
+{
+  "pk": 13025, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>3.63129208398695</longitude> <latitude>26.12782591346666</latitude> <altitude>-1823.38154800053780</altitude> <heading>53.74347576706845</heading> <tilt>78.53790979035715</tilt> <roll>-0.00442001038465</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Hadley Rille<br />Fourth human landing", 
+    "group": 2, 
+    "slug": "apollo-15-1971", 
+    "title": "Apollo 15 (1971)"
+  }
+},
+{
+  "pk": 13026, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>56.55027829101823</longitude> <latitude>3.52975842497331</latitude> <altitude>-1914.11322993423823</altitude> <heading>-38.14962988358819</heading> <tilt>73.11160579196250</tilt> <roll>-0.01506923950329</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Mare Fecunditatis<br />Sample return (USSR)", 
+    "group": 2, 
+    "slug": "luna-20-1972", 
+    "title": "Luna 20 (1972)"
+  }
+},
+{
+  "pk": 13027, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>15.47686055207693</longitude> <latitude>-8.98993594994247</latitude> <altitude>426.96560779627981</altitude> <heading>-96.39468721933726</heading> <tilt>62.19122915504926</tilt> <roll>-0.01418130409160</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Descartes Highlands<br />Fifth human landing", 
+    "group": 2, 
+    "slug": "apollo-16-1972", 
+    "title": "Apollo 16 (1972)"
+  }
+},
+{
+  "pk": 13028, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>30.77530650248094</longitude> <latitude>20.19165489781115</latitude> <altitude>-2385.14869315803435</altitude> <heading>-81.30944607508403</heading> <tilt>73.93679188683357</tilt> <roll>0.00920364751325</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Mare Serenitatis<br />Sixth human landing", 
+    "group": 2, 
+    "slug": "apollo-17-1972", 
+    "title": "Apollo 17 (1972)"
+  }
+},
+{
+  "pk": 13029, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>30.60154988905556</longitude> <latitude>25.98274094181218</latitude> <altitude>-561.09100052645465</altitude> <heading>-147.54948837554122</heading> <tilt>61.71011961343118</tilt> <roll>0.02072365164409</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "LeMonnier Crater<br />Robotic rover (USSR)", 
+    "group": 2, 
+    "slug": "luna-21lunokhod-2-1973", 
+    "title": "Luna 21/Lunokhod 2 (1973)"
+  }
+},
+{
+  "pk": 13030, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>62.19994923841788</longitude> <latitude>12.75009909746283</latitude> <altitude>-3651.34757070913292</altitude> <heading>129.79704009009384</heading> <tilt>0.00000000000000</tilt> <roll>0.00000000000000</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Mare Crisium<br />Sample return (USSR)", 
+    "group": 2, 
+    "slug": "luna-24-1976", 
+    "title": "Luna 24 (1976)"
+  }
+},
+{
+  "pk": 13031, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-46.96759445461406</longitude> <latitude>3.86066128654440</latitude> <altitude>152213.95797044740175</altitude> <heading>-2.71597334193146</heading> <tilt>0.00000000000000</tilt> <roll>0.00000000000000</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Crashed: First human-made object on Mars (USSR)", 
+    "group": 3, 
+    "slug": "mars-2-1971", 
+    "title": "Mars 2 (1971)"
+  }
+},
+{
+  "pk": 13032, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-157.99999999999997</longitude> <latitude>-45.00000000000001</latitude> <altitude>101636.96962454479944</altitude> <heading>-0.00000000000000</heading> <tilt>0.00000000000000</tilt> <roll>0.00000000000000</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Landed: operated only 20 seconds (USSR)", 
+    "group": 3, 
+    "slug": "mars-3-1971", 
+    "title": "Mars 3 (1971)"
+  }
+},
+{
+  "pk": 13033, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-19.39999999999998</longitude> <latitude>-23.90000000000001</latitude> <altitude>99558.30957696646510</altitude> <heading>-0.00000000000000</heading> <tilt>0.00000000000000</tilt> <roll>0.00000000000000</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Crashed: unknown error (USSR)", 
+    "group": 3, 
+    "slug": "mars-6-1974", 
+    "title": "Mars 6 (1974)"
+  }
+},
+{
+  "pk": 13034, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-47.94859688880853</longitude> <latitude>22.26937858400650</latitude> <altitude>-3633.35098620466488</altitude> <heading>-153.99997825561630</heading> <tilt>68.32904060785219</tilt> <roll>-0.00000136268763</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Chryse Planitia<br />First successful Mars landing (US)", 
+    "group": 3, 
+    "slug": "viking-1-1976", 
+    "title": "Viking 1 (1976)"
+  }
+},
+{
+  "pk": 13035, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>134.28433009647313</longitude> <latitude>47.66768185517893</latitude> <altitude>-4447.41560347538871</altitude> <heading>-153.99994211141217</heading> <tilt>67.69190415334560</tilt> <roll>-0.00000227897005</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Mie Crater in Utopia Planitia", 
+    "group": 3, 
+    "slug": "viking-2-1976", 
+    "title": "Viking 2 (1976)"
+  }
+},
+{
+  "pk": 13036, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-33.25087339252397</longitude> <latitude>19.09815469336149</latitude> <altitude>-3679.41909696732955</altitude> <heading>51.74364531671102</heading> <tilt>79.31444274682288</tilt> <roll>-0.00001917965007</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Chryse Planitia<br />First robotic rover (US)", 
+    "group": 3, 
+    "slug": "mars-pathfindersojourner-1997", 
+    "title": "Mars Pathfinder/Sojourner (1997)"
+  }
+},
+{
+  "pk": 13037, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>164.69999999999999</longitude> <latitude>-76.70000000000000</latitude> <altitude>102125.03612988129316</altitude> <heading>-0.00000000000000</heading> <tilt>0.00000000000000</tilt> <roll>0.00000000000000</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Crashed: software error (US)", 
+    "group": 3, 
+    "slug": "mars-polar-lander-1999", 
+    "title": "Mars Polar Lander (1999)"
+  }
+},
+{
+  "pk": 13038, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>90.00000000000000</longitude> <latitude>10.60000000000000</latitude> <altitude>96280.57715893205022</altitude> <heading>0.00000000000001</heading> <tilt>0.00000000000000</tilt> <roll>0.00000000000000</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Unknown failures (UK)", 
+    "group": 3, 
+    "slug": "beagle-2-2003", 
+    "title": "Beagle 2 (2003)"
+  }
+},
+{
+  "pk": 13039, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>175.52711303782374</longitude> <latitude>-14.60235617791045</latitude> <altitude>-1917.64215384610134</altitude> <heading>-108.42154943561731</heading> <tilt>66.01698849644582</tilt> <roll>0.00006785476496</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Gusev Crater", 
+    "group": 3, 
+    "slug": "mer-a-spirit-2004", 
+    "title": "MER-A, Spirit (2004)"
+  }
+},
+{
+  "pk": 13040, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-5.51186615454127</longitude> <latitude>-2.08913225802373</latitude> <altitude>-1366.25692612130115</altitude> <heading>10.99999341611721</heading> <tilt>86.50591302086755</tilt> <roll>-0.00000892935847</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Meridiani Planum", 
+    "group": 3, 
+    "slug": "mer-b-opportunity-2004", 
+    "title": "MER-B, Opportunity (2004)"
+  }
+},
+{
+  "pk": 13041, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>-125.74823082726346</longitude> <latitude>68.21855907037266</latitude> <altitude>-4123.61358268797358</altitude> <heading>-29.99976025909093</heading> <tilt>70.00041343560579</tilt> <roll>-0.00000000000002</roll> <altitudeMode>absolute</altitudeMode> </Camera>", 
+    "description": "Vastitas Borealis<br />First polar landing (US)", 
+    "group": 3, 
+    "slug": "phoenix-2008", 
+    "title": "Phoenix (2008)"
+  }
+},
+{
+  "pk": 13042, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<Camera> <longitude>136.2937568496592</longitude> <latitude>-3.96001119558117</latitude> <altitude>44292.70241452186</altitude> <heading>134.1182200051906</heading> <tilt>61.67052325801136</tilt> <roll>-0.00000000000002</roll> <altitudeMode>relativeToGround</altitudeMode> </Camera>", 
+    "description": "Gale Crater", 
+    "group": 3, 
+    "slug": "mars-science-laboratory-2012", 
+    "title": "Mars Science Laboratory (2012)"
+  }
+}
+]
