@@ -59,13 +59,11 @@ body {
   -webkit-transition-duration: .5s;
 }
 .earth:hover>img, .moon:hover>img, .mars:hover>img, {
-  cursor: hand;
   cursor: pointer;
   -webkit-transform: scale(1.1);
   -webkit-transition-duration: .5s;
 }
 .title {
-  cursor: hand;
   cursor: pointer;
   font-size: 420%;
   /* opacity: 0; */
@@ -96,12 +94,12 @@ body {
 }
 .expand_active {
   /* background-color: #C2DFFF; */
-  left: 10%;
+  left: 2%;
   padding: 6 0 6 0;
   position: absolute;
   text-align: center;
   top: 420px;
-  width: 80%;
+  width: 96%;
   opacity: 1;
   z-index: 1; 
   -webkit-border-radius: 5px;
@@ -132,7 +130,7 @@ body {
 }
 .ctlpanel {
   background-color: #C2DFFF;
-  cursor: hand;
+  cursor: pointer;
   left: 1%;
   top: 82%;
   padding: 0px;
@@ -148,7 +146,6 @@ body {
   background-color: #B4CFEC;
   border: 1px solid gray;
   color: #150517;
-  cursor: hand;
   cursor: pointer;
   display: inline-block;
   font-size: 1.3em;
@@ -169,7 +166,7 @@ body {
   background-color: #550000;
   border: 3px solid black;
   font-size: 3.0em;
-  cursor: hand;
+  cursor: pointer;
   left: 40%;
   top: 93%;
   height: 10%
@@ -184,11 +181,11 @@ body {
 .location {
   /* background-color: #2c2c2c; */
   background-image: url("button_background.png");
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   /* border: 1px solid gray; */
   color: white;
-  cursor: hand;
   cursor: pointer;
   display: inline-block;
   font-size: 1.3em;
@@ -196,10 +193,9 @@ body {
   margin: 0px 12px 0px 12px;
   text-align: center;
   vertical-align: middle;
-  /* width: 260px; */
   width: 414px;
   height: 100px;
-  -webkit-border-radius: 5px;
+  /* -webkit-border-radius: 5px; */
   -webkit-transform: scale(1.0);
   -webkit-transition-duration: .25s;
 }
@@ -212,7 +208,6 @@ body {
   background-position: center right;
   border: 1px solid gray;
   color: #150517;
-  cursor: hand;
   cursor: pointer;
   display: inline-block;
   font-size: 1.0em;
@@ -233,7 +228,6 @@ body {
   background-position: center left;
   border: 1px solid gray;
   color: #150517;
-  cursor: hand;
   cursor: pointer;
   display: inline-block;
   font-size: 1.0em;

@@ -59,13 +59,11 @@ body {
   -webkit-transition-duration: .5s;
 }
 .earth:hover>img, .moon:hover>img, .mars:hover>img, .keyboard:hover>img, .layers:hover>img, .appctl:hover>img {
-  cursor: hand;
   cursor: pointer;
   -webkit-transform: scale(1.1);
   -webkit-transition-duration: .5s;
 }
 .title {
-  cursor: hand;
   cursor: pointer;
   /* font-size: 200%; */
   opacity: 0;
@@ -77,7 +75,6 @@ body {
   -webkit-transition: opacity .5s linear;
 }
 .appctl>.title {
-  cursor: hand;
   cursor: pointer;
   /* font-size: 100%; */
   opacity: 0;
@@ -89,7 +86,6 @@ body {
   -webkit-transition: opacity .5s linear;
 }
 .subtitle {
-  cursor: hand;
   cursor: pointer;
   font-size: 125%;
   padding: 10px 10px 10px 10px;
@@ -161,7 +157,7 @@ body {
 .ctlpanel {
   background-color: #C2DFFF;
   margin: 0px auto 0px auto;
-  cursor: hand;
+  cursor: pointer;
   top: 915px;
   padding: 0px;
   opacity: 1;
@@ -176,7 +172,6 @@ body {
   background-color: #B4CFEC;
   border: 1px solid gray;
   color: #150517;
-  cursor: hand;
   cursor: pointer;
   display: inline-block;
   font-size: 0.8em;
@@ -194,7 +189,7 @@ body {
   -webkit-transition-duration: .25s;
 }
 .relaunch {
-  cursor: hand;
+  cursor: pointer;
   left: 0px;
   top: 1020px;
   padding: 3px;
@@ -208,7 +203,6 @@ body {
   background-color: #B4CFEC;
   border: 1px solid gray;
   color: #150517;
-  cursor: hand;
   cursor: pointer;
   display: inline-block;
   font-size: 0.9em;
@@ -230,7 +224,6 @@ body {
   background-position: center right;
   border: 1px solid gray;
   color: #150517;
-  cursor: hand;
   cursor: pointer;
   display: inline-block;
   font-size: 1.0em;
@@ -251,7 +244,6 @@ body {
   background-position: center left;
   border: 1px solid gray;
   color: #150517;
-  cursor: hand;
   cursor: pointer;
   display: inline-block;
   font-size: 1.0em;
@@ -295,7 +287,6 @@ body {
   border-style: outset;
   border-width: 2px;
   color: white;
-  cursor: hand;
   cursor: pointer;
   display: inline-block;
   font-size: 1.0em;
