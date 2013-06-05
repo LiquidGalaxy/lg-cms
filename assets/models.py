@@ -6,12 +6,11 @@ from mimetypes import guess_type
 
 # For upload and file creation times.
 from django.utils import timezone
-
-# Create your models here.
+from django.utils.translation import ugettext_lazy as _
 
 class Item(models.Model):
     """ Base model describing a single asset """
-    
+
     # naw # creator = models.ForeignKey(User, null=True, blank=True)
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=80, unique=True)
@@ -44,7 +43,9 @@ class Item(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = "asset file"
+        app_label = _("assets")
+        verbose_name = _("asset file")
+        verbose_name_plural = _("asset files")
 
         # http://stackoverflow.com/questions/612372/can-you-give-a-django-app-a-verbose-name-for-use-throughout-the-admin
         # app_label = "Digital Assets" # Causes error in Django 1.5
