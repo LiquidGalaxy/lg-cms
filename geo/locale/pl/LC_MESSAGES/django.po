@@ -1,0 +1,80 @@
+# Polish Translation for LG-CMS Project
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Szymon Guz <szymon@endpoint.com>, 2013.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-05 14:28+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: SZYMON GUZ <szymon@endpoint.com>\n"
+"Language-Team: Polish <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#: models.py:8 models.py:45
+msgid "Title"
+msgstr "Tytuł"
+
+#: models.py:10 models.py:47
+msgid "This will be the element's CSS id."
+msgstr "To będzie id elementu CSS."
+
+#: models.py:12 models.py:47
+msgid "Slug"
+msgstr "Slug"
+
+#: models.py:13 models.py:48
+msgid "Description"
+msgstr "Opis"
+
+#: models.py:15
+msgid "Group"
+msgstr "Grupa"
+
+#: models.py:19
+msgid "A valid KML &lt;LookAt&gt; or &lt;Camera&gt; element."
+msgstr "Prawidłowy element KML &lt;LookAt&gt; lub &lt;Camera&gt;."
+
+#: models.py:20
+msgid "flytoview"
+msgstr "flytoview"
+
+#: models.py:24
+msgid "Bookmark"
+msgstr "Zakładka"
+
+#: models.py:25
+msgid "Bookmarks"
+msgstr "Zakładki"
+
+#: models.py:50
+msgid "Icon URL"
+msgstr "URL ikony"
+
+#: models.py:51
+msgid "URL address of a square image. Hint: upload an Asset Item."
+msgstr "Adres URL obrazka. Podpowiedź: prześlij Plik Zasobu."
+
+#: models.py:58
+msgid "Planet"
+msgstr "Planeta"
+
+#: models.py:62
+msgid "Bookmark group"
+msgstr "Grupa zakładek"
+
+#: models.py:63
+msgid "Bookmark groups"
+msgstr "Grupy zakładek"
+
+#: management/commands/import_legacy_queries.py:33
+msgid "Imports the legacy queries.txt file."
+msgstr "Importuje plik queries.txt."
