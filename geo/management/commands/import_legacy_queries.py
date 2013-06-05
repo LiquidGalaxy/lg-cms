@@ -11,6 +11,7 @@ from django.core.management.base import BaseCommand
 from django.template.defaultfilters import slugify # To create good slugs
 
 from geo.models import BookmarkGroup, Bookmark
+from django.utils.translation import ugettext_lazy as _
 
 FIELDNAMES = ['planet', 'title', 'flytoview']
 
@@ -29,7 +30,7 @@ def check_groups():
     assert list(BookmarkGroup.objects.all().values_list('slug')) == [(u'earth',), (u'mars',), (u'moon',)]
 
 class Command(BaseCommand):
-  help = 'Imports the legacy queries.txt file.'
+  help = _('Imports the legacy queries.txt file.')
 
   def handle(self, *args, **options):
 

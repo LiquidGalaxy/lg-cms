@@ -31,6 +31,11 @@ TIME_ZONE = 'UTC'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
 
+LANGUAGES = (
+    ("en", "English"),
+    ("pl", "Polish")
+)
+
 SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
@@ -144,6 +149,7 @@ INSTALLED_APPS = (
     'pano',
     'screens',
     'sequences',
+    'language',
 )
 
 # A sample logging configuration. The only tangible logging

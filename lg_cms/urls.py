@@ -20,4 +20,7 @@ urlpatterns = patterns('',
     url(r'^pano/', include('pano.urls')),
 
     url(r'^assets/', include('assets.urls')),
+
+    url(r'^language/', include('language.urls')),
+
 )
