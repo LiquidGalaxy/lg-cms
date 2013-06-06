@@ -43,7 +43,6 @@ class Item(models.Model):
         return self.title
 
     class Meta:
-        app_label = _("assets")
         verbose_name = _("asset file")
         verbose_name_plural = _("asset files")
 
