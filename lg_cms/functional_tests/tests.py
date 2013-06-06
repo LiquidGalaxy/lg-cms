@@ -296,10 +296,10 @@ class GeoTest(LiveServerTestCase):
         # User clicks the "Bookmark Groups" link to view the listing.
         geo_links[0].click()
         body = self.browser.find_element_by_tag_name('body')
-        self.assertIn('3 bookmark groups', body.text) # fixture
+        self.assertIn('3 Bookmark groups', body.text) # fixture
 
         # Click the "Add" link.
-        self.browser.find_element_by_link_text("Add bookmark group").click()
+        self.browser.find_element_by_link_text("Add Bookmark group").click()
 
         # Populate the fields.
         self.browser.find_element_by_name("title").send_keys("Extra")
@@ -330,17 +330,17 @@ class GeoTest(LiveServerTestCase):
         
         # This fixture should have some bookmarks already loaded.
         body = self.browser.find_element_by_tag_name('body')
-        self.assertIn('63 bookmarks', body.text) # fixture
+        self.assertIn('63 Bookmarks', body.text) # fixture
 
         # And many of them can be filtered by group.
         self.browser.find_element_by_link_text("earth - Earth").click()
 
         # The legacy touchscreen had many Earth bookmarks.
         body = self.browser.find_element_by_tag_name('body')
-        self.assertIn('31 bookmarks', body.text) # fixture
+        self.assertIn('31 Bookmarks', body.text) # fixture
 
         # Let's create a new one or three.
-        self.browser.find_element_by_link_text("Add bookmark").click()
+        self.browser.find_element_by_link_text("Add Bookmark").click()
 
         # Populate the fields.
         self.browser.find_element_by_name("title").send_keys("End Point HQ")
