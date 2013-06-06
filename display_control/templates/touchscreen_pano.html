@@ -1,0 +1,44 @@
+{% extends 'base.html' %}    
+{% load static %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="{% static "touchscreen_krpano/style.css" %}" />
+{% endblock %}
+
+{% block extrahead %}
+    <script type="text/javascript" src="{% static "touchscreen_krpano/viewsync.js" %}"></script>
+{% endblock %}
+
+{% block title %}Liquid Galaxy Touchscreen{% endblock %}
+
+{% block branding %}{% endblock %}
+
+{% block content_title %}<h1>Liquid Galaxy Panoramas</h1>{% endblock %}
+
+{% block content %}
+
+<ul class="groups">
+{% for group in object_list %}
+    <li class="group" id="id_group_{{ group.slug }}">
+        <h1 class="title">{{ group.title }}</h1>
+        <div class="description">{{ group.description }}</div>
+        <ul class="panoramas">
+    {% for pano in group.panorama_set.all %}
+        <li class="panorama" id="id_panorama_{{ pano.slug }}"
+            onclick="loadpano('{% url 'krpano_detail' pano.slug %}');">
+            <h2 class="title">{{ pano.title }}</h2>
+            <div class="description">{{ pano.description }}</div>
+        </li> <!-- end pano -->
+    {% empty %}
+        <div class="empty">This group has no items.</div>
+    {% endfor %}
+        </ul>
+    </li> <!-- end group -->
+{% empty %}
+    <div class="empty">Sorry, no groups are defined!</div>
+{% endfor %}
+</ul>
+
+{% comment %} This requires the legacy Liquid Galaxy "javascript.js" <div class="relaunch" onclick="changeQuery('relaunch', 'Relaunch');">Relaunch</div> {% endcomment %}
+
+{% endblock %}{# end content block #}

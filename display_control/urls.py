@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 
-from views import TouchscreenLegacy
+from views import TouchscreenLegacy, TouchscreenPano
 
 urlpatterns = patterns('',
     # Examples:
@@ -9,4 +9,5 @@ urlpatterns = patterns('',
 
     url(r'^touchscreen.html$', TouchscreenLegacy.as_view(template_name='touchscreen_legacy.html')),
     url(r'^template/(?P<template_name>.*)$', TouchscreenLegacy.as_view()),
+    url(r'^pano/touchscreen.html$', TouchscreenPano.as_view()),
 )

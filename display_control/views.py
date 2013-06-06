@@ -1,10 +1,12 @@
 # Create your views here.
 
 from django.views.generic.base import TemplateView #Class-based views best views
+from django.views.generic.list import ListView
 
 # Models
 from assets.models import Item
 from geo.models import Bookmark, BookmarkGroup
+from pano.models import PanoramaGroup
 
 class TouchscreenLegacy(TemplateView):
       """ Render the legacy Liquid Galaxy Touchscreen interface. """
@@ -23,3 +25,7 @@ class TouchscreenLegacy(TemplateView):
         context['assets'] = kml_queryset
         context['bookmark_groups'] = bookmark_group_queryset
         return context
+
+class TouchscreenPano(ListView):
+    model = PanoramaGroup
+    template_name = 'touchscreen_pano.html'
