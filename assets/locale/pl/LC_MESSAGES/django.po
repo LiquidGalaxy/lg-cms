@@ -41,7 +41,7 @@ msgstr "czas zmiany"
 
 #: models.py:22
 msgid "storage"
-msgstr "przechowywane"
+msgstr "miejsce przecho-wywania"
 
 #: models.py:23
 msgid "mime type"
