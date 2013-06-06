@@ -1,0 +1,130 @@
+# Translation for pano application.
+# Copyright (C) 2013, End Point Corporation
+# This file is distributed under the same license as the LG-CMS package.
+# Szymon Guz <szymon@endpoint.com), 2013
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0.0.\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-06 19:02+0000\n"
+"PO-Revision-Date: 2013-06-06 18:38+0000\n"
+"Last-Translator: Szumon Guz <szymon@endpoint.com>\n"
+"Language-Team: Polish\n"
+"Language: Polish \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#: models.py:10
+msgid "Spherical / Equirectangular"
+msgstr "Sferyczna / Walcowa równoodległościowa"
+
+#: models.py:11
+msgid "Cylindrical"
+msgstr "Cylindryczna"
+
+#: models.py:13
+msgid "projection"
+msgstr "projekcja"
+
+#: models.py:17
+msgid ""
+"Defines the horizontal field of view (hfov) of the pano image in degrees. "
+"This is the visible range that was captured on the pano image. The default "
+"value is 360, which means a view all around. Use a smaller value for partial "
+"panos. For Flat panos (or normal images) the value \"1.0\" should be used. "
+msgstr ""
+"Określa poziome pole widzenia (hfov) obrazu panoramicznego w stopniach. Jest "
+"to widoczny zakres, który został ujęty na tym obrazie. Domyślną wartością "
+"jest 360, co oznacza pełne koło. Użyj mniejszej wartości dla częściowej "
+"panoramy. Dla płaskich panoram (albo normalny obrazów) powinna zostać używa "
+"wartość \"1.0\"."
+
+#: models.py:18
+msgid "hfov"
+msgstr "hfov"
+
+#: models.py:20
+msgid ""
+"Defines the vertical field of view (vfov) of the pano image in degrees. By "
+"default (when no value was set), this value will be calculated automatically "
+"by using the hfov, the type of the pano and the side aspect of the pano "
+"image."
+msgstr ""
+"Określa pionowe pole widzenia (vfov) obraazu panoramicznego w stopniach. "
+"Domyślnie (gdy nie ustawiono żadnej wartości) zostanie obliczona "
+"automatycznie używając wartości hfov, rodzaju panoramy i stosunku rozmiarów "
+"obrazu."
+
+#: models.py:21
+msgid "vfof"
+msgstr "vfof"
+
+#: models.py:23
+msgid ""
+"Defines the vertical offset of the pano image in degrees. By default the "
+"pano image will be centered in the 3D space. This means the viewing range "
+"will be from -hfov/2 to +hfov/2 and from -vfov/2 to +vfov/2. Now when using "
+"a partial pano image where the horizon is not in the middle of image (not at "
+"0 degree), then this image will be displayed distorted. The voffset can be "
+"used to shift the fov range up or down to center the image correctly in the "
+"3D space."
+msgstr ""
+"Określa pionowe przesunięcie obrazu panoramicznego w stopniach. Domyślnie "
+"obraz panoramiczny będzie wyśrodkowany w przestrzeni 3D. To oznacza, że "
+"pokazywany zakres będzie od -hfov/2 do +hfov/2 oraz of -vfov/2 do +vfov/2. "
+"Gdy używany jest częściowy obraz panoramiczny, w którym horyzon nie jest "
+"pośrodku obrazu (nie jest na 0 stopniu) wtedy obraz będzie zniekształcony. "
+"Wartość voffset może być użyta do przesunięcia pola widzenia do góry, albo "
+"do dołu, aby poprawnie wyśrodkować obraz w przestrzeni 3D."
+
+#: models.py:24
+msgid "voffset"
+msgstr "voffset"
+
+#: models.py:26
+msgid "group"
+msgstr "grupa"
+
+#: models.py:29
+msgid "Panorama"
+msgstr "Panorama"
+
+#: models.py:30
+msgid "Panoramas"
+msgstr "Panoramy"
+
+#: models.py:37
+msgid "title"
+msgstr "tytuł"
+
+#: models.py:39
+msgid "This will be the element's CSS id."
+msgstr "To będzie id elementu CSS."
+
+#: models.py:40
+msgid "slug"
+msgstr "slug"
+
+#: models.py:41
+msgid "description"
+msgstr "opis"
+
+#: models.py:43
+msgid "Icon URL"
+msgstr "URL ikony"
+
+#: models.py:44
+msgid "URL address of a square image. Hint: upload an Asset Item."
+msgstr "URL kwadratowego obrazka. Podpowiedź: wgraj plik zasobu."
+
+#: models.py:50
+msgid "Panorama Group"
+msgstr "Grupa Panoram"
+
+#: models.py:51
+msgid "Panorama Groups"
+msgstr "Grupy Panoram"
