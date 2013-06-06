@@ -12,15 +12,15 @@ class Item(models.Model):
     """ Base model describing a single asset """
 
     # naw # creator = models.ForeignKey(User, null=True, blank=True)
-    title = models.CharField(max_length=250)
-    slug = models.SlugField(max_length=80, unique=True)
-    description = models.TextField(max_length=1000)
+    title = models.CharField(max_length=250, verbose_name=_("title"))
+    slug = models.SlugField(max_length=80, unique=True, verbose_name=_("slug"))
+    description = models.TextField(max_length=1000, verbose_name=_("description"))
 
-    creation_time = models.DateTimeField(auto_now=True)
-    update_time = models.DateTimeField(auto_now=True)
+    creation_time = models.DateTimeField(auto_now=True, verbose_name=_("creation time"))
+    update_time = models.DateTimeField(auto_now=True, verbose_name=_("update time"))
 
-    storage = models.FileField(upload_to='asset_storage', max_length=250)
-    mime_type = models.CharField(max_length=80, blank=True, default=None)
+    storage = models.FileField(upload_to='asset_storage', max_length=250, verbose_name=_("storage"))
+    mime_type = models.CharField(max_length=80, blank=True, default=None, verbose_name=_("mime type"))
 
     def clean(self):
         # Populate the Creation Time.
@@ -31,11 +31,11 @@ class Item(models.Model):
             try:
                 guessed_mime_type = guess_type(self.storage.path)[0]
             except ValueError:
-                raise ValidationError('Provide asset file.')
+                raise ValidationError(_('Provide asset file.'))
             if guessed_mime_type is None: # If the MIME type cannot be guessed,
                 raise ValidationError(
-                    'Could not recognize file extension type. ' +
-                    'Please change filename or specify MIME type.')
+                    _('Could not recognize file extension type. ') +
+                    _('Please change filename or specify MIME type.'))
             else:
                 self.mime_type = guessed_mime_type
 
