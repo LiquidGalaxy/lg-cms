@@ -34,8 +34,7 @@ class Item(models.Model):
                 raise ValidationError(_('Provide asset file.'))
             if guessed_mime_type is None: # If the MIME type cannot be guessed,
                 raise ValidationError(
-                    _('Could not recognize file extension type. ') +
-                    _('Please change filename or specify MIME type.'))
+                    _('Could not recognize file extension type. Please change filename or specify MIME type.'))
             else:
                 self.mime_type = guessed_mime_type
 

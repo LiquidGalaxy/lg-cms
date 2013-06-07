@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-06 15:41+0000\n"
+"POT-Creation-Date: 2013-06-07 20:13+0000\n"
 "PO-Revision-Date:  2013-06-06 15:41+0000\n"
 "Last-Translator: Szymon Guz <szymon@endpoint.com>\n"
 "Language-Team: Polish\n"
@@ -52,18 +52,16 @@ msgid "Provide asset file."
 msgstr "plik zasobu"
 
 #: models.py:37
-msgid "Could not recognize file extension type. "
-msgstr "Nie można było rozpoznać rozszerzenia pliku."
+#, fuzzy
+msgid ""
+"Could not recognize file extension type. Please change filename or specify "
+"MIME type."
+msgstr "Proszę zmienić nazwę pliku, albo określić typ MIME. Nie można było rozpoznać rozszerzenia pliku."
 
-#: models.py:38
-msgid "Please change filename or specify MIME type."
-msgstr "Proszę zmienić nazwę pliku, albo określić typ MIME."
-
-#: models.py:46
+#: models.py:45
 msgid "asset file"
 msgstr "plik zasobu"
 
-#: models.py:47
+#: models.py:46
 msgid "asset files"
 msgstr "pliki zasobów"
-
