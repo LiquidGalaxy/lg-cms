@@ -381,3 +381,111 @@ class GeoTest(LiveServerTestCase):
 
         new_bookmark_divs = self.browser.find_elements_by_id('end-point-hq')
         self.assertEquals(len(new_bookmark_divs), 1)
+
+class PanoTestAdmin(LiveServerTestCase):
+
+    def setUp(self):
+        self.browser = webdriver.Chrome()
+        self.browser.implicitly_wait(3)
+
+        ## User opens their web browser, and goes to the admin page.
+        self.browser.get(self.live_server_url + '/admin/')
+
+        ## She sees the familiar 'Liquid Galaxy administration' heading.
+        body = self.browser.find_element_by_tag_name('body')
+        self.assertIn('Liquid Galaxy administration', body.text)
+
+        # The user types in her username and password and hits "Return".
+        username_field = self.browser.find_element_by_name('username')
+        username_field.send_keys('galadmin')
+
+        password_field = self.browser.find_element_by_name('password')
+        password_field.send_keys('galadmin')
+        password_field.send_keys(Keys.RETURN)
+
+        # The username and password should be accepted, and the user taken
+        # to the Site Administration page.
+        body = self.browser.find_element_by_tag_name('body')
+        self.assertIn('Site administration', body.text)
+
+    def tearDown(self):
+        self.browser.quit()
+
+    def test_can_create_new_pano_group(self):
+        """This test ensures users may use the admin interface to create new panos."""
+
+        # The user now sees a couple of links for the "Pano" application.
+        group_links = self.browser.find_elements_by_link_text("Pano")
+        self.assertEquals(len(group_links), 1)
+
+        # ... and the "Panorama Groups".
+        group_links = self.browser.find_elements_by_link_text(
+            "Panorama Groups")
+        self.assertEquals(len(group_links), 1)
+
+        # User clicks the "Panorama Groups" link to view the group listing.
+        group_links[0].click()
+        body = self.browser.find_element_by_tag_name('body')
+        self.assertIn('0 Panorama Groups', body.text)
+
+        # Click the "Add" link.
+        self.browser.find_element_by_link_text("Add Panorama Group").click()
+
+        # Enter a title and description.
+        title_field = self.browser.find_element_by_name("title")
+        title_field.send_keys('End Point')
+
+        description_field = self.browser.find_element_by_name("description")
+        description_field.send_keys("""Panoramic Photography by End Point. Lorem Ipsum, placerat id condimentum rutrum, rhoncus ac lorem. D'ya have a good sarsaparilla? Aliquam placerat posuere neque, at dignissim magna ullamcorper. ...which would place him high in the runnin' for laziest worldwide-but sometimes there's a man... sometimes there's a man. In aliquam sagittis massa ac tortor ultrices faucibus. These men are nihilists, Donny, nothing to be afraid of. Curabitur eu mi sapien, ut ultricies ipsum morbi.""") # Lebowskiipsum.com
+
+        # Save this group.
+        self.browser.find_element_by_name("_save").click()
+
+        # We should now be back at the listing. Verify the Title is listed:
+        group_links = self.browser.find_elements_by_link_text("End Point")
+        self.assertEquals(len(group_links), 1)
+
+        # Head back up to the Panoramas section.
+        pano_links = self.browser.find_elements_by_link_text("Pano")
+        pano_links[0].click()
+
+        # User sees the "Panoramas" link.
+        pano_links = self.browser.find_elements_by_link_text("Panoramas")
+        self.assertEquals(len(pano_links), 1)
+
+        # User clicks the "Panoramas" link to view the pano listing.
+        pano_links[0].click()
+        body = self.browser.find_element_by_tag_name('body')
+        self.assertIn('0 Panoramas', body.text)
+
+        # Click the "Add" link.
+        self.browser.find_element_by_link_text("Add Panorama").click()
+
+        # Enter a title and description.
+        title_field = self.browser.find_element_by_name("title")
+        title_field.send_keys('End Point Office Rooftop')
+
+        description_field = self.browser.find_element_by_name("description")
+        description_field.send_keys("""Panoramic Photography by End Point. Lorem Ipsum, placerat id condimentum rutrum, rhoncus ac lorem. D'ya have a good sarsaparilla? Aliquam placerat posuere neque, at dignissim magna ullamcorper. ...which would place him high in the runnin' for laziest worldwide-but sometimes there's a man... sometimes there's a man. In aliquam sagittis massa ac tortor ultrices faucibus. These men are nihilists, Donny, nothing to be afraid of. Curabitur eu mi sapien, ut ultricies ipsum morbi.""") # Lebowskiipsum.com
+
+        # Unfortunately we cannot upload a file directly with Selenium.
+        # This uses the FakeFileUploadMiddleware
+        self.browser.execute_script(
+            "document.getElementsByName('fakefile_storage')[0].value='pano.jpg'")
+
+        # This is a Equirectangular projection pano.
+        projection_selector = Select(
+            self.browser.find_element_by_name("projection"))
+        projection_selector.select_by_visible_text('Spherical / Equirectangular')
+
+        # Make sure it's in the group we defined before.
+        group_selector = Select(self.browser.find_element_by_name("group"))
+        group_selector.select_by_visible_text('End Point')
+
+        # Save this pano.
+        self.browser.find_element_by_name("_save").click()
+
+        # We should now be back at the listing. Verify the Title is listed:
+        pano_links = self.browser.find_elements_by_link_text(
+            "End Point Office Rooftop")
+        self.assertEquals(len(pano_links), 1)
