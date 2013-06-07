@@ -6,6 +6,11 @@
 {% endblock %}
 
 {% block extrahead %}
+    <script type="text/javascript" src="http://lg-head:8080/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="{% static "touchscreen_krpano/fields.js" %}"></script>
+    <script type="text/javascript">
+        var viewsync = io.connect('http://lg-head:8080/viewsync');
+    </script>
     <script type="text/javascript" src="{% static "touchscreen_krpano/viewsync.js" %}"></script>
 {% endblock %}
 
