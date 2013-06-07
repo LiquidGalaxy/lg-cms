@@ -30,7 +30,7 @@
         <ul class="panoramas">
     {% for pano in group.panorama_set.all %}
         <li class="panorama" id="id_panorama_{{ pano.slug }}"
-            onclick="loadpano('{% url 'krpano_detail' pano.slug %}');">
+            onclick="loadpano('http://lg-head{% url 'krpano_detail' pano.slug %}');">
             <h2 class="title">{{ pano.title }}</h2>
             <div class="description">{{ pano.description }}</div>
         </li> <!-- end pano -->
