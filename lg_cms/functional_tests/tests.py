@@ -211,22 +211,14 @@ class ItemTest(LiveServerTestCase):
         # Click the "Layers" icon.
         self.browser.find_element_by_id('layers_icon').click()
 
-# Unfortunately this block just doesn't work as promised.
-# http://seleniumhq.org/docs/04_webdriver_advanced.html#explicit-and-implicit-waits
-#        # Wait for it to appear
-#        wait = WebDriverWait(self.browser, 40)
-#
-#        def clickable(element):
-#            if element.is_displayed():
-#                return element
-#            return null
-#
-#        item_link = wait.until(
-#            lambda d: clickable(d.find_element_by_id('end-point'))
-#        )
-#
-#        # PRES BUTAN!
-#        item_link.click()
+        # http://seleniumhq.org/docs/04_webdriver_advanced.html#explicit-and-implicit-waits
+        wait = WebDriverWait(self.browser, 5)
+        from selenium.webdriver.common.by import By
+        from selenium.webdriver.support import expected_conditions as EC
+        # Wait for it to appear
+        item_link = wait.until(EC.element_to_be_clickable((By.ID, 'end-point')))
+        # Still doesn't work :( item_link.click()
+        self.assertIn('End Point', item_link.text)
 
         # There should now be three buttons for KML loading.
         item_links = self.browser.find_elements_by_class_name('kml_off')
@@ -489,3 +481,32 @@ class PanoTestAdmin(LiveServerTestCase):
         pano_links = self.browser.find_elements_by_link_text(
             "End Point Office Rooftop")
         self.assertEquals(len(pano_links), 1)
+
+        # Now see if it's on the touchscreen interface.
+        self.browser.get(
+            self.live_server_url + '/control/pano/touchscreen.html')
+
+        # There should be two titles, one for the group and one for the pano.
+        titles = self.browser.find_elements_by_class_name('title')
+        self.assertEquals(len(titles), 2)
+
+        # Check their contents too.
+        self.assertIn('End Point', titles[0].text)
+        self.assertIn('End Point Office Rooftop', titles[1].text)
+
+        # We should also see two descriptions.
+        descriptions = self.browser.find_elements_by_class_name('description')
+        self.assertEquals(len(descriptions), 2)
+        for description in descriptions:
+            self.assertIn('End Point', description.text)
+
+        # Test the XML view too.
+        self.browser.get(
+            self.live_server_url + '/pano/end-point-office-rooftop.xml')
+        xml = self.browser.find_element_by_tag_name('krpano')
+        sphere = self.browser.find_element_by_tag_name('sphere')
+        self.assertIn('.jpg', sphere.get_attribute('url'))
+
+        # Not sure why this one doesn't work.
+        #image = self.browser.find_element_by_tag_name('image')
+        #self.assertIn('SPHERE', image.get_attribute('type'))
