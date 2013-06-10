@@ -211,22 +211,14 @@ class ItemTest(LiveServerTestCase):
         # Click the "Layers" icon.
         self.browser.find_element_by_id('layers_icon').click()
 
-# Unfortunately this block just doesn't work as promised.
-# http://seleniumhq.org/docs/04_webdriver_advanced.html#explicit-and-implicit-waits
-#        # Wait for it to appear
-#        wait = WebDriverWait(self.browser, 40)
-#
-#        def clickable(element):
-#            if element.is_displayed():
-#                return element
-#            return null
-#
-#        item_link = wait.until(
-#            lambda d: clickable(d.find_element_by_id('end-point'))
-#        )
-#
-#        # PRES BUTAN!
-#        item_link.click()
+        # http://seleniumhq.org/docs/04_webdriver_advanced.html#explicit-and-implicit-waits
+        wait = WebDriverWait(self.browser, 5)
+        from selenium.webdriver.common.by import By
+        from selenium.webdriver.support import expected_conditions as EC
+        # Wait for it to appear
+        item_link = wait.until(EC.element_to_be_clickable((By.ID, 'end-point')))
+        # Still doesn't work :( item_link.click()
+        self.assertIn('End Point', item_link.text)
 
         # There should now be three buttons for KML loading.
         item_links = self.browser.find_elements_by_class_name('kml_off')
@@ -381,3 +373,140 @@ class GeoTest(LiveServerTestCase):
 
         new_bookmark_divs = self.browser.find_elements_by_id('end-point-hq')
         self.assertEquals(len(new_bookmark_divs), 1)
+
+class PanoTestAdmin(LiveServerTestCase):
+
+    def setUp(self):
+        self.browser = webdriver.Chrome()
+        self.browser.implicitly_wait(3)
+
+        ## User opens their web browser, and goes to the admin page.
+        self.browser.get(self.live_server_url + '/admin/')
+
+        ## She sees the familiar 'Liquid Galaxy administration' heading.
+        body = self.browser.find_element_by_tag_name('body')
+        self.assertIn('Liquid Galaxy administration', body.text)
+
+        # The user types in her username and password and hits "Return".
+        username_field = self.browser.find_element_by_name('username')
+        username_field.send_keys('galadmin')
+
+        password_field = self.browser.find_element_by_name('password')
+        password_field.send_keys('galadmin')
+        password_field.send_keys(Keys.RETURN)
+
+        # The username and password should be accepted, and the user taken
+        # to the Site Administration page.
+        body = self.browser.find_element_by_tag_name('body')
+        self.assertIn('Site administration', body.text)
+
+    def tearDown(self):
+        self.browser.quit()
+
+    def test_can_create_new_pano_group(self):
+        """This test ensures users may use the admin interface to create new panos."""
+
+        # The user now sees a couple of links for the "Pano" application.
+        group_links = self.browser.find_elements_by_link_text("Pano")
+        self.assertEquals(len(group_links), 1)
+
+        # ... and the "Panorama Groups".
+        group_links = self.browser.find_elements_by_link_text(
+            "Panorama Groups")
+        self.assertEquals(len(group_links), 1)
+
+        # User clicks the "Panorama Groups" link to view the group listing.
+        group_links[0].click()
+        body = self.browser.find_element_by_tag_name('body')
+        self.assertIn('0 Panorama Groups', body.text)
+
+        # Click the "Add" link.
+        self.browser.find_element_by_link_text("Add Panorama Group").click()
+
+        # Enter a title and description.
+        title_field = self.browser.find_element_by_name("title")
+        title_field.send_keys('End Point')
+
+        description_field = self.browser.find_element_by_name("description")
+        description_field.send_keys("""Panoramic Photography by End Point. Lorem Ipsum, placerat id condimentum rutrum, rhoncus ac lorem. D'ya have a good sarsaparilla? Aliquam placerat posuere neque, at dignissim magna ullamcorper. ...which would place him high in the runnin' for laziest worldwide-but sometimes there's a man... sometimes there's a man. In aliquam sagittis massa ac tortor ultrices faucibus. These men are nihilists, Donny, nothing to be afraid of. Curabitur eu mi sapien, ut ultricies ipsum morbi.""") # Lebowskiipsum.com
+
+        # Save this group.
+        self.browser.find_element_by_name("_save").click()
+
+        # We should now be back at the listing. Verify the Title is listed:
+        group_links = self.browser.find_elements_by_link_text("End Point")
+        self.assertEquals(len(group_links), 1)
+
+        # Head back up to the Panoramas section.
+        pano_links = self.browser.find_elements_by_link_text("Pano")
+        pano_links[0].click()
+
+        # User sees the "Panoramas" link.
+        pano_links = self.browser.find_elements_by_link_text("Panoramas")
+        self.assertEquals(len(pano_links), 1)
+
+        # User clicks the "Panoramas" link to view the pano listing.
+        pano_links[0].click()
+        body = self.browser.find_element_by_tag_name('body')
+        self.assertIn('0 Panoramas', body.text)
+
+        # Click the "Add" link.
+        self.browser.find_element_by_link_text("Add Panorama").click()
+
+        # Enter a title and description.
+        title_field = self.browser.find_element_by_name("title")
+        title_field.send_keys('End Point Office Rooftop')
+
+        description_field = self.browser.find_element_by_name("description")
+        description_field.send_keys("""Panoramic Photography by End Point. Lorem Ipsum, placerat id condimentum rutrum, rhoncus ac lorem. D'ya have a good sarsaparilla? Aliquam placerat posuere neque, at dignissim magna ullamcorper. ...which would place him high in the runnin' for laziest worldwide-but sometimes there's a man... sometimes there's a man. In aliquam sagittis massa ac tortor ultrices faucibus. These men are nihilists, Donny, nothing to be afraid of. Curabitur eu mi sapien, ut ultricies ipsum morbi.""") # Lebowskiipsum.com
+
+        # Unfortunately we cannot upload a file directly with Selenium.
+        # This uses the FakeFileUploadMiddleware
+        self.browser.execute_script(
+            "document.getElementsByName('fakefile_storage')[0].value='pano.jpg'")
+
+        # This is a Equirectangular projection pano.
+        projection_selector = Select(
+            self.browser.find_element_by_name("projection"))
+        projection_selector.select_by_visible_text('Spherical / Equirectangular')
+
+        # Make sure it's in the group we defined before.
+        group_selector = Select(self.browser.find_element_by_name("group"))
+        group_selector.select_by_visible_text('End Point')
+
+        # Save this pano.
+        self.browser.find_element_by_name("_save").click()
+
+        # We should now be back at the listing. Verify the Title is listed:
+        pano_links = self.browser.find_elements_by_link_text(
+            "End Point Office Rooftop")
+        self.assertEquals(len(pano_links), 1)
+
+        # Now see if it's on the touchscreen interface.
+        self.browser.get(
+            self.live_server_url + '/control/pano/touchscreen.html')
+
+        # There should be two titles, one for the group and one for the pano.
+        titles = self.browser.find_elements_by_class_name('title')
+        self.assertEquals(len(titles), 2)
+
+        # Check their contents too.
+        self.assertIn('End Point', titles[0].text)
+        self.assertIn('End Point Office Rooftop', titles[1].text)
+
+        # We should also see two descriptions.
+        descriptions = self.browser.find_elements_by_class_name('description')
+        self.assertEquals(len(descriptions), 2)
+        for description in descriptions:
+            self.assertIn('End Point', description.text)
+
+        # Test the XML view too.
+        self.browser.get(
+            self.live_server_url + '/pano/end-point-office-rooftop.xml')
+        xml = self.browser.find_element_by_tag_name('krpano')
+        sphere = self.browser.find_element_by_tag_name('sphere')
+        self.assertIn('.jpg', sphere.get_attribute('url'))
+
+        # Not sure why this one doesn't work.
+        #image = self.browser.find_element_by_tag_name('image')
+        #self.assertIn('SPHERE', image.get_attribute('type'))

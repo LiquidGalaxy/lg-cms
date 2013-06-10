@@ -66,4 +66,3 @@ msgstr "plik zasobu"
 #: models.py:46
 msgid "asset files"
 msgstr "pliki zasobów"
-

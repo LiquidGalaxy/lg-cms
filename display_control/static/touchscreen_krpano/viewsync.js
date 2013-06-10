@@ -6,7 +6,7 @@ var rolloffset = (fields.rolloffset) ? fields.rolloffset : 0;
 
 var urlImage = (fields.rolloffset) ? fields.rolloffset : 'defaultpano.jpg';
 
-var viewsync = io.connect('/viewsync');
+/* done outside /* var viewsync = io.connect('http://lg-head:8080/viewsync'); */
 
 var curxml = "";
 

@@ -7,6 +7,11 @@
 {% endblock %}
 
 {% block extrahead %}
+    <script type="text/javascript" src="http://lg-head:8080/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="{% static "touchscreen_krpano/fields.js" %}"></script>
+    <script type="text/javascript">
+        var viewsync = io.connect('http://lg-head:8080/viewsync');
+    </script>
     <script type="text/javascript" src="{% static "touchscreen_krpano/viewsync.js" %}"></script>
 {% endblock %}
 
@@ -26,7 +31,7 @@
         <ul class="panoramas">
     {% for pano in group.panorama_set.all %}
         <li class="panorama" id="id_panorama_{{ pano.slug }}"
-            onclick="loadpano('{% url 'krpano_detail' pano.slug %}');">
+            onclick="loadpano('http://lg-head{% url 'krpano_detail' pano.slug %}');">
             <h2 class="title">{{ pano.title }}</h2>
             <div class="description">{{ pano.description }}</div>
         </li> <!-- end pano -->

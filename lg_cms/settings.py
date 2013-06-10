@@ -119,7 +119,11 @@ FAKEUPLOAD_FILE_SPEC = {
     "placemark_end_point.kml": {
         "filename": "placemark_end_point.kml",
         "file": "lg_cms/functional_tests/fixtures/placemark_end_point.kml",
-    }
+    },
+    "pano.jpg": {
+        "filename": "pano.jpg",
+        "file": "lg_cms/functional_tests/fixtures/pano.jpg",
+    },
 }
 
 ROOT_URLCONF = 'lg_cms.urls'
