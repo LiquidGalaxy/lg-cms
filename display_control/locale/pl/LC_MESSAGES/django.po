@@ -1,0 +1,45 @@
+# LG_CMS Translation.
+# Copyright (C) 2013
+# This file is distributed under the same license as the LG_CMS package.
+#
+# Szymon Guz <szymon@endpoint.com>, 2013.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LG_CMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-30 21:22+0000\n"
+"PO-Revision-Date: 2013-05-30 21:22+0000\n"
+"Last-Translator: Szymon Guz <szymon@endpoint.com>\n"
+"Language-Team: End Point <lg@endpoint.com>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#: templates/touchscreen_legacy.html:21 templates/touchscreen_pano.html:13
+msgid "Liquid Galaxy Touchscreen"
+msgstr "Panel Dotykowy Liquid Galaxy"
+
+#: templates/touchscreen_legacy.html:45
+msgid "Sorry, no KML files to load."
+msgstr "Niestety nie znaleziono plików KML do załadowania."
+
+#: templates/touchscreen_legacy.html:111
+msgid "Welcome to the Liquid Galaxy by Google"
+msgstr "Witamy w Liquid Galaxy (Google)"
+
+#: templates/touchscreen_pano.html:17
+msgid "Liquid Galaxy Panoramas"
+msgstr "Panoramy Liquid Galaxy"
+
+#: templates/touchscreen_pano.html:34
+msgid "This group has no items."
+msgstr "Ta grupa nie ma żadnych elementów."
+
+#: templates/touchscreen_pano.html:39
+msgid "Sorry, no groups are defined!"
+msgstr "Niestety nie zdefiniowano żadnych grup!"

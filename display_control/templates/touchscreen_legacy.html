@@ -1,4 +1,5 @@
 {% extends 'base.html' %}    
+{% load i18n %}
 
 {% block extrastyle %}
 <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}touchscreen_legacy/sidebar.css" />
@@ -17,7 +18,7 @@
     </script>
 {% endblock %}
 
-{% block title %}Liquid Galaxy Touchscreen{% endblock %}
+{% block title %}{% trans "Liquid Galaxy Touchscreen" %}{% endblock %}
   {% block bodyonload %}noneExpand('e_earth', 'e_layers', 'e_moon', 'e_mars', 'e_keyboard');{% endblock %}
 
 {% block content %}
@@ -41,7 +42,7 @@
 		{% for item in assets %}
                       <div id="{{ item.slug }}" class="kml_off" onclick="toggleKml(this, '{{ item.storage.url }}');">{{ item.title }}</div>
 		{% empty %}
-			<div id="kml_empty">Sorry, no KML files to load.</div>
+                      <div id="kml_empty">{% trans "Sorry, no KML files to load." %}</div>
 		{% endfor %}
                   </div>
       </div>
@@ -107,7 +108,7 @@
         </div>
       </div>
       <div class="welcome" onclick="noneExpand('e_earth', 'e_layers', 'e_moon', 'e_mars', 'e_keyboard');">
-        Welcome to the Liquid Galaxy by Google
+          {% trans "Welcome to the Liquid Galaxy by Google" %}
       </div>
       <!--<div class="ctlpanel">
         <div class="appctl">
