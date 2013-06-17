@@ -67,19 +67,15 @@ class GoogleEarthWidget(forms.Widget):
               var group = g.options[g.selectedIndex].text;
               if (group.match(/--/g) ) {
                 clear_gep();
-                alert('----');
               }
               else if (group.match(/earth/g) ) {
                 load_earth();
-                alert(group);
               }
               else if (group.match(/moon/g) ) {
                 load_moon();
-                alert(group);
               }
               else if (group.match(/mars/g) ) {
                 load_mars();
-                alert(group);
               }
             }
 
