@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: black;
+  color: white;
+  font-family: arial, sans-serif;
+  font-size: 110%;
+  margin: 0;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+#status {
+  background-color: yellow;
+  color: black;
+  left: 10%;
+  top: 50px;
+  font-size: 0.9em;
+  /* margin: -40 auto; */
+  padding: 3px;
+  opacity: 0;
+  position: absolute;
+  text-align: middle;
+  width: 80%;
+  z-index: 3;
+  -webkit-border-radius: 5px;
+  -webkit-transition: opacity .5s linear .5s;
+}
+.touchscreen {
+  margin: 80 auto;
+  text-align: center;
+  width: 90%;
+  margin-top: 44px;
+}
+.welcome {
+  background-color: #808080;
+  color: #EEE9E9;
+  left: 10%;
+  padding: 5px;
+  position: absolute;
+  text-align: center;
+  top: 5px;
+  width: 80%;
+  -webkit-border-radius: 5px;
+}
+.earth>img, .moon>img, .mars>img, .keyboard>img, .layers>img {
+  height: 64px;
+  width: 64px;
+  -webkit-transform: scale(1.0);
+  -webkit-transition-duration: .5s;
+}
+.appctl>img {
+  top: 0px;
+  height: 64px;
+  width: 64px;
+  -webkit-transform: scale(1.0);
+  -webkit-transition-duration: .5s;
+}
+.earth:hover>img, .moon:hover>img, .mars:hover>img, .keyboard:hover>img, .layers:hover>img, .appctl:hover>img {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+  -webkit-transition-duration: .5s;
+}
+.title {
+  cursor: pointer;
+  /* font-size: 200%; */
+  opacity: 0;
+  position: relative;
+  text-align: center;
+  top: 60px;
+  width: 64px;
+  z-index: 1;
+  -webkit-transition: opacity .5s linear;
+}
+.appctl>.title {
+  cursor: pointer;
+  /* font-size: 100%; */
+  opacity: 0;
+  position: relative;
+  text-align: center;
+  top: 80px;
+  width: 64px;
+  z-index: 1;
+  -webkit-transition: opacity .5s linear;
+}
+.subtitle {
+  cursor: pointer;
+  font-size: 125%;
+  padding: 10px 10px 10px 10px;
+  opacity: 1;
+  color: blue;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  -webkit-transition: opacity .5s linear;
+}
+.earth:hover>.title, .moon:hover>.title, .mars:hover>.title, .layers:hover>.title, .appctl:hover>.title {
+  opacity: 1;
+  -webkit-transition: opacity .5s linear;
+}
+.expand {
+  background-color: #C2DFFF;
+  left: 0px;
+  opacity: 0;
+  padding: 6 0 6 0;
+  position: absolute;
+  text-align: center;
+  top: 180px;
+  width: 100%;
+  z-index: -1;
+  /* -webkit-border-radius: 5px; */
+  -webkit-transition: z-index 0s linear .5s, opacity .5s linear;
+}
+.expand_active {
+  background-color: #C2DFFF;
+  left: 0px;
+  padding: 6 0 6 0;
+  position: absolute;
+  text-align: center;
+  top: 180px;
+  width: 100%;
+  opacity: 1;
+  z-index: 1; 
+  /* -webkit-border-radius: 5px; */
+  -webkit-transition: z-index 0s linear .5s, opacity .5s linear;
+}
+.expand_inactive {
+  background-color: #C2DFFF;
+  left: 0px;
+  padding: 6 0 6 0;
+  position: absolute;
+  text-align: center;
+  top: 180px;
+  width: 100%;
+  opacity: 0;
+  z-index: -1;
+  /* -webkit-border-radius: 5px; */
+  -webkit-transition: z-index 0s linear .5s, opacity .5s linear;
+}
+.earth, .moon, .mars, .keyboard, .layers {
+  display: inline-table;
+  height: 35px;
+  width: 35px;
+}
+.appctl {
+  display: inline-table;
+  height: 60px;
+  width: 100%;
+}
+.earth:hover>.expand, .moon:hover>.expand, .mars:hover>.expand, .keyboard:hover>.expand, .layers:hover>.expand {
+  opacity: 1;
+  z-index: 1;
+  -webkit-transition: opacity .5s linear .3s;
+}
+.ctlpanel {
+  background-color: #C2DFFF;
+  margin: 0px auto 0px auto;
+  cursor: pointer;
+  top: 915px;
+  padding: 0px;
+  opacity: 1;
+  position: absolute;
+  text-align: left;
+  vertical-align: middle;
+  width: 400px;
+  z-index: 3;
+  -webkit-border-radius: 5px;
+}
+.ctlbutton {
+  background-color: #B4CFEC;
+  border: 1px solid gray;
+  color: #150517;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.8em;
+  margin: 1px;
+  padding: 1px 0px 1px 0px;
+  text-align: center;
+  vertical-align: middle;
+  width: 50px;
+  -webkit-border-radius: 5px;
+  -webkit-transform: scale(1.0);
+  -webkit-transition-duration: .25s;
+}
+.ctlbutton:hover {
+  -webkit-transform: scale(1.1);
+  -webkit-transition-duration: .25s;
+}
+.relaunch {
+  cursor: pointer;
+  left: 0px;
+  top: 1020px;
+  padding: 3px;
+  opacity: 1;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 3;
+}
+.location {
+  background-color: #B4CFEC;
+  border: 1px solid gray;
+  color: #150517;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.9em;
+  margin: 4px;
+  padding: 6px;
+  text-align: center;
+  vertical-align: middle;
+  width: 200px;
+  -webkit-border-radius: 5px;
+  -webkit-transform: scale(1.0);
+  -webkit-transition-duration: .25s;
+}
+.location:hover {
+  -webkit-transform: scale(1.1);
+  -webkit-transition-duration: .25s;
+}
+.kml_off {
+  background-color: #6FC;
+  background-position: center right;
+  border: 1px solid gray;
+  color: #150517;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.0em;
+  margin: 14px;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 320px;
+  -webkit-border-radius: 5px;
+  -webkit-transform: scale(1.0);
+  -webkit-transition-duration: .25s;
+}
+.kml_on {
+  background-color: #FF9;
+  background-image: url("check.png");
+  background-size: 48 px;
+  background-repeat: no-repeat;
+  background-position: center left;
+  border: 1px solid gray;
+  color: #150517;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.0em;
+  margin: 14px;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 320px;
+  -webkit-border-radius: 5px;
+  -webkit-transform: scale(1.0);
+  -webkit-transition-duration: .25s;
+}
+.kml_on:hover , .kml_off:hover  {
+  -webkit-transform: scale(1.1);
+  -webkit-transition-duration: .25s;
+}
+.keyboard .expand {
+  text-align: center;
+}
+.keyboardRow1 {
+  margin: 10 0 20 0;
+}
+.keyboardRow2 {
+  margin: 0 10 10 0;
+}
+.keyboardRow3 {
+  margin: 0 20 10 0;
+}
+.keyboardRow4 {
+  margin: 0 40 10 0;
+}
+.keyboardRow5 {
+  margin: 0 0 10 0;
+}
+.keyboardRow6 {
+  margin: 0;
+}
+.keyboardKey {
+  background-color: black;
+  border-color: gray;
+  border-style: outset;
+  border-width: 2px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.0em;
+  height: 32px;
+  line-height: 32px;
+  margin: 1px;
+  text-align: center;
+  width: 26px;
+  -webkit-border-radius: 5px;
+}
+.keyboardKey:active, .keyboardKeyClear:active, .keyboardKeySearch:active, .keyboardKeySpace:active .keyboardKeyBackspace:active {
+  background-color: gray;
+}
+.keyboardEntry {
+  height: 32px;
+  font-size: 1.2em;
+  vertical-align: middle;
+  width: 240px;
+}
+.keyboardKeyClear {
+  height: 32px;
+  line-height: 32px;
+  vertical-align: middle;
+  width: 60px;
+}
+.keyboardKeySearch {
+  height: 32px;
+  line-height: 32px;
+  vertical-align: middle;
+  width: 60px;
+}
+.keyboardKeySpace {
+  width: 240px;
+}
+.keyboardKeyBackspace {
+  width: 60px;
+}
