@@ -27,7 +27,7 @@
     <div class="touchscreen">
       <div id="status"></div>
 {% for group in bookmark_groups %}
-      <div class="earth">
+      <div class="{{ group.planet }}">
         <div class="title" onclick="changePlanet('{{ group.planet }}');  toggleExpand('e_{{ group.planet }}', 'e_earth', 'e_moon', 'e_mars');">{{ group.title }}</div>
         <img onclick="changePlanet('{{ group.planet }}');  toggleExpand('e_{{ group.planet }}', 'e_earth', 'e_moon', 'e_mars');" src="{{ group.icon_url }}" />
         <div class="expand_inactive" id="e_{{ group.slug }}">
