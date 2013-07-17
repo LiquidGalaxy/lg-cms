@@ -2,4 +2,5 @@ sqlite3.db
 *.pyc
 settings_local.py
 chromedriver.log
+libpeerconnection.log
 *.*~
