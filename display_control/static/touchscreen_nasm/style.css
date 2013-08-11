@@ -107,12 +107,12 @@ body {
 }
 .expand_inactive {
   /* background-color: #C2DFFF; */
-  left: 10%;
+  left: 2%;
   padding: 6 0 6 0;
   position: absolute;
   text-align: center;
   top: 420px;
-  width: 80%;
+  width: 96%;
   opacity: 0;
   z-index: -1;
   -webkit-border-radius: 5px;
