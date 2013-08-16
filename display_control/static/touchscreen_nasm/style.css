@@ -10,6 +10,7 @@ body {
   font-size: 110%;
   margin: 0;
   overflow: hidden;
+  -webkit-user-drag: none;
   -webkit-user-select: none;
   -moz-user-select: none;
 }
