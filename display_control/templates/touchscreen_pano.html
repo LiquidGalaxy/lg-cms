@@ -31,7 +31,7 @@
         <ul class="panoramas">
     {% for pano in group.panorama_set.all %}
         <li class="panorama" id="id_panorama_{{ pano.slug }}"
-            onclick="loadpano('http://lg-head{% url 'krpano_detail' pano.slug %}');">
+            onmousedown="loadpano('http://lg-head{% url 'krpano_detail' pano.slug %}');">
             <h2 class="title">{{ pano.title }}</h2>
             <div class="description">{{ pano.description }}</div>
         </li> <!-- end pano -->
@@ -45,6 +45,6 @@
 {% endfor %}
 </ul>
 
-{% comment %} This requires the legacy Liquid Galaxy "javascript.js" <div class="relaunch" onclick="changeQuery('relaunch', 'Relaunch');">Relaunch</div> {% endcomment %}
+{% comment %} This requires the legacy Liquid Galaxy "javascript.js" <div class="relaunch" onmousedown="changeQuery('relaunch', 'Relaunch');">Relaunch</div> {% endcomment %}
 
 {% endblock %}{# end content block #}

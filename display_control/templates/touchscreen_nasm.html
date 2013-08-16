@@ -28,11 +28,11 @@
       <div id="status"></div>
 {% for group in bookmark_groups %}
       <div class="{{ group.planet }}">
-        <div class="title" onclick="changePlanet('{{ group.planet }}');  toggleExpand('e_{{ group.planet }}', 'e_earth', 'e_moon', 'e_mars');">{{ group.title }}</div>
-        <img draggable="false" onclick="changePlanet('{{ group.planet }}');  toggleExpand('e_{{ group.planet }}', 'e_earth', 'e_moon', 'e_mars');" src="{{ group.icon_url }}" />
+        <div class="title" onmousedown="changePlanet('{{ group.planet }}');  toggleExpand('e_{{ group.planet }}', 'e_earth', 'e_moon', 'e_mars');">{{ group.title }}</div>
+        <img draggable="false" onmousedown="changePlanet('{{ group.planet }}');  toggleExpand('e_{{ group.planet }}', 'e_earth', 'e_moon', 'e_mars');" src="{{ group.icon_url }}" />
         <div class="expand_inactive" id="e_{{ group.slug }}">
 	{% for bookmark in group.bookmark_set.all %}
-                      <div class="location" onclick="changeQuery('{{ bookmark.as_query_txt|safe }}', '{{ bookmark.title }}');"><strong>{{ bookmark.title }}</strong><br />{{ bookmark.description|safe }}</div>
+                      <div class="location" onmousedown="changeQuery('{{ bookmark.as_query_txt|safe }}', '{{ bookmark.title }}');"><strong>{{ bookmark.title }}</strong><br />{{ bookmark.description|safe }}</div>
 	{% endfor %}
                   </div>
       </div>
@@ -40,11 +40,11 @@
 
 {% comment %}{# Not on NASM #}
       <div class="layers">
-        <div id="layers_icon" class="title" onclick="changePlanet('earth');  toggleExpand('e_layers', 'e_earth', 'e_mars','e_moon', 'e_keyboard', 'e_layers');">Layers</div>
-        <img draggable="false" onclick="changePlanet('earth'); toggleExpand('e_layers', 'e_earth', 'e_moon', 'e_mars', 'e_keyboard', 'e_layers');" src="{{ STATIC_URL }}touchscreen_legacy/layers.png" />
+        <div id="layers_icon" class="title" onmousedown="changePlanet('earth');  toggleExpand('e_layers', 'e_earth', 'e_mars','e_moon', 'e_keyboard', 'e_layers');">Layers</div>
+        <img draggable="false" onmousedown="changePlanet('earth'); toggleExpand('e_layers', 'e_earth', 'e_moon', 'e_mars', 'e_keyboard', 'e_layers');" src="{{ STATIC_URL }}touchscreen_legacy/layers.png" />
         <div class="expand_inactive" id="e_layers">
 		{% for item in assets %}
-                      <div id="{{ item.slug }}" class="kml_off" onclick="toggleKml(this, '{{ item.storage.url }}');">{{ item.title }}</div>
+                      <div id="{{ item.slug }}" class="kml_off" onmousedown="toggleKml(this, '{{ item.storage.url }}');">{{ item.title }}</div>
 		{% empty %}
 			<div id="kml_empty">Sorry, no KML files to load.</div>
 		{% endfor %}
@@ -52,12 +52,12 @@
       </div>
 {% endcomment %}
 
-      <div class="welcome" onclick="noneExpand('e_earth', 'e_layers', 'e_moon', 'e_mars', 'e_keyboard');">
+      <div class="welcome" onmousedown="noneExpand('e_earth', 'e_layers', 'e_moon', 'e_mars', 'e_keyboard');">
         Touch your destination {# Welcome to the Liquid Galaxy by Google #}
       </div>
 
       <div class="relaunch">
-        <div onclick="changeQuery('relaunch-earth', 'Relaunch');"><strong>Relaunch</strong></div>
+        <div onmousedown="changeQuery('relaunch-earth', 'Relaunch');"><strong>Relaunch</strong></div>
       </div>
     </div>
 {% endblock %}
