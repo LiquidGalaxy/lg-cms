@@ -16,12 +16,12 @@ body {
 #status {
   background-color: yellow;
   color: black;
-  left: 35%;
-  margin: -40 auto;
+  left: 30%;
   opacity: 0;
   position: absolute;
   text-align: center;
-  width: 30%;
+  top: 290px;
+  width: 40%;
   z-index: 3;
   -webkit-border-radius: 5px;
   -webkit-transition: opacity .5s linear .5s;
@@ -29,7 +29,7 @@ body {
 .touchscreen {
   margin: 80 auto;
   text-align: center;
-  width: 90%;
+  width: 100%;
 }
 .welcome {
   background-color: #808080;
@@ -38,13 +38,13 @@ body {
   padding: 5px;
   position: absolute;
   text-align: center;
-  top: 50%;
+  top: 250px;
   width: 40%;
   -webkit-border-radius: 5px;
 }
 .earth>img, .moon>img, .mars>img, .keyboard>img, .layers>img {
-  height: 220px;
-  width: 220px;
+  height: 160px;
+  width: 160px;
   -webkit-transform: scale(1.0);
   -webkit-transition-duration: .5s;
 }
@@ -105,7 +105,7 @@ body {
   padding: 6 0 6 0;
   position: absolute;
   text-align: center;
-  top: 370px;
+  top: 340px;
   width: 80%;
   z-index: -1;
   -webkit-border-radius: 5px;
@@ -117,7 +117,7 @@ body {
   padding: 6 0 6 0;
   position: absolute;
   text-align: center;
-  top: 370px;
+  top: 340px;
   width: 80%;
   opacity: 1;
   z-index: 1; 
@@ -130,7 +130,7 @@ body {
   padding: 6 0 6 0;
   position: absolute;
   text-align: center;
-  top: 370px;
+  top: 340px;
   width: 80%;
   opacity: 0;
   z-index: -1;
@@ -200,12 +200,12 @@ body {
   color: #150517;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.3em;
+  font-size: 1.0em;
   margin: 10px;
-  padding: 12px 8px 12px 8px;
+  padding: 12px 6px 12px 6px;
   text-align: center;
   vertical-align: middle;
-  width: 260px;
+  width: 160px;
   -webkit-border-radius: 5px;
   -webkit-transform: scale(1.0);
   -webkit-transition-duration: .25s;
@@ -284,38 +284,38 @@ body {
   color: white;
   cursor: pointer;
   display: inline-block;
-  font-size: 2.4em;
-  height: 60px;
-  line-height: 60px;
+  font-size: 1.6em;
+  height: 40px;
+  line-height: 40px;
   margin: 3px;
   text-align: center;
-  width: 60px;
+  width: 40px;
   -webkit-border-radius: 5px;
 }
 .keyboardKey:active, .keyboardKeyClear:active, .keyboardKeySearch:active, .keyboardKeySpace:active .keyboardKeyBackspace:active {
   background-color: gray;
 }
 .keyboardEntry {
-  height: 70px;
-  font-size: 3em;
+  height: 50px;
+  font-size: 2.4em;
   vertical-align: middle;
-  width: 500;
+  width: 380;
 }
 .keyboardKeyClear {
-  height: 64px;
-  line-height: 64px;
+  height: 40px;
+  line-height: 40px;
   vertical-align: middle;
-  width: 120px;
+  width: 80px;
 }
 .keyboardKeySearch {
-  height: 64px;
-  line-height: 64px;
+  height: 40px;
+  line-height: 40px;
   vertical-align: middle;
-  width: 140px;
+  width: 100px;
 }
 .keyboardKeySpace {
-  width: 600px;
+  width: 400px;
 }
 .keyboardKeyBackspace {
-  width: 100px;
+  width: 70px;
 }
