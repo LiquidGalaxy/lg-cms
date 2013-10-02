@@ -33,7 +33,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  width: 90%;
+  width: 100%;
 }
 .touchscreen:hover>.welcome {
   opacity: 0;
