@@ -36,17 +36,17 @@
                   </div>
       </div>
 {% endfor %}
+{% if assets %}
       <div class="layers">
         <div id="layers_icon" class="title" onmousedown="changePlanet('earth');  toggleExpand('e_layers');">Layers</div>
         <img draggable="false" onmousedown="changePlanet('earth'); toggleExpand('e_layers');" src="{{ STATIC_URL }}touchscreen_google/layers.png" />
         <div class="expand_inactive" id="e_layers">
 		{% for item in assets %}
                       <div id="{{ item.slug }}" class="kml_off" onmousedown="toggleKml(this, '{{ item.storage.url }}');">{{ item.title }}</div>
-		{% empty %}
-                      <div id="kml_empty">{% trans "Sorry, no KML files to load." %}</div>
 		{% endfor %}
                   </div>
       </div>
+{% endif %}
       <div class="keyboard">
         <div class="title" onmousedown="toggleExpand('e_keyboard');">&nbsp;</div>
         <img draggable="false" onmousedown="toggleExpand('e_keyboard');" src="{{ STATIC_URL }}touchscreen_google/keyboard.png" />
