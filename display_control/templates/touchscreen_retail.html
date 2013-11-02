@@ -16,6 +16,24 @@
 	{% endfor %}
                 showAndHideStatus();
       }
+
+      // get url args
+      var fields = function () {
+        var out_fields = {};
+        var query_fields = window.location.search.split('?')[1];
+        if( query_fields ) {
+          query_fields = query_fields.split('&');
+          for( var i in query_fields ) {
+            var raw = query_fields[i].split('=');
+            if( raw.length > 1 )
+              out_fields[raw[0]] = raw[1];
+          }
+        }
+        return out_fields;
+      }();
+
+      if (fields['resume'])
+        resumeEarth();
     </script>
 {% endblock %}
 
@@ -95,6 +113,11 @@
           <div class="keyboardRow6">
             <div class="keyboardKey keyboardKeySpace" onmousedown="keyEntry(' ');"></div>
           </div>
+        </div>
+      </div>
+      <div class="streetview">
+        <div class="title" onmousedown="switchToPeruse();">Street View</div>
+        <img draggable="false" onmousedown="switchToPeruse();" src="http://liquid-galaxy.googlecode.com/git/php-interface/pegman.png" />
         </div>
       </div>
       <div class="welcome" onmousedown="noneExpand();">

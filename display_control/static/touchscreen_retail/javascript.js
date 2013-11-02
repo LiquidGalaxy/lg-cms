@@ -68,6 +68,12 @@ function createRequest() {
   }
 }
 
+function quietRequest(url) {
+  var req = createRequest();
+  req.open('GET', url, true);
+  req.send(null);
+}
+
 function submitRequest(url) {
   var req = createRequest();
   req.onreadystatechange = function() {
@@ -93,6 +99,10 @@ function changePlanet(planet) {
 function changeQuery(query, name) {
   submitRequest('http://localhost:81/change.php?query=' + query + '&name=' + name);
   showAndHideStatus();
+}
+
+function quietQuery(query, name) {
+  quietRequest('http://localhost:81/change.php?query=' + query + '&name=' + name);
 }
 
 function changeLayer(layer, name) {
@@ -170,4 +180,12 @@ function noneExpand(){
   $("[id^=e_]").each(function(i, val) {
     val.className='expand_inactive';
   });
+}
+
+function resumeEarth() {
+  quietQuery('resume-earth', 'Google Earth');
+}
+function switchToPeruse() {
+  quietQuery('launch-peruse', 'Google Street View');
+  window.location.href = 'http://lg-head:8086/touchscreen/';
 }

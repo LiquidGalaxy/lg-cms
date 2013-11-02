@@ -1,3 +1,4 @@
+F
 * {
   margin: 0;
   padding: 0;
@@ -42,11 +43,14 @@ body {
   width: 40%;
   -webkit-border-radius: 5px;
 }
-.earth>img, .moon>img, .mars>img, .keyboard>img, .layers>img {
+.earth>img, .moon>img, .mars>img, .keyboard>img, .layers>img, .streetview>img {
   height: 160px;
   width: 160px;
   -webkit-transform: scale(1.0);
   -webkit-transition-duration: .5s;
+}
+.streetview>img {
+  width: 90px;
 }
 .appctl>img {
   top: 0px;
@@ -56,7 +60,7 @@ body {
   -webkit-transform: scale(1.0);
   -webkit-transition-duration: .5s;
 }
-.earth:hover>img, .moon:hover>img, .mars:hover>img, .keyboard:hover>img, .layers:hover>img, .appctl:hover>img {
+.earth:hover>img, .moon:hover>img, .mars:hover>img, .keyboard:hover>img, .layers:hover>img, .appctl:hover>img, .streetview:hover>img {
   cursor: pointer;
   -webkit-transform: scale(1.1);
   -webkit-transition-duration: .5s;
@@ -94,7 +98,7 @@ body {
   z-index: 1;
   -webkit-transition: opacity .5s linear;
 }
-.earth:hover>.title, .moon:hover>.title, .mars:hover>.title, .layers:hover>.title, .appctl:hover>.title {
+.earth:hover>.title, .moon:hover>.title, .mars:hover>.title, .layers:hover>.title, .appctl:hover>.title, .streetview:hover>.title {
   opacity: 1;
   -webkit-transition: opacity .5s linear;
 }
@@ -137,7 +141,7 @@ body {
   -webkit-border-radius: 5px;
   -webkit-transition: z-index 0s linear .5s, opacity .5s linear;
 }
-.earth, .moon, .mars, .keyboard, .layers {
+.earth, .moon, .mars, .keyboard, .layers, .streetview {
   display: inline-table;
   height: 240px;
   width: 240px;
@@ -147,7 +151,7 @@ body {
   height: 60px;
   width: 100%;
 }
-.earth:hover>.expand, .moon:hover>.expand, .mars:hover>.expand, .keyboard:hover>.expand, .layers:hover>.expand {
+.earth:hover>.expand, .moon:hover>.expand, .mars:hover>.expand, .keyboard:hover>.expand, .layers:hover>.expand, .streetview:hover>.expand {
   opacity: 1;
   z-index: 1;
   -webkit-transition: opacity .5s linear .3s;
