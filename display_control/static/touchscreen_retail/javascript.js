@@ -134,42 +134,10 @@ function showAndHideStatus() {
   window.setTimeout('document.getElementById("status").style.opacity = 0;', 2000);
 }
 
-function setCaret() {
-  var keyboardEntry = document.getElementById('keyboardEntry');
-  keyboardEntry.focus();
-}
-
-function keyEntry(key) {
-  var keyboardEntry = document.getElementById('keyboardEntry');
-  keyboardEntry.value = keyboardEntry.value + key;
-  setCaret();
-}
-
-function backspaceKey() {
-  var keyboardEntry = document.getElementById('keyboardEntry');
-  keyboardEntry.value =
-    keyboardEntry.value.substr(0, keyboardEntry.value.length - 1);
-  setCaret();
-}
-
-function clearKey() {
-  var keyboardEntry = document.getElementById('keyboardEntry');
-  keyboardEntry.value = '';
-  setCaret();
-}
-
 function searchKey() {
   var keyboardEntry = document.getElementById('keyboardEntry');
-  changeQuery('search=' + keyboardEntry.value, keyboardEntry.value);
-  setCaret();
-}
-
-//Added by Sean (alchemist@google.com) to make keyboard enter key work to submit
-function enterKeySubmit(e) {
-  if(e && e.keyCode == 13)
-  {
-      searchKey();    
-  }
+  if (keyboardEntry.value)
+    changeQuery('search=' + keyboardEntry.value, keyboardEntry.value);
 }
 
 function toggleExpand(on_obj){
@@ -177,6 +145,7 @@ function toggleExpand(on_obj){
   document.getElementById(on_obj).className='expand_active';
 }
 function noneExpand(){
+  clearSearch();
   $("[id^=e_]").each(function(i, val) {
     val.className='expand_inactive';
   });
@@ -188,4 +157,20 @@ function resumeEarth() {
 function switchToPeruse() {
   quietQuery('launch-peruse', 'Google Street View');
   window.location.href = 'http://lg-head:8086/touchscreen/';
+}
+
+$(function() {
+  jsKeyboard.init('virtual-keyboard');
+  var field = $('#keyboardEntry');
+  field.focus();
+  jsKeyboard.currentElement = field;
+  jsKeyboard.currentElementCursorPosition = 0;
+
+  $(".key_enter").live("click", function(e){
+    searchKey();
+  });
+});
+
+function clearSearch() {
+  $('#keyboardEntry').val("");
 }

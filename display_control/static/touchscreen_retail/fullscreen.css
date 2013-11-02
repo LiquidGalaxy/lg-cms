@@ -43,7 +43,7 @@ body {
   width: 40%;
   -webkit-border-radius: 5px;
 }
-.earth>img, .moon>img, .mars>img, .keyboard>img, .layers>img, .streetview>img {
+.earth>img, .moon>img, .mars>img, .search>img, .layers>img, .streetview>img {
   height: 160px;
   width: 160px;
   -webkit-transform: scale(1.0);
@@ -60,7 +60,7 @@ body {
   -webkit-transform: scale(1.0);
   -webkit-transition-duration: .5s;
 }
-.earth:hover>img, .moon:hover>img, .mars:hover>img, .keyboard:hover>img, .layers:hover>img, .appctl:hover>img, .streetview:hover>img {
+.earth:hover>img, .moon:hover>img, .mars:hover>img, .search:hover>img, .layers:hover>img, .appctl:hover>img, .streetview:hover>img {
   cursor: pointer;
   -webkit-transform: scale(1.1);
   -webkit-transition-duration: .5s;
@@ -141,7 +141,7 @@ body {
   -webkit-border-radius: 5px;
   -webkit-transition: z-index 0s linear .5s, opacity .5s linear;
 }
-.earth, .moon, .mars, .keyboard, .layers, .streetview {
+.earth, .moon, .mars, .search, .layers, .streetview {
   display: inline-table;
   height: 240px;
   width: 240px;
@@ -151,7 +151,7 @@ body {
   height: 60px;
   width: 100%;
 }
-.earth:hover>.expand, .moon:hover>.expand, .mars:hover>.expand, .keyboard:hover>.expand, .layers:hover>.expand, .streetview:hover>.expand {
+.earth:hover>.expand, .moon:hover>.expand, .mars:hover>.expand, .search:hover>.expand, .layers:hover>.expand, .streetview:hover>.expand {
   opacity: 1;
   z-index: 1;
   -webkit-transition: opacity .5s linear .3s;
@@ -257,68 +257,4 @@ body {
 .kml_on:hover , .kml_off:hover  {
   -webkit-transform: scale(1.1);
   -webkit-transition-duration: .25s;
-}
-.keyboard .expand {
-  text-align: center;
-}
-.keyboardRow1 {
-  margin: 10 0 20 0;
-}
-.keyboardRow2 {
-  margin: 0 70 10 0;
-}
-.keyboardRow3 {
-  margin: 0 40 10 0;
-}
-.keyboardRow4 {
-  margin: 0 60 10 0;
-}
-.keyboardRow5 {
-  margin: 0 0 10 0;
-}
-.keyboardRow6 {
-  margin: 0;
-}
-.keyboardKey {
-  background-color: black;
-  border-color: gray;
-  border-style: outset;
-  border-width: 3px;
-  color: white;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 1.6em;
-  height: 40px;
-  line-height: 40px;
-  margin: 3px;
-  text-align: center;
-  width: 40px;
-  -webkit-border-radius: 5px;
-}
-.keyboardKey:active, .keyboardKeyClear:active, .keyboardKeySearch:active, .keyboardKeySpace:active .keyboardKeyBackspace:active {
-  background-color: gray;
-}
-.keyboardEntry {
-  height: 50px;
-  font-size: 2.4em;
-  vertical-align: middle;
-  width: 380;
-}
-.keyboardKeyClear {
-  height: 40px;
-  line-height: 40px;
-  vertical-align: middle;
-  width: 80px;
-}
-.keyboardKeySearch {
-  height: 40px;
-  line-height: 40px;
-  vertical-align: middle;
-  width: 100px;
-}
-.keyboardKeySpace {
-  width: 400px;
-}
-.keyboardKeyBackspace {
-  width: 70px;
 }
