@@ -136,8 +136,12 @@ function showAndHideStatus() {
 
 function searchKey() {
   var keyboardEntry = document.getElementById('keyboardEntry');
-  if (keyboardEntry.value)
-    changeQuery('search=' + keyboardEntry.value, keyboardEntry.value);
+
+  if (keyboardEntry.value) {
+    var val = encodeURIComponent(keyboardEntry.value);
+
+    changeQuery('search=' + val, val);
+  }
 }
 
 function toggleExpand(on_obj){
