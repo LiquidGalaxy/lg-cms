@@ -111,26 +111,40 @@ class GoogleEarthWidget(forms.Widget):
                 ge.getLayerRoot().enableLayerById(ge.LAYER_ROADS, true);
                 ge.getLayerRoot().enableLayerById(ge.LAYER_TERRAIN, true);
                 ge.getNavigationControl().setVisibility(ge.VISIBILITY_SHOW);
+                ge.getNavigationControl().setStreetViewEnabled(true);
               }
               ge.getNavigationControl().setVisibility(ge.VISIBILITY_SHOW);
               var kmlString = %(kml)s;
               if (kmlString != '') {
                 ge_kmlObject = ge.parseKml(kmlString);
+
                 ge.getFeatures().appendChild(ge_kmlObject);
                 if (ge_kmlObject.getAbstractView()) {
                     ge.getView().setAbstractView(ge_kmlObject.getAbstractView());
                 }
               }
               google.earth.addEventListener(ge.getView(), 'viewchangeend', function() {
-                var view = ge.getView().copyAsLookAt(ge.ALTITUDE_RELATIVE_TO_SEA_FLOOR)
+                var view = ge.getView().copyAsLookAt(ge.ALTITUDE_RELATIVE_TO_SEA_FLOOR);
+
+                // set this value if we are in the streetViewKml:
+                var streetViewKml = "";
+                var viewerOptions = view.getViewerOptions();
+
+                if (viewerOptions) {
+
+                    if (viewerOptions.getOption(ge.OPTION_STREET_VIEW)) {
+                        streetViewKml = "<gx:ViewerOptions><gx:option  name=\\\\\'streetview\\\\\'></gx:option></gx:ViewerOptions>";
+                    }
+                }
+
                 var kml = "<LookAt>"
+                    + streetViewKml
                     + "<longitude>"       + view.getLongitude()  + "</longitude>"
                     + "<latitude>"        + view.getLatitude()   + "</latitude>"
                     + "<range>"           + view.getRange()      + "</range>"
                     + "<altitude>"        + view.getAltitude()   + "</altitude>"
                     + "<heading>"         + view.getHeading()    + "</heading>"
                     + "<tilt>"            + view.getTilt()       + "</tilt>"
-                    + "<range>"           + view.getRange()      + "</range>"
                     + "<altitudeMode>"    + "relativeToGround"   + "</altitudeMode>"
                     + "<gx:altitudeMode>" + "relativeToSeaFloor" + "</gx:altitudeMode>"
                     + "</LookAt>";
@@ -157,7 +171,7 @@ class GoogleEarthWidget(forms.Widget):
         Returns:
             HTML code for inserting into website.
         """
-        res = '<span id="%s" style="display: inline-block; height: 300px; width: 800px;"></span>' \
+        res = '<span id="%s" style="display: inline-block; height: 420px; width: 800px;"></span>' \
             % element_name
         return mark_safe(res)
 
