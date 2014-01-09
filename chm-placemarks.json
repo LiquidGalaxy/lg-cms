@@ -1,0 +1,233 @@
+[
+{
+  "pk": 64, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-122.0363057013695</longitude><latitude>37.416416435228484</latitude><range>195.98463958043783</range><altitude>21.885370183054878</altitude><heading>159.46928862274004</heading><tilt>62.25604035126786</tilt><range>195.98463958043783</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "lockheed-martin", 
+    "title": "1932: Lockheed Martin"
+  }
+},
+{
+  "pk": 65, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-122.06880080496798</longitude><latitude>37.3402977657959</latitude><range>107.81211266871502</range><altitude>0</altitude><heading>-46.855311461855806</heading><tilt>48.66362881399899</tilt><range>107.81211266871502</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "apple-garage", 
+    "title": "1975: Apple Garage"
+  }
+},
+{
+  "pk": 66, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-122.15455411583248</longitude><latitude>37.442947783623765</latitude><range>81.27844047943238</range><altitude>0</altitude><heading>-51.46204642491165</heading><tilt>47.241402989016784</tilt><range>81.27844047943238</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "hp-garage", 
+    "title": "1939: HP Garage"
+  }
+},
+{
+  "pk": 67, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-122.17785219828924</longitude><latitude>37.4563899590871</latitude><range>100.74597971859846</range><altitude>0</altitude><heading>76.37197365573148</heading><tilt>50.74349519197724</tilt><range>100.74597971859846</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "stanford-research-international", 
+    "title": "1977: Stanford Research International"
+  }
+},
+{
+  "pk": 68, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-121.8964788966702</longitude><latitude>37.335906590446996</latitude><range>587.9896229305454</range><altitude>0</altitude><heading>-149.12296430104453</heading><tilt>48.04974189916036</tilt><range>587.9896229305454</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "ibm-ramac-disk-drive", 
+    "title": "1956: IBM RAMAC Disk Drive"
+  }
+},
+{
+  "pk": 69, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-122.07754330206697</longitude><latitude>37.41396593588508</latitude><range>135.31311040853083</range><altitude>0</altitude><heading>54.590616637024056</heading><tilt>47.711265845140915</tilt><range>135.31311040853083</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "silicon-graphics", 
+    "title": "1981: Silicon Graphics"
+  }
+},
+{
+  "pk": 70, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-122.1110445131634</longitude><latitude>37.40487167354817</latitude><range>92.8851711571114</range><altitude>0</altitude><heading>83.05044049314314</heading><tilt>49.22805775937571</tilt><range>92.8851711571114</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "shockley-semiconductor", 
+    "title": "1955: Shockley Semiconductor"
+  }
+},
+{
+  "pk": 71, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-121.8931263405835</longitude><latitude>37.33077960953185</latitude><range>282.4482980981298</range><altitude>15.553061654513671</altitude><heading>-75.61033285419994</heading><tilt>69.5200194315076</tilt><range>282.4482980981298</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "adobe-systems", 
+    "title": "1982: Adobe Systems"
+  }
+},
+{
+  "pk": 72, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-122.1036853706779</longitude><latitude>37.4223369707898</latitude><range>184.8233511220688</range><altitude>4.394131595008549</altitude><heading>129.51987376230664</heading><tilt>63.53839647667797</tilt><range>184.8233511220688</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "fairchild-semiconductor", 
+    "title": "1960: Fairchild Semiconductor"
+  }
+},
+{
+  "pk": 73, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-121.93213572218282</longitude><latitude>37.41278530488</latitude><range>231.3270612456435</range><altitude>0</altitude><heading>163.90756001933306</heading><tilt>77.97157218360533</tilt><range>231.3270612456435</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "cisco-systems", 
+    "title": "1984: Cisco Systems"
+  }
+},
+{
+  "pk": 74, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-121.96295443435976</longitude><latitude>37.38842634220482</latitude><range>320.6118290183286</range><altitude>5.874743973972752</altitude><heading>-179.20448106830742</heading><tilt>78.87007873155093</tilt><range>320.6118290183286</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "intel", 
+    "title": "1968: Intel"
+  }
+},
+{
+  "pk": 75, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-122.17013739104156</longitude><latitude>37.428709393526475</latitude><range>215.0323810485875</range><altitude>0</altitude><heading>-139.05299702981125</heading><tilt>81.33424050409796</tilt><range>215.0323810485875</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "stanford-jacks-hall", 
+    "title": "1980: Stanford Jacks Hall"
+  }
+},
+{
+  "pk": 76, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-122.14761995759251</longitude><latitude>37.40279605769185</latitude><range>150.86146910827202</range><altitude>4.686112243479854</altitude><heading>-100.23756217197825</heading><tilt>60.442413531369475</tilt><range>150.86146910827202</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "xerox-parc", 
+    "title": "1970: Xerox PARC"
+  }
+},
+{
+  "pk": 77, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-122.05382246777064</longitude><latitude>37.39552996923004</latitude><range>196.83115610144338</range><altitude>0</altitude><heading>171.44309893128766</heading><tilt>73.32957189540109</tilt><range>196.83115610144338</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "netscape", 
+    "title": "1994: Netscape"
+  }
+},
+{
+  "pk": 78, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-122.01909201383143</longitude><latitude>37.40777956490244</latitude><range>112.46085375489122</range><altitude>8.427680078322588</altitude><heading>96.78977912050493</heading><tilt>69.1150789442662</tilt><range>112.46085375489122</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "atari", 
+    "title": "1972: Atari"
+  }
+},
+{
+  "pk": 79, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-121.92808440708258</longitude><latitude>37.29475538053195</latitude><range>118.66345215117012</range><altitude>9.630056129474255</altitude><heading>23.88927854876389</heading><tilt>67.61639967934674</tilt><range>118.66345215117012</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "ebay", 
+    "title": "1995: eBay"
+  }
+},
+{
+  "pk": 80, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-122.0335801306055</longitude><latitude>37.36861916347862</latitude><range>111.8799538465495</range><altitude>0</altitude><heading>-10.06217956402567</heading><tilt>58.82328037871036</tilt><range>111.8799538465495</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "andy-capps-tavern", 
+    "title": "1971: Andy Capp's Tavern"
+  }
+},
+{
+  "pk": 81, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-122.1635729998719</longitude><latitude>37.457806900912324</latitude><range>85.78643596423416</range><altitude>5.793866497173703</altitude><heading>-121.58985897069805</heading><tilt>54.22402237230531</tilt><range>85.78643596423416</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "google-garage", 
+    "title": "1998: Google Garage"
+  }
+},
+{
+  "pk": 82, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-122.18942161300915</longitude><latitude>37.472834879564566</latitude><range>126.02143836824725</range><altitude>3.163568506202609</altitude><heading>99.53179590370179</heading><tilt>47.04158072720609</tilt><range>126.02143836824725</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "homebrew-computer-club", 
+    "title": "1975: Homebrew Computer Club"
+  }
+},
+{
+  "pk": 83, 
+  "model": "geo.bookmark", 
+  "fields": {
+    "flytoview": "<LookAt><longitude>-122.13510840299462</longitude><latitude>37.41175328324368</latitude><range>97.79955172813828</range><altitude>1.7046382305464551</altitude><heading>123.74817668968323</heading><tilt>62.87993258072629</tilt><range>97.79955172813828</range><altitudeMode>relativeToGround</altitudeMode><gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode></LookAt>", 
+    "description": "", 
+    "group": 1, 
+    "slug": "facebook-house", 
+    "title": "2004: Facebook House"
+  }
+},
+{
+  "pk": 1, 
+  "model": "geo.bookmarkgroup", 
+  "fields": {
+    "planet": "earth", 
+    "icon_url": "http://lg-head.liquid.glx/valley.png", 
+    "description": "Silicon Valley locations for Computer History Museum.", 
+    "slug": "valley", 
+    "title": "Valley"
+  }
+}
+]
