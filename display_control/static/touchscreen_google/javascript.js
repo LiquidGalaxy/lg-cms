@@ -22,6 +22,9 @@
 // we disable the ability to right click using the example
 // code provided by Reconn.us at the following URL
 //  http://www.reconn.us/content/view/36/45/
+
+var statusTimer = null;
+
 var isNS = (navigator.appName == 'Netscape') ? 1 : 0;
 if (navigator.appName == 'Netscape') {
   document.captureEvents(Event.MOUSEDOWN || Event.MOUSEUP);
@@ -73,7 +76,7 @@ function submitRequest(url) {
   req.onreadystatechange = function() {
     if (req.readyState == 4) {
       if (req.status == 200) {
-        document.getElementById('status').innerHTML = req.responseText;
+        showAndHideStatus(req.responseText);
       }
     }
   }
@@ -87,22 +90,18 @@ function xchangePlanet(planet) {
 
 function changePlanet(planet) {
   submitRequest('http://localhost:81/change.php?planet=' + planet);
-  showAndHideStatus();
 }
 
 function changeQuery(query, name) {
   submitRequest('http://localhost:81/change.php?query=' + query + '&name=' + name);
-  showAndHideStatus();
 }
 
 function changeLayer(layer, name) {
   submitRequest('http://localhost:81/change.php?layer=' + layer + '&name=' + name);
-  showAndHideStatus();
 }
 
 function syncKml(action, url) {
   submitRequest('http://localhost:81/sync_touchscreen.php?touch_action=' + action + '&touch_kml=' + url);
-  showAndHideStatus();
 }
 
 function toggleKml(obj, url) {
@@ -115,13 +114,14 @@ function toggleKml(obj, url) {
     submitRequest('http://localhost:81/sync_touchscreen.php?touch_action=delete&touch_kml=' + url);
     obj.className='kml_off';
   }
-  showAndHideStatus();
 }
 
-function showAndHideStatus() {
+function showAndHideStatus(message) {
+  window.clearTimeout(statusTimer);
   var status = document.getElementById('status');
+  status.innerHTML = message;
   status.style.opacity = 1;
-  window.setTimeout('document.getElementById("status").style.opacity = 0;', 2000);
+  statusTimer = window.setTimeout('document.getElementById("status").style.opacity = 0;', 2000);
 }
 
 function setCaret() {
