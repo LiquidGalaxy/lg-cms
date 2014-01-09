@@ -142,8 +142,8 @@ body {
 }
 .earth, .moon, .mars, .keyboard, .layers {
   display: inline-table;
-  height: 35px;
-  width: 35px;
+  height: 64px;
+  width: 64px;
 }
 .appctl {
   display: inline-table;
