@@ -84,10 +84,6 @@ function submitRequest(url) {
   req.send(null);
 }
 
-function xchangePlanet(planet) {
-    return;
-}
-
 function changePlanet(planet) {
   submitRequest('http://localhost:81/change.php?planet=' + planet);
 }
