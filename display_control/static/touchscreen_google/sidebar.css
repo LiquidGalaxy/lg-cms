@@ -97,7 +97,7 @@ body {
   z-index: 1;
   -webkit-transition: opacity .5s linear;
 }
-.earth:hover>.title, .moon:hover>.title, .mars:hover>.title, .layers:hover>.title, .appctl:hover>.title {
+.earth:hover>.title, .moon:hover>.title, .mars:hover>.title, .keyboard:hover>.title, .layers:hover>.title, .appctl:hover>.title {
   opacity: 1;
   -webkit-transition: opacity .5s linear;
 }
