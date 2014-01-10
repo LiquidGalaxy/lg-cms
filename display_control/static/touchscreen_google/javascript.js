@@ -89,6 +89,7 @@ function changePlanet(planet) {
 }
 
 function changeQuery(query, name) {
+  killPano();
   submitRequest('http://localhost:81/change.php?query=' + query + '&name=' + name);
 }
 
@@ -118,6 +119,10 @@ function showAndHideStatus(message) {
   status.innerHTML = message;
   status.style.opacity = 1;
   statusTimer = window.setTimeout('document.getElementById("status").style.opacity = 0;', 2000);
+}
+
+function killPano() {
+  submitRequest('http://localhost:81/change.php?kill-pano=true');
 }
 
 function setCaret() {
@@ -163,5 +168,6 @@ function toggleExpand(on_obj){
   document.getElementById(on_obj).className='expand_active';
 }
 function noneExpand(){
+  killPano();
   $('[id^="e_"]').attr('class', 'expand_inactive');
 }
