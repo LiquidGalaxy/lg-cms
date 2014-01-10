@@ -71,7 +71,7 @@ actions:
         name: 2 HP Street View
         input: ALL
         action: earth/scripts/launch-peruse.sh -p 4FQ9cXr38R0EyBvCW3rMtQ -d 309
-        exit_action: lg-run-bg earth/scripts/kill-browser.sh
+        exit_action: earth/scripts/kill-peruse.sh
         repeat: DEFAULT
         constraints:
             latitude: '[37.44261378970577+-0.00001]'
@@ -112,7 +112,7 @@ actions:
         name: 5 Fairchild Street View
         input: ALL
         action: earth/scripts/launch-peruse.sh -p PuCyci2cqhrcYvrT8GnTQA -d 129.5
-        exit_action: lg-run-bg earth/scripts/kill-browser.sh
+        exit_action: earth/scripts/kill-peruse.sh
         repeat: DEFAULT
         constraints:
             latitude: '[37.42328278328824+-0.00001]'
@@ -133,7 +133,7 @@ actions:
         name: 6 Intel Street View
         input: ALL
         action: earth/scripts/launch-peruse.sh -p kYQ8mMscqVeKhTIaYA0QUw -d 181
-        exit_action: lg-run-bg earth/scripts/kill-browser.sh
+        exit_action: earth/scripts/kill-peruse.sh
         repeat: DEFAULT
         constraints:
             latitude: '[37.3912519757155+-0.00001]'
@@ -164,7 +164,7 @@ actions:
         name: 8 Atari Street View
         input: ALL
         action: earth/scripts/launch-peruse.sh -p qAxvUpU-tXPcfVCvNsjQxw -d 96.8
-        exit_action: lg-run-bg earth/scripts/kill-browser.sh
+        exit_action: earth/scripts/kill-peruse.sh
         repeat: DEFAULT
         constraints:
             latitude: '[37.40789114986155+-0.00001]'
@@ -185,7 +185,7 @@ actions:
         name: 9 Andy Street View
         input: ALL
         action: earth/scripts/launch-peruse.sh -p CyaiXsfAh5KBENa4NGZuNw -d 350
-        exit_action: lg-run-bg earth/scripts/kill-browser.sh
+        exit_action: earth/scripts/kill-peruse.sh
         repeat: DEFAULT
         constraints:
             latitude: '[37.36777251981194+-0.00001]'
@@ -206,7 +206,7 @@ actions:
         name: 10 Homebrew Street View
         input: ALL
         action: earth/scripts/launch-peruse.sh -p jCXzEcRXFZaSL6mq1YlPkw -d 99.5
-        exit_action: lg-run-bg earth/scripts/kill-browser.sh
+        exit_action: earth/scripts/kill-peruse.sh
         repeat: DEFAULT
         constraints:
             latitude: '[37.47297206915353+-0.00001]'
@@ -227,7 +227,7 @@ actions:
         name: 11 Apple Street View
         input: ALL
         action: earth/scripts/launch-peruse.sh -p hEpEeC3ui0UXNBTOKk_JTw -d 313.2
-        exit_action: lg-run-bg earth/scripts/kill-browser.sh
+        exit_action: earth/scripts/kill-peruse.sh
         repeat: DEFAULT
         constraints:
             latitude: '[37.33980049137537+-0.00001]'
@@ -258,7 +258,7 @@ actions:
         name: 13 Silicon Graphics Street View
         input: ALL
         action: earth/scripts/launch-peruse.sh -p CMRmbLbi_ZRleLSCGQH0mw -d 54.5
-        exit_action: lg-run-bg earth/scripts/kill-browser.sh
+        exit_action: earth/scripts/kill-peruse.sh
         repeat: DEFAULT
         constraints:
             latitude: '[37.41344492445142+-0.00001]'
@@ -279,7 +279,7 @@ actions:
         name: 14 Adobe Systems Street View
         input: ALL
         action: earth/scripts/launch-peruse.sh -p pW6YkPgpLr3_P-bH66CMhg -d 285
-        exit_action: lg-run-bg earth/scripts/kill-browser.sh
+        exit_action: earth/scripts/kill-peruse.sh
         repeat: DEFAULT
         constraints:
             latitude: '[37.33018888747993+-0.00001]'
@@ -300,7 +300,7 @@ actions:
         name: 15 Cisco Systems Street View
         input: ALL
         action: earth/scripts/launch-peruse.sh -p LGGNd0voYGu0-oYO4Wqxrw -d 163.9
-        exit_action: lg-run-bg earth/scripts/kill-browser.sh
+        exit_action: earth/scripts/kill-peruse.sh
         repeat: DEFAULT
         constraints:
             latitude: '[37.41473806839968+-0.00001]'
@@ -321,7 +321,7 @@ actions:
         name: 16 Stanford Jacks Hall Street View
         input: ALL
         action: earth/scripts/launch-peruse.sh -p ASHTa49bIEHbg07a09ZCHg -d 231
-        exit_action: lg-run-bg earth/scripts/kill-browser.sh
+        exit_action: earth/scripts/kill-peruse.sh
         repeat: DEFAULT
         constraints:
             latitude: '[37.43015173391265+-0.00001]'
@@ -342,7 +342,7 @@ actions:
         name: 17 Netscape Street View
         input: ALL
         action: earth/scripts/launch-peruse.sh -p 99kYHBK58lt5_JUIRzhtQg -d 171.4
-        exit_action: lg-run-bg earth/scripts/kill-browser.sh
+        exit_action: earth/scripts/kill-peruse.sh
         repeat: DEFAULT
         constraints:
             latitude: '[37.39720494347901+-0.00001]'
@@ -363,7 +363,7 @@ actions:
         name: 18 eBay Street View
         input: ALL
         action: earth/scripts/launch-peruse.sh -p Wk_Q7sslQ61TGh6bg_bFCA -d 23.8
-        exit_action: lg-run-bg earth/scripts/kill-browser.sh
+        exit_action: earth/scripts/kill-peruse.sh
         repeat: DEFAULT
         constraints:
             latitude: '[37.29385417232633+-0.00001]'
@@ -394,7 +394,7 @@ actions:
         name: 20 Facebook Street View
         input: ALL
         action: earth/scripts/launch-peruse.sh -p amrW7W0sNrU6nKztwzkBtw -d 123.7
-        exit_action: lg-run-bg earth/scripts/kill-browser.sh
+        exit_action: earth/scripts/kill-peruse.sh
         repeat: DEFAULT
         constraints:
             latitude: '[37.41218768734378+-0.00001]'
