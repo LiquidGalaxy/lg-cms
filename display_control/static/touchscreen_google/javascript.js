@@ -75,7 +75,7 @@ function submitRequest(url) {
   var req = createRequest();
   req.onreadystatechange = function() {
     if (req.readyState == 4) {
-      if (req.status == 200) {
+      if (req.status == 200 && req.responseText != '') {
         showAndHideStatus(req.responseText);
       }
     }
