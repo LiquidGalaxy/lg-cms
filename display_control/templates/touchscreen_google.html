@@ -31,7 +31,7 @@
         <img draggable="false" onmousedown="changePlanet('{{ group.planet }}');  toggleExpand('e_{{ group.slug }}');" src="{{ group.icon_url }}" />
         <div class="expand_inactive" id="e_{{ group.slug }}">
 	{% for bookmark in group.bookmark_set.all %}
-                      <div class="location" onmousedown="changeQuery('{{ bookmark.as_query_txt|safe }}', '{{ bookmark.title }}');">{{ bookmark.title }}</div>
+                      <div class="location" onmousedown="changeQuery('{{ bookmark.as_query_txt|safe }}', '{{ bookmark.title|escapejs }}');">{{ bookmark.title }}</div>
 	{% endfor %}
                   </div>
       </div>
