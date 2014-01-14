@@ -105,8 +105,8 @@ actions:
         exit_action: pkill -f 'mplayer -name 05'
         repeat: DEFAULT
         constraints:
-            latitude: '[37.4200, 37.4228]'
-            longitude: '[-122.1048, -122.1020]'
+            latitude: '[37.4218, 37.4236]'
+            longitude: '[-122.1065, -122.1037]'
             altitude: '[0,1000]'
     -
         name: 5 Fairchild Street View
