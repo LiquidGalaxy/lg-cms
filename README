@@ -1,0 +1,13 @@
+Quick start for touchscreen development:
+
+Install Django and any other dependancies.  On Ubuntu, try:
+$ sudo apt-get install django
+
+Create SQLite ORM database file:
+$ ./manage.py syncdb --noinput
+
+Start the Django development server:
+$ ./manage.py runserver
+
+Now your browser should be able to reach the touchscreen interface:
+http://127.0.0.1:8000/control/template/touchscreen_google.html
