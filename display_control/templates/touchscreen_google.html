@@ -27,19 +27,19 @@
       <div id="status"></div>
 {% for group in bookmark_groups %}
       <div class="{{ group.planet }}">
-        <div class="title" onmousedown="changePlanet('{{ group.planet }}');  toggleExpand('e_{{ group.slug }}');">{{ group.title }}</div>
-        <img draggable="false" onmousedown="changePlanet('{{ group.planet }}');  toggleExpand('e_{{ group.slug }}');" src="{{ group.icon_url }}" />
+        <div class="title" onmousedown="changePlanet('{{ group.planet }}');  toggleExpand([{% for group in bookmark_groups %} 'e_{{group.title|lower}}', {% endfor %} 'e_layers', 'e_keyboard', 'e_{{ group.title|lower }}']);">{{ group.title }}</div>
+        <img draggable="false" onmousedown="changePlanet('{{ group.planet }}');  toggleExpand([{% for group in bookmark_groups %} 'e_{{group.title|lower}}', {% endfor %} 'e_layers', 'e_keyboard', 'e_{{ group.title|lower }}']);" src="{{ group.icon_url }}" />
         <div class="expand_inactive" id="e_{{ group.slug }}">
 	{% for bookmark in group.bookmark_set.all %}
-                      <div class="location" onmousedown="changeQuery('{{ bookmark.as_query_txt|safe }}', '{{ bookmark.title }}');">{{ bookmark.title }}</div>
+          <div class="location" onmousedown="changeQuery('{{ bookmark.as_query_txt|safe }}', '{{ bookmark.title }}');">{{ bookmark.title }}</div>
 	{% endfor %}
-                  </div>
+        </div>
       </div>
 {% endfor %}
 {% if assets %}
       <div class="layers">
-        <div id="layers_icon" class="title" onmousedown="changePlanet('earth');  toggleExpand('e_layers');">Layers</div>
-        <img draggable="false" onmousedown="changePlanet('earth'); toggleExpand('e_layers');" src="{{ STATIC_URL }}touchscreen_google/layers.png" />
+        <div id="layers_icon" class="title" onmousedown="changePlanet('earth');  toggleExpand([{% for group in bookmark_groups %} 'e_{{group.title|lower}}', {% endfor %} 'e_keyboard', 'e_layers']);">Layers</div>
+        <img draggable="false" onmousedown="changePlanet('earth'); toggleExpand([{% for group in bookmark_groups %} 'e_{{group.title|lower}}', {% endfor %} 'e_keyboard', 'e_layers']);" src="{{ STATIC_URL }}touchscreen_google/layers.png" />
         <div class="expand_inactive" id="e_layers">
 		{% for item in assets %}
                       <div id="{{ item.slug }}" class="kml_off" onmousedown="toggleKml(this, '{{ item.storage.url }}');">{{ item.title }}</div>
@@ -48,8 +48,8 @@
       </div>
 {% endif %}
       <div class="keyboard">
-        <div class="title" onmousedown="toggleExpand('e_keyboard');">&nbsp;</div>
-        <img draggable="false" onmousedown="toggleExpand('e_keyboard');" src="{{ STATIC_URL }}touchscreen_google/keyboard.png" />
+        <div class="title" onmousedown="toggleExpand([{% for group in bookmark_groups %} 'e_{{group.title|lower}}', {% endfor %} 'e_layers', 'e_keyboard']);">&nbsp;</div>
+        <img draggable="false" onmousedown="toggleExpand([{% for group in bookmark_groups %} 'e_{{group.title|lower}}', {% endfor %} 'e_layers', 'e_keyboard']);" src="{{ STATIC_URL }}touchscreen_google/keyboard.png" />
         <div class="expand_inactive" id="e_keyboard">
           <div class="keyboardRow1">
             <input class="keyboardEntry" id="keyboardEntry" name="keyboardEntry" type="text" value="" onkeypress="enterKeySubmit(event);" />
@@ -108,7 +108,7 @@
           </div>
         </div>
       </div>
-      <div class="welcome" onmousedown="noneExpand('e_earth', 'e_layers', 'e_moon', 'e_mars', 'e_keyboard');">
+      <div class="welcome" onmousedown="noneExpand([{% for group in bookmark_groups %} 'e_{{group.title|lower}}', {% endfor %} 'e_layers', 'e_keyboard']);">
           {% trans "Welcome to the Liquid Galaxy by Google" %}
       </div>
       <!--<div class="ctlpanel">
@@ -126,7 +126,7 @@
         <!--<div class="location" onmousedown="changeQuery('relaunch-aquarium', 'Relaunch');">Relaunch [Aquarium]</div> -->
         <div class="location" onmousedown="changeQuery('relaunch-earth', 'Relaunch Earth');">Relaunch Earth</div>
         <div class="location" onmousedown="changeQuery('relaunch-peruse', 'Relaunch Street View');">Street View</div>
-        <!--<div class="location" onmousedown="changeQuery('relaunch-mapsdive', 'Relaunch Maps Dive');">Maps Dive</div>-->
+        <!--<div class="location" onmousedown="changeQuery('relaunch-mapsdive', 'Relaunch Maps Dive');">Maps Dive</div> -->
         <!--<div class="location" onmousedown="changeQuery('relaunch-mplayer', 'Relaunch');">Catlin Seaview Survey</div> -->
       </div>
     </div>
