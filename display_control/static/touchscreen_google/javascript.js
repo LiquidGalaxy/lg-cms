@@ -162,10 +162,12 @@ function enterKeySubmit(e) {
   }
 }
 
-function toggleExpand(on_obj){
-  noneExpand();
-  document.getElementById(on_obj).className='expand_active';
+function toggleExpand(bookmarks){
+  noneExpand(bookmarks);
+  var selectedBookmark = bookmarks[bookmarks.length-1].replace(/ /g, '');
+  document.getElementById(selectedBookmark).className='expand_active';
 }
+
 function noneExpand(){
   $('[id^="e_"]').attr('class', 'expand_inactive');
 }
