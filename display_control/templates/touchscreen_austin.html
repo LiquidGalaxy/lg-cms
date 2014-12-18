@@ -2,12 +2,12 @@
 {% load i18n %}
 
 {% block extrastyle %}
-<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}touchscreen_google/sidebar.css" />
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}touchscreen_austin/sidebar.css" />
 {% endblock %}
 
 {% block extrahead %}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}touchscreen_google/javascript.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}touchscreen_austin/javascript.js"></script>
     <script type="text/javascript">       
       function clearKmls() {
         showAndHideStatus();
@@ -39,7 +39,7 @@
 {% if assets %}
       <div class="layers">
         <div id="layers_icon" class="title" onmousedown="changePlanet('earth');  toggleExpand([{% for group in bookmark_groups %} 'e_{{group.title|lower}}', {% endfor %} 'e_keyboard', 'e_layers']);">Layers</div>
-        <img draggable="false" onmousedown="changePlanet('earth'); toggleExpand([{% for group in bookmark_groups %} 'e_{{group.title|lower}}', {% endfor %} 'e_keyboard', 'e_layers']);" src="{{ STATIC_URL }}touchscreen_google/layers.png" />
+        <img draggable="false" onmousedown="changePlanet('earth'); toggleExpand([{% for group in bookmark_groups %} 'e_{{group.title|lower}}', {% endfor %} 'e_keyboard', 'e_layers']);" src="{{ STATIC_URL }}touchscreen_austin/layers.png" />
         <div class="expand_inactive" id="e_layers">
 		{% for item in assets %}
                       <div id="{{ item.slug }}" class="kml_off" onmousedown="toggleKml(this, '{{ item.storage.url }}');">{{ item.title }}</div>
@@ -49,7 +49,7 @@
 {% endif %}
       <div class="keyboard">
         <div class="title" onmousedown="toggleExpand([{% for group in bookmark_groups %} 'e_{{group.title|lower}}', {% endfor %} 'e_layers', 'e_keyboard']);">&nbsp;</div>
-        <img draggable="false" onmousedown="toggleExpand([{% for group in bookmark_groups %} 'e_{{group.title|lower}}', {% endfor %} 'e_layers', 'e_keyboard']);" src="{{ STATIC_URL }}touchscreen_google/keyboard.png" />
+        <img draggable="false" onmousedown="toggleExpand([{% for group in bookmark_groups %} 'e_{{group.title|lower}}', {% endfor %} 'e_layers', 'e_keyboard']);" src="{{ STATIC_URL }}touchscreen_austin/keyboard.png" />
         <div class="expand_inactive" id="e_keyboard">
           <div class="keyboardRow1">
             <input class="keyboardEntry" id="keyboardEntry" name="keyboardEntry" type="text" value="" onkeypress="enterKeySubmit(event);" />
@@ -113,7 +113,7 @@
       </div>
       <!--<div class="ctlpanel">
         <div class="appctl">
-          <img draggable="false" onmousedown="changeQuery('mpctl', 'MPlayer');" src="{{ STATIC_URL }}touchscreen_google/mplayer.png" />
+          <img draggable="false" onmousedown="changeQuery('mpctl', 'MPlayer');" src="{{ STATIC_URL }}touchscreen_austin/mplayer.png" />
           <div class="ctlbutton" onmousedown="changeQuery('mpctl-prev', 'MP PREV');">PREV</div>
           <div class="ctlbutton" onmousedown="changeQuery('mpctl-rev', 'MP REV');">REV</div>
           <div class="ctlbutton" onmousedown="changeQuery('mpctl-fwd', 'MP FWD');">FWD</div>
