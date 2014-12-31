@@ -1,0 +1,133 @@
+{% extends 'base.html' %}    
+{% load i18n %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}touchscreen_unc/fullscreen.css" />
+{% endblock %}
+
+{% block extrahead %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}touchscreen_unc/javascript.js"></script>
+    <script type="text/javascript">       
+      function clearKmls() {
+        showAndHideStatus();
+	{% for item in assets %}
+                  submitRequest('http://localhost:81/sync_touchscreen.php?touch_action=delete&touch_kml={{ item.storage.url }}');
+	{% endfor %}
+                showAndHideStatus();
+      }
+    </script>
+{% endblock %}
+
+{% block title %}{% trans "Liquid Galaxy Touchscreen" %}{% endblock %}
+  {% block bodyonload %}noneExpand();{% endblock %}
+
+{% block content %}
+    <div class="touchscreen">
+      <div id="status"></div>
+{% for group in bookmark_groups %}
+      <div class="{{ group.planet }}">
+        <div class="title" onmousedown="changePlanet('{{ group.planet }}');  toggleExpand([{% for group in bookmark_groups %} 'e_{{group.title|lower}}', {% endfor %} 'e_layers', 'e_keyboard', 'e_{{ group.title|lower }}']);">{{ group.title }}</div>
+        <img draggable="false" onmousedown="changePlanet('{{ group.planet }}');  toggleExpand([{% for group in bookmark_groups %} 'e_{{group.title|lower}}', {% endfor %} 'e_layers', 'e_keyboard', 'e_{{ group.title|lower }}']);" src="{{ group.icon_url }}" />
+        <div class="expand_inactive" id="e_{{ group.slug }}">
+	{% for bookmark in group.bookmark_set.all %}
+          <div class="location" onmousedown="changeQuery('{{ bookmark.as_query_txt|safe }}', '{{ bookmark.title }}');">{{ bookmark.title }}</div>
+	{% endfor %}
+        </div>
+      </div>
+{% endfor %}
+{% if assets %}
+      <div class="layers">
+        <div id="layers_icon" class="title" onmousedown="changePlanet('earth');  toggleExpand([{% for group in bookmark_groups %} 'e_{{group.title|lower}}', {% endfor %} 'e_keyboard', 'e_layers']);">Layers</div>
+        <img draggable="false" onmousedown="changePlanet('earth'); toggleExpand([{% for group in bookmark_groups %} 'e_{{group.title|lower}}', {% endfor %} 'e_keyboard', 'e_layers']);" src="{{ STATIC_URL }}touchscreen_unc/layers.png" />
+        <div class="expand_inactive" id="e_layers">
+		{% for item in assets %}
+                      <div id="{{ item.slug }}" class="kml_off" onmousedown="toggleKml(this, '{{ item.storage.url }}');">{{ item.title }}</div>
+		{% endfor %}
+                  </div>
+      </div>
+{% endif %}
+      <div class="keyboard">
+        <div class="title" onmousedown="toggleExpand([{% for group in bookmark_groups %} 'e_{{group.title|lower}}', {% endfor %} 'e_layers', 'e_keyboard']);">&nbsp;</div>
+        <img draggable="false" onmousedown="toggleExpand([{% for group in bookmark_groups %} 'e_{{group.title|lower}}', {% endfor %} 'e_layers', 'e_keyboard']);" src="{{ STATIC_URL }}touchscreen_unc/keyboard.png" />
+        <div class="expand_inactive" id="e_keyboard">
+          <div class="keyboardRow1">
+            <input class="keyboardEntry" id="keyboardEntry" name="keyboardEntry" type="text" value="" onkeypress="enterKeySubmit(event);" />
+            <div class="keyboardKey keyboardKeyClear" onmousedown='clearKey();'>Clear</div>
+            <div class="keyboardKey keyboardKeySearch" onmousedown='searchKey();'>Search</div>
+          </div>
+          <div class="keyboardRow2">
+                          <div class="keyboardKey" onmousedown="keyEntry('1');">1</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('2');">2</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('3');">3</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('4');">4</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('5');">5</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('6');">6</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('7');">7</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('8');">8</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('9');">9</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('0');">0</div>
+                        <div class="keyboardKey keyboardKeyBackspace" onmousedown='backspaceKey();'>Bksp</div>
+          </div>
+          <div class="keyboardRow3">
+                          <div class="keyboardKey" onmousedown="keyEntry('Q');">Q</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('W');">W</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('E');">E</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('R');">R</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('T');">T</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('Y');">Y</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('U');">U</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('I');">I</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('O');">O</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('P');">P</div>
+                      </div>
+          <div class="keyboardRow4">
+                          <div class="keyboardKey" onmousedown="keyEntry('A');">A</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('S');">S</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('D');">D</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('F');">F</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('G');">G</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('H');">H</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('J');">J</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('K');">K</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('L');">L</div>
+                      </div>
+          <div class="keyboardRow5">
+                          <div class="keyboardKey" onmousedown="keyEntry('Z');">Z</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('X');">X</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('C');">C</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('V');">V</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('B');">B</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('N');">N</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('M');">M</div>
+                          <div class="keyboardKey" onmousedown="keyEntry(',');">,</div>
+                          <div class="keyboardKey" onmousedown="keyEntry('.');">.</div>
+                      </div>
+          <div class="keyboardRow6">
+            <div class="keyboardKey keyboardKeySpace" onmousedown='keyEntry(" ");'></div>
+          </div>
+        </div>
+      </div>
+      <div class="welcome" onmousedown="noneExpand([{% for group in bookmark_groups %} 'e_{{group.title|lower}}', {% endfor %} 'e_layers', 'e_keyboard']);">
+          {% trans "Welcome to the Liquid Galaxy by Google" %}
+      </div>
+      <!--<div class="ctlpanel">
+        <div class="appctl">
+          <img draggable="false" onmousedown="changeQuery('mpctl', 'MPlayer');" src="{{ STATIC_URL }}touchscreen_unc/mplayer.png" />
+          <div class="ctlbutton" onmousedown="changeQuery('mpctl-prev', 'MP PREV');">PREV</div>
+          <div class="ctlbutton" onmousedown="changeQuery('mpctl-rev', 'MP REV');">REV</div>
+          <div class="ctlbutton" onmousedown="changeQuery('mpctl-fwd', 'MP FWD');">FWD</div>
+          <div class="ctlbutton" onmousedown="changeQuery('mpctl-next', 'MP NEXT');">NEXT</div>
+          <div class="ctlbutton" onmousedown="changeQuery('mpctl-pause', 'MP PAUSE');">PAUSE</div>
+          <div class="ctlbutton" onmousedown="changeQuery('mpctl-stop', 'MP STOP');">STOP</div>
+        </div>
+      </div>-->
+      <div class="relaunch">
+        <!--<div class="location" onmousedown="changeQuery('relaunch-aquarium', 'Relaunch');">Relaunch [Aquarium]</div> -->
+        <div class="location" onmousedown="changeQuery('relaunch-earth', 'Relaunch Earth');">Relaunch Earth</div>
+        <div class="location" onmousedown="changeQuery('relaunch-peruse', 'Relaunch Street View');">Street View</div>
+        <!--<div class="location" onmousedown="changeQuery('relaunch-mapsdive', 'Relaunch Maps Dive');">Maps Dive</div> -->
+        <!--<div class="location" onmousedown="changeQuery('relaunch-mplayer', 'Relaunch');">Catlin Seaview Survey</div> -->
+      </div>
+    </div>
+{% endblock %}
