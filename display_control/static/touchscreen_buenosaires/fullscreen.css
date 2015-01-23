@@ -42,6 +42,9 @@ body {
   width: 40%;
   -webkit-border-radius: 5px;
 }
+.moon {
+  display: none !important;
+}
 .earth>img, .moon>img, .mars>img, .keyboard>img, .layers>img {
   height: 220px;
   width: 220px;
