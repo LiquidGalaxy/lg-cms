@@ -1,0 +1,337 @@
+# viewsyncrelay config file
+---
+# Each input has a name, a port, and a bind address. It accepts UDP traffic on that port
+# XXX Make this support receiving multicast
+input_streams:
+    -
+        name: input
+        port: 45677
+        addr: 0.0.0.0
+
+# Each output has a name, an address, and a port, and sends UDP traffic on that
+# port. The broadcast element can be true, false, or missing; if it's missing,
+# it will be the equivalent of "false". This tells the script whether this is a
+# broadcast address or not.
+# XXX Make this support sending multicast, broadcast
+output_streams:
+    -
+        name: output
+        host: 10.42.42.255
+        port: 45678
+        broadcast: true
+
+# Linkages connect inputs and outputs, optionally including transformations.
+# Inputs and outputs are both names referring to input streams, and can be a
+# scalar or an array. Transform can also contain a scalar or array, indicating
+# transformations applied in the order given
+# XXX Actually implement the "scalar or array" stuff for input, output, and transform
+linkages:
+    -
+        name: normal input
+        input: input
+        output: output
+
+# Actions tell viewsyncrelay to do something when a packet matches some conditions
+# "repeat" values can be:
+#   DEFAULT:
+#       Run the first time a packet matches conditions. Don't run again until
+#       after we get a packet that *doesn't* match the constraints
+#   ALL: Run each time a packet matches thesse constraints
+#   ONCE: Run once (duh!)
+#   RESET: Allows a reset_constraints section exactly like the constraints
+#       section. Runs the action once, but resets when the reset_constraints
+#       are matched, allowing the action to run again. These actions also allow
+#       an "initially_disabled" field, which, when set, means the action needs
+#       to be reset *before* it can run at all. Note that the presence of the
+#       initially_disabled key is sufficient to make it disabled; the value of
+#       the key doesn't matter.
+actions:
+# actions for Silicon Valley Experience
+    -
+        name: 1 Lockheed Narration
+        input: ALL
+        action: unzip -p /media/kml/lg-chm-master.kmz audio/1.mp3 | mplayer -name 01 -really-quiet -cache 1024 -nomouseinput -nograbpointer -noconsolecontrols -vo null -
+        exit_action: pkill -f 'mplayer -name 01'
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.4125, 37.4205]'
+            longitude: '[-122.0406, -122.0306]'
+            altitude: '[0,1000]'
+    -
+        name: 2 HP Narration
+        input: ALL
+        action: unzip -p /media/kml/lg-chm-master.kmz audio/2.mp3 | mplayer -name 02 -really-quiet -cache 1024 -nomouseinput - nograbpointer -noconsolecontrols -vo null -
+        exit_action: pkill -f 'mplayer -name 02'
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.4391, 37.4471]'
+            longitude: '[-122.1598, -122.1498]'
+            altitude: '[0,1000]'
+    -
+        name: 3 IBM Narration
+        input: ALL
+        action: unzip -p /media/kml/lg-chm-master.kmz audio/3.mp3 | mplayer -name 03 -really-quiet -cache 1024 -nomouseinput -nograbpointer -noconsolecontrols -vo null -
+        exit_action: pkill -f 'mplayer -name 03'
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.3320, 37.3400]'
+            longitude: '[-121.9011, -121.8911]'
+            altitude: '[0,1000]'
+    -
+        name: 4 Shockley Narration
+        input: ALL
+        action: unzip -p /media/kml/lg-chm-master.kmz audio/4.mp3 | mplayer -name 04 -really-quiet -cache 1024 -nomouseinput -nograbpointer -noconsolecontrols -vo null -
+        exit_action: pkill -f 'mplayer -name 04'
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.4035, 37.4060]'
+            longitude: '[-122.1120, -122.1095]'
+            altitude: '[0,1000]'
+    -
+        name: 5 Fairchild Narration
+        input: ALL
+        action: unzip -p /media/kml/lg-chm-master.kmz audio/5.mp3 | mplayer -name 05 -really-quiet -cache 1024 -nomouseinput -nograbpointer -noconsolecontrols -vo null -
+        exit_action: pkill -f 'mplayer -name 05'
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.4218, 37.4236]'
+            longitude: '[-122.1065, -122.1037]'
+            altitude: '[0,1000]'
+    -
+        name: 5 Fairchild Street View
+        input: ALL
+        action: earth/scripts/launch-peruse.sh -p PuCyci2cqhrcYvrT8GnTQA -d 129.5
+        exit_action: earth/scripts/kill-peruse.sh
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.42328278328824+-0.00001]'
+            longitude: '[-122.10512909897344+-0.00001]'
+            heading: '[129.5+-5]'
+            altitude: '[99+-10]'
+    -
+        name: 6 Intel Narration
+        input: ALL
+        action: unzip -p /media/kml/lg-chm-master.kmz audio/6.mp3 | mplayer -name 06 -really-quiet -cache 1024 -nomouseinput -nograbpointer -noconsolecontrols -vo null -
+        exit_action: pkill -f 'mplayer -name 06'
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.3837, 37.3917]'
+            longitude: '[-121.9689, -121.9589]'
+            altitude: '[0,1000]'
+    -
+        name: 6 Intel Street View
+        input: ALL
+        action: earth/scripts/launch-peruse.sh -p kYQ8mMscqVeKhTIaYA0QUw -d 181
+        exit_action: earth/scripts/kill-peruse.sh
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.3912519757155+-0.00001]'
+            longitude: '[-121.96290505178695+-0.00001]'
+            heading: '[-179.2+-5]'
+            altitude: '[75+-10]'
+    -
+        name: 7 Xerox Narration
+        input: ALL
+        action: unzip -p /media/kml/lg-chm-master.kmz audio/7.mp3 | mplayer -name 07 -really-quiet -cache 1024 -nomouseinput -nograbpointer -noconsolecontrols -vo null -
+        exit_action: pkill -f 'mplayer -name 07'
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.3988, 37.4068]'
+            longitude: '[-122.1525, -122.1425]'
+            altitude: '[0,1000]'
+    -
+        name: 8 Atari Narration
+        input: ALL
+        action: unzip -p /media/kml/lg-chm-master.kmz audio/8.mp3 | mplayer -name 08 -really-quiet -cache 1024 -nomouseinput -nograbpointer -noconsolecontrols -vo null -
+        exit_action: pkill -f 'mplayer -name 08'
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.4036, 37.4116]'
+            longitude: '[-122.0243, -122.0143]'
+            altitude: '[0,1000]'
+    -
+        name: 9 Andy Narration
+        input: ALL
+        action: unzip -p /media/kml/lg-chm-master.kmz audio/9.mp3 | mplayer -name 09 -really-quiet -cache 1024 -nomouseinput -nograbpointer -noconsolecontrols -vo null -
+        exit_action: pkill -f 'mplayer -name 09'
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.3647, 37.3727]'
+            longitude: '[-122.0386, -122.0286]'
+            altitude: '[0,1000]'
+    -
+        name: 9 Andy Street View
+        input: ALL
+        action: earth/scripts/launch-peruse.sh -p CyaiXsfAh5KBENa4NGZuNw -d 350
+        exit_action: earth/scripts/kill-peruse.sh
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.36777251981194+-0.00001]'
+            longitude: '[-122.03339109947015+-0.00001]'
+            heading: '[-10+-5]'
+            altitude: '[95+-10]'
+    -
+        name: 10 Homebrew Narration
+        input: ALL
+        action: unzip -p /media/kml/lg-chm-master.kmz audio/10.mp3 | mplayer -name 10 -really-quiet -cache 1024 -nomouseinput -nograbpointer -noconsolecontrols -vo null -
+        exit_action: pkill -f 'mplayer -name 10'
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.4682, 37.4762]'
+            longitude: '[-122.1952, -122.1852]'
+            altitude: '[0,1000]'
+    -
+        name: 10 Homebrew Street View
+        input: ALL
+        action: earth/scripts/launch-peruse.sh -p jCXzEcRXFZaSL6mq1YlPkw -d 99.5
+        exit_action: earth/scripts/kill-peruse.sh
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.47297206915353+-0.00001]'
+            longitude: '[-122.1904511141102+-0.00001]'
+            heading: '[99.5+-5]'
+            altitude: '[98+-10]'
+    -
+        name: 11 Apple Narration
+        input: ALL
+        action: unzip -p /media/kml/lg-chm-master.kmz audio/11.mp3 | mplayer -name 11 -really-quiet -cache 1024 -nomouseinput -nograbpointer -noconsolecontrols -vo null -
+        exit_action: pkill -f 'mplayer -name 11'
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.3362, 37.3442]'
+            longitude: '[-122.0738, -122.0638]'
+            altitude: '[0,1000]'
+    -
+        name: 11 Apple Street View
+        input: ALL
+        action: earth/scripts/launch-peruse.sh -p hEpEeC3ui0UXNBTOKk_JTw -d 313.2
+        exit_action: earth/scripts/kill-peruse.sh
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.33980049137537+-0.00001]'
+            longitude: '[-122.06813346894587+-0.00001]'
+            heading: '[-46.8+-5]'
+            altitude: '[150+-10]'
+    -
+        name: 12 SRI Narration
+        input: ALL
+        action: unzip -p /media/kml/lg-chm-master.kmz audio/12.mp3 | mplayer -name 12 -really-quiet -cache 1024 -nomouseinput -nograbpointer -noconsolecontrols -vo null -
+        exit_action: pkill -f 'mplayer -name 12'
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.4528, 37.4608]'
+            longitude: '[-122.1824, -122.1724]'
+            altitude: '[0,1000]'
+    -
+        name: 13 Silicon Graphics Narration
+        input: ALL
+        action: unzip -p /media/kml/lg-chm-master.kmz audio/13.mp3 | mplayer -name 13 -really-quiet -cache 1024 -nomouseinput -nograbpointer -noconsolecontrols -vo null -
+        exit_action: pkill -f 'mplayer -name 13'
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.4103, 37.4183]'
+            longitude: '[-122.0819, -122.0719]'
+            altitude: '[0,1000]'
+    -
+        name: 14 Adobe Systems Narration
+        input: ALL
+        action: unzip -p /media/kml/lg-chm-master.kmz audio/14.mp3 | mplayer -name 14 -really-quiet -cache 1024 -nomouseinput -nograbpointer -noconsolecontrols -vo null -
+        exit_action: pkill -f 'mplayer -name 14'
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.3268, 37.3348]'
+            longitude: '[-121.8988, -121.8888]'
+            altitude: '[0,1000]'
+    -
+        name: 14 Adobe Systems Street View
+        input: ALL
+        action: earth/scripts/launch-peruse.sh -p pW6YkPgpLr3_P-bH66CMhg -d 285
+        exit_action: earth/scripts/kill-peruse.sh
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.33018888747993+-0.00001]'
+            longitude: '[-121.89023093101319+-0.00001]'
+            heading: '[-75.6+-5]'
+            altitude: '[141+-10]'
+    -
+        name: 15 Cisco Systems Narration
+        input: ALL
+        action: unzip -p /media/kml/lg-chm-master.kmz audio/15.mp3 | mplayer -name 15 -really-quiet -cache 1024 -nomouseinput -nograbpointer -noconsolecontrols -vo null -
+        exit_action: pkill -f 'mplayer -name 15'
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.4079, 37.4159]'
+            longitude: '[-121.9373, -121.9273]'
+            altitude: '[0,1000]'
+    -
+        name: 15 Cisco Systems Street View
+        input: ALL
+        action: earth/scripts/launch-peruse.sh -p LGGNd0voYGu0-oYO4Wqxrw -d 163.9
+        exit_action: earth/scripts/kill-peruse.sh
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.41473806839968+-0.00001]'
+            longitude: '[-121.93284500992888+-0.00001]'
+            heading: '[163.9+-5]'
+            altitude: '[55+-10]'
+    -
+        name: 16 Stanford Jacks Hall Narration
+        input: ALL
+        action: unzip -p /media/kml/lg-chm-master.kmz audio/16.mp3 | mplayer -name 16 -really-quiet -cache 1024 -nomouseinput -nograbpointer -noconsolecontrols -vo null -
+        exit_action: pkill -f 'mplayer -name 16'
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.4246, 37.4326]'
+            longitude: '[-122.1754, -122.1654]'
+            altitude: '[0,1000]'
+    -
+        name: 16 Stanford Jacks Hall Street View
+        input: ALL
+        action: earth/scripts/launch-peruse.sh -p ASHTa49bIEHbg07a09ZCHg -d 231
+        exit_action: earth/scripts/kill-peruse.sh
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.43015173391265+-0.00001]'
+            longitude: '[-122.16856141304815+-0.00001]'
+            heading: '[-139+-5]'
+            altitude: '[60+-10]'
+    -
+        name: 17 Netscape Narration
+        input: ALL
+        action: unzip -p /media/kml/lg-chm-master.kmz audio/17.mp3 | mplayer -name 17 -really-quiet -cache 1024 -nomouseinput -nograbpointer -noconsolecontrols -vo null -
+        exit_action: pkill -f 'mplayer -name 17'
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.3918, 37.3998]'
+            longitude: '[-122.0588, -122.0488]'
+            altitude: '[0,1000]'
+    -
+        name: 18 eBay Narration
+        input: ALL
+        action: unzip -p /media/kml/lg-chm-master.kmz audio/18.mp3 | mplayer -name 18 -really-quiet -cache 1024 -nomouseinput -nograbpointer -noconsolecontrols -vo null -
+        exit_action: pkill -f 'mplayer -name 18'
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.2915, 37.2995]'
+            longitude: '[-121.9328, -121.9228]'
+            altitude: '[0,1000]'
+    -
+        name: 19 Google Narration
+        input: ALL
+        action: unzip -p /media/kml/lg-chm-master.kmz audio/19.mp3 | mplayer -name 19 -really-quiet -cache 1024 -nomouseinput -nograbpointer -noconsolecontrols -vo null -
+        exit_action: pkill -f 'mplayer -name 19'
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.4537, 37.4617]'
+            longitude: '[-122.1686, -122.1586]'
+            altitude: '[0,1000]'
+    -
+        name: 20 Facebook Narration
+        input: ALL
+        action: unzip -p /media/kml/lg-chm-master.kmz audio/20.mp3 | mplayer -name 20 -really-quiet -cache 1024 -nomouseinput -nograbpointer -noconsolecontrols -vo null -
+        exit_action: pkill -f 'mplayer -name 20'
+        repeat: DEFAULT
+        constraints:
+            latitude: '[37.4078, 37.4158]'
+            longitude: '[-122.1398, -122.1298]'
+            altitude: '[0,1000]'
